@@ -10,6 +10,7 @@ main
     direction: rtl;
     float: left;
     margin: 10%;
+    font-size: 0;
 }
 
 header
@@ -40,6 +41,7 @@ article
     -moz-transition: width .3s;
     -o-transition: width .3s;
     transition: width .3s;
+    font-size: initial;
 }
 
 .description
@@ -135,7 +137,8 @@ article:target ~ .cross
 }
 
 .slider-forward,
-.slider-back
+.slider-back,
+.default-checked
 {
     display: none;
 }
@@ -170,7 +173,8 @@ article:target ~ .cross
     width: 20vw;
 }
 
-.slider-forward:checked + label + .slider-back + label:after
+.slider-forward:checked + label + .slider-back + label:after,
+.slider-back:checked ~ .slider-back + label:after
 {
     display: block;
 }
@@ -183,7 +187,8 @@ article:target ~ .cross
 
 .slider-forward:checked + label:after,
 .slider-forward:checked ~ .slider-forward + label:after,
-.slider-back:checked ~ .slider-forward + label:after
+.slider-back:checked ~ .slider-forward + label:after,
+.slider-back:checked ~ .slider-back ~ .slider-back + label:after
 {
     display: none;
 }
