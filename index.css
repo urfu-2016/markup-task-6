@@ -22,17 +22,17 @@ section.slider label:hover
     color: #ff0042;
 }
 
-#slide1:checked ~ section.slides .inner
+.slide1:checked ~ section.slides .inner
 {
     margin-left: 0;
 }
 
-#slide2:checked ~ section.slides .inner
+.slide2:checked ~ section.slides .inner
 {
     margin-left: -100%;
 }
 
-#slide3:checked ~ section.slides .inner
+.slide3:checked ~ section.slides .inner
 {
     margin-left: -200%;
 }
@@ -71,14 +71,14 @@ section.slides .slider-page
     float: left;
 }
 
-#controls
+.controls
 {
     margin: -8% 0 0 84%;
     width: 15%;
     height: 50px;
 }
 
-#controls label
+.controls label
 {
     display: none;
     width: 50px;
@@ -86,14 +86,14 @@ section.slides .slider-page
 
 }
 
-#controls label:hover
+.controls label:hover
 {
     opacity: .8;
 }
 
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(1)
+.slide1:checked ~ .controls label:nth-child(2),
+.slide2:checked ~ .controls label:nth-child(3),
+.slide3:checked ~ .controls label:nth-child(1)
 {
     background: url('next.png') no-repeat;
     float: right;
@@ -102,9 +102,9 @@ section.slides .slider-page
     background-color: #ef023f;
 }
 
-#slide1:checked ~ #controls label:nth-child(3),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2)
+.slide1:checked ~ .controls label:nth-child(3),
+.slide2:checked ~ .controls label:nth-child(1),
+.slide3:checked ~ .controls label:nth-child(2)
 {
     background: url('prev.png') no-repeat;
     float: left;
@@ -152,7 +152,7 @@ section.slider
     transition: all .5s ease-out;
 }
 
-#controls label
+.controls label
 {
     -webkit-transform: translateZ(0);
     -webkit-transition: opacity .2s ease-out;
@@ -161,11 +161,11 @@ section.slider
     transition: opacity .2s ease-out;
 }
 
-#slide1:checked ~ section.slides article:nth-child(1) .cctooltip,
-#slide2:checked ~ section.slides article:nth-child(2) .cctooltip,
-#slide3:checked ~ section.slides article:nth-child(3) .cctooltip,
-#slide4:checked ~ section.slides article:nth-child(4) .cctooltip,
-#slide5:checked ~ section.slides article:nth-child(5) .cctooltip
+.slide1:checked ~ section.slides article:nth-child(1) .cctooltip,
+.slide2:checked ~ section.slides article:nth-child(2) .cctooltip,
+.slide3:checked ~ section.slides article:nth-child(3) .cctooltip,
+.slide4:checked ~ section.slides article:nth-child(4) .cctooltip,
+.slide5:checked ~ section.slides article:nth-child(5) .cctooltip
 {
     opacity: 1;
     -webkit-transition: all 1s ease-out .6s;
