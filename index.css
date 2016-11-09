@@ -73,8 +73,10 @@ section.slides .slider-page
 
 .controls
 {
-    margin: -8% 0 0 84%;
-    width: 15%;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    width: 127px;
     height: 50px;
 }
 
