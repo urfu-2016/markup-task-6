@@ -136,14 +136,11 @@ article:target ~ .cross
     color: #fff;
 }
 
-.slider-forward,
-.slider-back,
-.default-checked
+.slider
 {
     display: none;
 }
 
-.slider-forward-label:after,
 .slider-back-label:after
 {
     margin-top: 20%;
@@ -151,44 +148,30 @@ article:target ~ .cross
     position: absolute;
     cursor: pointer;
     font-size: 40px;
+    max-width: 40px;
     color: #777;
-}
-
-.slider-forward-label:after
-{
-    content: '▶';
-    right: 3%;
     z-index: 2;
 }
 
-.slider-back-label:after
+.slider:not(:checked) + label:after
 {
-    content: '◀';
-    display: none;
+    content: '▶';
+    right: 3%;
+}
+
+.slider:checked ~ .slider + label:after
+{
     left: 3%;
+    content: '◀';
 }
 
-.slider-back:checked ~ article
-{
-    width: 20vw;
-}
-
-.slider-forward:checked + label + .slider-back + label:after,
-.slider-back:checked ~ .slider-back + label:after
-{
-    display: block;
-}
-
-.slider-forward:checked ~ article,
-.slider-back:checked ~ .slider-back ~ article
+.slider:checked ~ article
 {
     width: 0;
 }
 
-.slider-forward:checked + label:after,
-.slider-forward:checked ~ .slider-forward + label:after,
-.slider-back:checked ~ .slider-forward + label:after,
-.slider-back:checked ~ .slider-back ~ .slider-back + label:after
+.slider:checked ~ .slider ~ .slider + label:after,
+.slider:checked + label:after
 {
     display: none;
 }
