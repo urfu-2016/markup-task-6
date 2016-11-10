@@ -141,7 +141,7 @@ article:target ~ .cross
     display: none;
 }
 
-.slider-back-label:after
+.slider-label:after
 {
     margin-top: 20%;
     top: 0;
