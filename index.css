@@ -1,0 +1,169 @@
+html
+{
+    min-width: 1050px;
+    max-width: 1750px;
+}
+
+.foto
+{
+    width: 85%;
+    margin: 5%;
+}
+
+.block
+{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.description
+{
+    display: none;
+    text-align: justify;
+    margin-left: 2%;
+}
+
+.overflow
+{
+    margin: 10%;
+}
+
+.vegetable
+{
+    display: inline-block;
+    width: 25%;
+}
+
+.vegetable:hover .description
+{
+    display: block;
+    width: 95%;
+    white-space: normal;
+}
+
+.vegetable:hover
+{
+    box-shadow: 0 0 10px 5px #8a8b8d;
+    border-radius: 20px;
+    vertical-align: top;
+    position: relative;
+    width: 23%;
+    cursor: pointer;
+    transition: width .5s;
+}
+
+.inner
+{
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px 0;
+
+}
+
+.vegetable:first-child
+{
+    margin-left: 1%;
+}
+
+input
+{
+    display: none;
+}
+
+.close
+{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    font-size: 4rem;
+    left: 97%;
+    color: #000;
+}
+
+.close:hover
+{
+    color: #fff;
+}
+
+.grey-background
+{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #8a8b8d;
+}
+
+.big-foto:checked + div label .foto
+{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.big-foto:checked ~ .grey-background
+{
+    visibility: visible;
+}
+
+.big-foto:checked ~ .close
+{
+    visibility: visible;
+}
+
+.close-cross:checked ~ .close
+{
+    visibility: hidden;
+}
+
+.big-foto:checked + div p
+{
+    display: none;
+}
+
+.roll-slide1:checked ~ label:nth-of-type(3),
+.roll-slide2:checked ~ label:nth-of-type(1),
+.roll-slide3:checked ~ label:nth-of-type(2)
+{
+    float: left;
+    margin-top: 2%;
+    border-top: 50px solid transparent;
+    border-right: 60px solid #6d6e71;
+    border-bottom: 50px solid transparent;
+}
+
+.roll-slide1:checked ~ label:nth-of-type(5),
+.roll-slide2:checked ~ label:nth-of-type(6),
+.roll-slide3:checked ~ label:nth-of-type(4)
+{
+    float: right;
+    margin-top: 2%;
+    border-top: 50px solid transparent;
+    border-left: 60px solid #6d6e71;
+    border-bottom: 50px solid transparent;
+}
+
+.roll-slide1:checked ~ .inner .roll
+{
+    margin-left: .5%;
+    transition: all .5s;
+}
+
+.roll-slide2:checked ~ .inner .roll
+{
+    margin-left: -101%;
+    margin-right: 101%;
+    transition: all 1s;
+}
+
+.roll-slide3:checked ~ .inner .roll
+{
+    margin-left: -202.5%;
+    margin-right: 202.5%;
+    transition: all 1s;
+}
