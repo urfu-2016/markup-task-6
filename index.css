@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+body
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.screen-bar
+{
+    height: 350px;
+    width: 1100px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.slider
+{
+    position: relative;
+    bottom: 0;
+    left: 50%;
+}
+
+.photo
+{
+    display: inline-block;
+    vertical-align: bottom;
+    width: 350px;
+    border: 1px solid black;
+}
+
+.photo figcaption
+{
+    text-align: center;
+}
+
+#block-1
+{
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+}
+
+#block-2
+{
+    position: absolute;
+    bottom: 0;
+    left: 52%;
+}
+
+.image-block-1,
+.image-block-2
+{
+    display: none;
+}
+
+.item-1
+{
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+}
+
+.item-2
+{
+    position: absolute;
+    left: 260px;
+    bottom: 15px;
+}
+
+.item-3
+{
+    position: absolute;
+    left: 520px;
+    bottom: 15px;
+}
+
+.item-4
+{
+    position: absolute;
+    left: 780px;
+    bottom: 15px;
+}
+
+.screen-bar figure
+{
+    width: 250px;
+    margin: 10px;
+    padding: 0;
+    background: grey;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.screen-bar figure:hover
+{
+    position: relative;
+    top: 50px;
+    width: 400px;
+    z-index: 999;
+    box-shadow: 5px 5px 3px #928c89;
+}
+
+.screen-bar figure:hover figcaption
+{
+    display: block;
+}
+
+.screen-bar figure:hover img
+{
+    width: 400px;
+}
+
+.screen-bar figcaption
+{
+    text-align: left;
+    display: none;
+    font-family: 'Merriweather', serif;
+}
+
+input[id='block-1']:checked ~ .image-block-1
+{
+    display: block;
+}
+
+input[id='block-2']:checked ~ .image-block-2
+{
+    display: block;
+}
