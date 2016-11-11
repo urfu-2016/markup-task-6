@@ -1,21 +1,23 @@
-@font-face {
+@font-face
+{
     font-family: 'Charis Italic';
-    src: url('fonts/CharisSILI.ttf') format("truetype");
+    src: url('fonts/CharisSILI.ttf') format('truetype');
 }
 
-@font-face {
+@font-face
+{
     font-family: 'PD';
-    src: url('fonts/PlayfairDisplay-Regular.otf') format("opentype");
+    src: url('fonts/PlayfairDisplay-Regular.otf') format('opentype');
 }
 
 html
 {
-    font-family: 'Charis Italic', "Times New Roman", Times, serif;
+    font-family: 'Charis Italic', 'Times New Roman', Times, serif;
 }
 
 header
 {
-    font-family: 'PD', "Times New Roman", Times, serif;
+    font-family: 'PD', 'Times New Roman', Times, serif;
 }
 
 section.slider
