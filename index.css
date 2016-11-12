@@ -1,5 +1,10 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
+body
+{
+    font-size: 14px;
+}
+
 .main-header
 {
     width: 100%;
