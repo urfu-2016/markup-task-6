@@ -1,0 +1,52 @@
+input[name='block-control']
+{
+    display: none;
+}
+
+.selector
+{
+    width: 1000px;
+    text-align: center;
+    position: relative;
+    top: 400px;
+    display: inline-block;
+}
+
+.selector label
+{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url('radio/radio-unselected.png');
+}
+
+input[id='block-1']:checked ~ .screen-bar .slider
+{
+    margin-left: 0;
+    transition: 2s;
+}
+
+input[id='block-2']:checked ~ .screen-bar .slider
+{
+    margin-left: -1003px;
+    transition: 2s;
+}
+
+input[id='block-3']:checked ~ .screen-bar .slider
+{
+    margin-left: -2006px;
+    transition: 2s;
+}
+
+input[id='block-1']:checked ~ .screen-bar .selector [id='label-1'],
+input[id='block-2']:checked ~ .screen-bar .selector [id='label-2'],
+input[id='block-3']:checked ~ .screen-bar .selector [id='label-3']
+{
+    background-image: url('radio/radio-selected.png');
+    transition: 1s;
+}
+
+.selector label:hover
+{
+    background-image: url('radio/radio-highlighted.png');
+}

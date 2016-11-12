@@ -6,28 +6,13 @@ body
     font-family: 'Ubuntu', sans-serif;
 }
 
-.screen-bar
-{
-    height: 350px;
-    width: 1100px;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-}
-
-.slider
-{
-    position: relative;
-    bottom: 0;
-    left: 50%;
-}
-
 .photo
 {
-    display: inline-block;
-    vertical-align: bottom;
     width: 350px;
+    margin: 0;
     border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .photo figcaption
@@ -35,98 +20,93 @@ body
     text-align: center;
 }
 
-#block-1
+.screen-bar
 {
-    position: absolute;
-    bottom: 0;
-    left: 48%;
-}
-
-#block-2
-{
-    position: absolute;
-    bottom: 0;
-    left: 52%;
-}
-
-.image-block-1,
-.image-block-2
-{
-    display: none;
-}
-
-.item-1
-{
-    position: absolute;
-    left: 0;
-    bottom: 15px;
-}
-
-.item-2
-{
-    position: absolute;
-    left: 260px;
-    bottom: 15px;
-}
-
-.item-3
-{
-    position: absolute;
-    left: 520px;
-    bottom: 15px;
-}
-
-.item-4
-{
-    position: absolute;
-    left: 780px;
-    bottom: 15px;
-}
-
-.screen-bar figure
-{
-    width: 250px;
-    margin: 10px;
-    padding: 0;
-    background: grey;
-    border: 1px solid black;
-    text-align: center;
+    width: 1000px;
+    height: 600px;
     display: inline-block;
-    vertical-align: bottom;
+    position: relative;
+    overflow: hidden;
 }
 
-.screen-bar figure:hover
+.slider
+{
+    position: absolute;
+    margin-left: -750px;
+    height: 250px;
+    width: 10000px;
+}
+
+.block
 {
     position: relative;
-    top: 50px;
-    width: 400px;
-    z-index: 999;
-    box-shadow: 5px 5px 3px #928c89;
+    display: inline-block;
+    vertical-align: top;
+    height: 200px;
+    width: 950px;
+    margin: 25px;
 }
 
-.screen-bar figure:hover figcaption
+.block figure
 {
-    display: block;
+    margin: 0;
+    position: absolute;
+    width: 230px;
 }
 
-.screen-bar figure:hover img
-{
-    width: 400px;
-}
-
-.screen-bar figcaption
+.block figure figcaption
 {
     text-align: left;
-    display: none;
     font-family: 'Merriweather', serif;
+    display: none;
 }
 
-input[id='block-1']:checked ~ .image-block-1
+figure:hover figcaption
 {
     display: block;
+    background: white;
 }
 
-input[id='block-2']:checked ~ .image-block-2
+.block figure:hover
 {
-    display: block;
+    z-index: 999;
+    width: 350px;
+    border: 1px solid black;
+    background: white;
+    box-shadow: 5px 5px 3px gray;
+}
+
+.block figure:hover img
+{
+    width: 350px;
+}
+
+.item2
+{
+    left: 240px;
+}
+
+.item2:hover
+{
+    left: 175px;
+}
+
+.item3
+{
+    left: 480px;
+}
+
+.item3:hover
+{
+    left: 405px;
+}
+
+.item4
+{
+    left: 720px;
+}
+
+.item4:hover
+{
+    left: 600px;
 }
