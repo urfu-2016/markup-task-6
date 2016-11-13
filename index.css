@@ -3,6 +3,14 @@ body
     margin: 10px 0;
 }
 
+a,
+a:visited,
+a:active
+{
+    color: #000;
+    text-decoration: none;
+}
+
 .gallery-wrapper
 {
     text-align: center;
@@ -52,6 +60,7 @@ body
 
 .gallery-image 
 {
+    vertical-align: top;
     font-size: initial;
     width: 25%;
     display: inline-block;
@@ -64,6 +73,9 @@ body
 
 .gallery-image p
 {
+    word-wrap: break-word;
+    display: block;
+    white-space: initial;
     opacity: 0;
 }
 
@@ -117,6 +129,7 @@ body
 
 .gallery-image:target .image-container > p
 {
+
     opacity: 0;
 }
 
