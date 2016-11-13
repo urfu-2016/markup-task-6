@@ -1,0 +1,163 @@
+body
+{
+    margin: 10px 0;
+}
+
+.gallery-wrapper
+{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    width: 90%;
+}
+
+.arrow
+{
+    width: 5%;
+    height: 100px;
+}
+
+.left-arrow
+{
+    float: left;
+}
+
+.right-arrow
+{
+    float: right;
+}
+
+.left-arrow:before
+{
+    content: '<';
+}
+
+.right-arrow:before
+{
+    content: '>';
+}
+
+.gallery-image 
+{
+    font-size: initial;
+    width: 25%;
+    display: inline-block;
+}
+
+.gallery-image p
+{
+    opacity: 0;
+}
+
+.gallery-image:not(:target):hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.gallery-image:hover p
+{
+    opacity: 1;
+}
+
+.image-container > img
+{
+    max-width: 80%;
+    max-height: 80%;
+    display: inline-block;
+}
+
+.gallery-image:target
+{
+    left: 0;
+}
+
+.gallery-image:target > a
+{
+    cursor: default;
+}
+
+.gallery-image:target .image-container
+{
+    position: fixed;
+    z-index: 2;
+    top: 0; 
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.gallery-image:target .image-container > img
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.gallery-image:target .image-container > p
+{
+    opacity: 0;
+}
+
+.gallery-image:target ~ .close
+{
+    position: fixed;
+    right: 0;
+    top: 0;
+    font-size: initial;
+    z-index: 3;
+}
+
+.gallery-image:target ~ .close:before
+{
+    font-size: 2em;
+    content: 'x';
+}
+
+.gallery-wrapper > div
+{
+    position: relative;
+    transition: 1s;
+}
+
+input.first:checked ~ div > .gallery-wrapper > div
+{
+    left: 0;
+}
+
+input.second:checked ~ div > .gallery-wrapper > div
+{
+    left: -100%;
+}
+
+input.third:checked ~ div > .gallery-wrapper > div
+{
+    left: -200%;
+}
+
+input
+{
+    display: none;
+}
+
+input.first:checked ~ div > label.left-arrow[for='first'],
+input.first:checked ~ div > label.left-arrow[for='second'],
+input.first:checked ~ div > label.right-arrow[for='first'],
+input.first:checked ~ div > label.right-arrow[for='third'],
+
+input.second:checked ~ div > label.left-arrow[for='second'],
+input.second:checked ~ div > label.left-arrow[for='third'],
+input.second:checked ~ div > label.right-arrow[for='first'],
+input.second:checked ~ div > label.right-arrow[for='second'],
+
+input.third:checked ~ div > label.left-arrow[for='first'],
+input.third:checked ~ div > label.left-arrow[for='third'],
+input.third:checked ~ div > label.right-arrow[for='second'],
+input.third:checked ~ div > label.right-arrow[for='third']
+{
+    display: none;
+}
