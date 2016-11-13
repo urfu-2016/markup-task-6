@@ -1,6 +1,6 @@
 body
 {
-    width:100%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -26,14 +26,14 @@ main
     max-width: 1030px;
     width: 100%;
     min-width: 500px;
-    vertical-align:middle;
+    vertical-align: middle;
     text-align: center;
 }
 
 .items
 {
     display: inline-block;
-    width:15000px;
+    width: 15000px;
     vertical-align: middle;
     position: relative;
 }
@@ -43,13 +43,12 @@ main
     display: inline-block;
     width: 1024px;
     float: left;
-    margin:5px;
-    vertical-align: middle;
+    margin: 5px;
 }
 
 .element
 {
-    display:inline-block;
+    display: inline-block;
     max-width: 22%;
     height: auto;
     padding: 1%;
@@ -58,7 +57,7 @@ main
 
 .images
 {
-    display:block;
+    display: block;
     max-width: 99%;
     padding: 1%;
     cursor: zoom-in;
@@ -67,7 +66,7 @@ main
 .cross
 {
     display: none;
-    background: url("Photo/cross.png");
+    background: url('Photo/cross.png');
     width: 40px;
     height: 40px;
 }
@@ -98,10 +97,10 @@ span.element:hover > article.text
     width: auto;
     height: auto;
     margin: auto;
-    padding: 0px;
+    padding: 0;
     max-width: 99%;
     max-height: 99%;
-    box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(0,0,0,.7);
 }
 
 .images:focus ~ span.cross
@@ -111,12 +110,6 @@ span.element:hover > article.text
     position: fixed;
     top: 20px;
     right: 50px;
-}
-
-.images:focus,
-.images:focus ~ span.cross,
-.images:focus ~ *
-{
     pointer-events: none;
     cursor: zoom-out;
 }
