@@ -1,0 +1,215 @@
+body > input,
+body > label,
+.gray-screen
+{
+    display: none;
+}
+
+.exit
+{
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    width: 5%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.gray-screen
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.gray-screen > div
+{
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.gray-screen img
+{
+    max-height: 60%;
+    max-width: 60%;
+    width: auto;
+}
+
+.gallery
+{
+    position: fixed;
+    vertical-align: middle;
+    display: table;
+    top: 0;
+    left: 10%;
+    height: 100%;
+    width: 80%;
+    border-spacing: 10px;
+    background-color: #fff;
+}
+
+.gallery > label
+{
+    position: fixed;
+    display: table;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.gallery > label:nth-of-type(n + 4)
+{
+    left: 90%;
+}
+
+.gallery > label > span
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+article
+{
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+    height: 100%;
+}
+
+.card-container
+{
+    z-index: 1;
+}
+
+label.fullsizing,
+.description
+{
+    padding: 0 5%;
+}
+
+.description
+{
+    display: none;
+    text-align: justify;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+label.fullsizing
+{
+    display: inline-block;
+}
+
+label.fullsizing
+{
+    margin: 0;
+    background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+section .page1,
+section .page2,
+section .page3,
+.gray-screen .f1,
+.gray-screen .f2,
+.gray-screen .f3,
+.gray-screen .f4
+{
+    display: none;
+}
+
+/*-------------------------actions--------------------------------*/
+/*-------------------------hover----------------------------------*/
+
+.card-container:hover
+{
+    position: relative;
+    width: 150%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+    overflow-y: scroll;
+}
+
+.card-container:hover label.fullsizing
+{
+    box-shadow: 0 15px rgba(0, 0, 0, .25);
+}
+
+.card-container:hover .description
+{
+    display: block;
+    position: absolute;
+    /*По ширине*/
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 5px 15px rgba(0, 0, 0, .5);
+}
+/*----------------------------------------------------------------*/
+/*-------------------------fullsize-------------------------------*/
+
+.fullsizing.f1:checked ~ .exit.f1,
+.fullsizing.f2:checked ~ .exit.f2,
+.fullsizing.f3:checked ~ .exit.f3,
+.fullsizing.f4:checked ~ .exit.f4
+{
+    display: block;
+}
+
+.fullsizing:checked ~ .gray-screen
+{
+    display: table;
+}
+
+.fullsizing:checked ~ section
+{
+    pointer-events: none;
+}
+
+.fullsizing.f1:checked ~ .gray-screen .f1,
+.fullsizing.f2:checked ~ .gray-screen .f2,
+.fullsizing.f3:checked ~ .gray-screen .f3,
+.fullsizing.f4:checked ~ .gray-screen .f4
+{
+    display: inline-block;
+}
+/*----------------------------------------------------------------*/
+
+/*-------------------------page-----------------------------------*/
+
+input.page1:checked ~ section .to-page1,
+input.page2:checked ~ section .to-page2,
+input.page3:checked ~ section .to-page3
+{
+    z-index: 1;
+}
+
+input.page1:checked ~ .gallery .page1.card-container,
+input.page2:checked ~ .gallery .page2.card-container,
+input.page3:checked ~ .gallery .page3.card-container
+{
+    display: block;
+}
+
+input.page1:checked ~ .gray-screen .page1,
+input.page2:checked ~ .gray-screen .page2,
+input.page3:checked ~ .gray-screen .page3
+{
+    display: table-cell;
+}
+/*----------------------------------------------------------------*/
