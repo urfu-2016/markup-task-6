@@ -10,7 +10,7 @@ body
 {
     width: 350px;
     margin: 0;
-    border: 1px solid black;
+    border: 1px solid #000;
     display: inline-block;
     vertical-align: top;
 }
@@ -64,16 +64,16 @@ body
 figure:hover figcaption
 {
     display: block;
-    background: white;
+    background: #fff;
 }
 
 .block figure:hover
 {
     z-index: 999;
     width: 350px;
-    border: 1px solid black;
-    background: white;
-    box-shadow: 5px 5px 3px gray;
+    border: 1px solid #000;
+    background: #fff;
+    box-shadow: 5px 5px 3px #808080;
 }
 
 .block figure:hover img
