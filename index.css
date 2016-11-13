@@ -12,12 +12,12 @@ h3
 
 .block
 {
-    text-align: justify
+    text-align: justify;
     margin: 10px;
     overflow: hidden;
     display: inline-block;
     vertical-align: top;
-    width: 24%;
+    width: 23%;
 }
 
 .img-photo
