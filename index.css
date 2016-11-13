@@ -1,0 +1,132 @@
+body
+{
+    width:100%;
+    margin: 0 auto;
+}
+
+main
+{
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.carousel
+{
+    display: inline-block;
+    width: 1030px;
+    vertical-align: middle;
+}
+
+.wrapper
+{
+    padding: 10px;
+    overflow: hidden;
+    max-width: 1030px;
+    width: 100%;
+    min-width: 500px;
+    vertical-align:middle;
+    text-align: center;
+}
+
+.items
+{
+    display: inline-block;
+    width:15000px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.block
+{
+    display: inline-block;
+    width: 1024px;
+    float: left;
+    margin:5px;
+    vertical-align: middle;
+}
+
+.element
+{
+    display:inline-block;
+    max-width: 22%;
+    height: auto;
+    padding: 1%;
+    vertical-align: middle;
+}
+
+.images
+{
+    display:block;
+    max-width: 99%;
+    padding: 1%;
+    cursor: zoom-in;
+}
+
+.cross
+{
+    display: none;
+    background: url("Photo/cross.png");
+    width: 40px;
+    height: 40px;
+}
+
+.text
+{
+    display: none;
+}
+
+span.element:hover > article.text
+{
+    display: block;
+}
+
+.element:hover
+{
+    box-shadow: 0 0 10px 5px #808080;
+}
+
+.images:focus
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 0px;
+    max-width: 99%;
+    max-height: 99%;
+    box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(0,0,0,0.7);
+}
+
+.images:focus ~ span.cross
+{
+    display: block;
+    z-index: 101;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+}
+
+.images:focus,
+.images:focus ~ span.cross,
+.images:focus ~ *
+{
+    pointer-events: none;
+    cursor: zoom-out;
+}
+
+.radio2:checked ~ section.wrapper > div.items
+{
+    right: 1030px;
+}
+
+.radio3:checked ~ section.wrapper > div.items
+{
+    right: 2070px;
+}
