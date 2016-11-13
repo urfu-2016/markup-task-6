@@ -54,7 +54,7 @@ body > label,
     background-color: #fff;
 }
 
-.gallery > label
+.slider
 {
     position: fixed;
     display: table;
@@ -65,12 +65,17 @@ body > label,
     background-color: #fff;
 }
 
-.gallery > label:nth-of-type(n + 4)
+.gallery > label:nth-of-type(n + 3)
 {
     left: 90%;
 }
 
-.gallery > label > span
+.gallery > div:nth-of-type(2)
+{
+    left: 90%;
+}
+
+.slider > span
 {
     display: table-cell;
     vertical-align: middle;
