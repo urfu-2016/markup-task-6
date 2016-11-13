@@ -93,7 +93,7 @@ h2
     right: 0;
     bottom: 0;
     background: #000;
-    opacity: 0.9;
+    opacity: .9;
     display: none;
     z-index: 2;
     position: fixed;
