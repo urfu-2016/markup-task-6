@@ -14,8 +14,20 @@ body
 
 .arrow
 {
+    font-size: 3em;
     width: 5%;
     height: 100px;
+}
+
+.arrow:hover
+{
+    color: #f00;
+}
+
+.arrow:before
+{
+    position: relative;
+    top: 50px;
 }
 
 .left-arrow
@@ -45,14 +57,19 @@ body
     display: inline-block;
 }
 
+.shadow-caster
+{
+    margin: 5px;
+}
+
 .gallery-image p
 {
     opacity: 0;
 }
 
-.gallery-image:not(:target):hover
+.gallery-image:not(:target):hover > .shadow-caster
 {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 .gallery-image:hover p
@@ -81,7 +98,7 @@ body
 {
     position: fixed;
     z-index: 2;
-    top: 0; 
+    top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
@@ -121,7 +138,7 @@ body
 .gallery-wrapper > div
 {
     position: relative;
-    transition: 1s;
+    transition: .5s;
 }
 
 input.first:checked ~ div > .gallery-wrapper > div
@@ -139,25 +156,20 @@ input.third:checked ~ div > .gallery-wrapper > div
     left: -200%;
 }
 
-input
+input,
+label
 {
     display: none;
 }
 
-input.first:checked ~ div > label.left-arrow[for='first'],
-input.first:checked ~ div > label.left-arrow[for='second'],
-input.first:checked ~ div > label.right-arrow[for='first'],
-input.first:checked ~ div > label.right-arrow[for='third'],
+input.first:checked ~ div > label.left-arrow[for='third'],
+input.first:checked ~ div > label.right-arrow[for='second'],
 
-input.second:checked ~ div > label.left-arrow[for='second'],
-input.second:checked ~ div > label.left-arrow[for='third'],
-input.second:checked ~ div > label.right-arrow[for='first'],
-input.second:checked ~ div > label.right-arrow[for='second'],
+input.second:checked ~ div > label.left-arrow[for='first'],
+input.second:checked ~ div > label.right-arrow[for='third'],
 
-input.third:checked ~ div > label.left-arrow[for='first'],
-input.third:checked ~ div > label.left-arrow[for='third'],
-input.third:checked ~ div > label.right-arrow[for='second'],
-input.third:checked ~ div > label.right-arrow[for='third']
+input.third:checked ~ div > label.left-arrow[for='second'],
+input.third:checked ~ div > label.right-arrow[for='first']
 {
-    display: none;
+    display: initial;
 }
