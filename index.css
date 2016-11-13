@@ -1,19 +1,7 @@
-html
-{
-    min-width: 960px;
-    max-width: 1750px;
-}
-
 .foto
 {
     width: 85%;
     margin: 5%;
-}
-
-.block
-{
-    text-align: center;
-    margin-top: 100px;
 }
 
 .description
@@ -23,21 +11,29 @@ html
     margin-left: 2%;
 }
 
-.overflow
+.main-content
 {
+    min-width: 960px;
+    max-width: 1750px;
     margin: 5%;
 }
 
 .vegetable
 {
     display: inline-block;
-    width: 25%;
+    width: 23.5%;
+}
+
+div:nth-child(4n+1)
+{
+    margin-left: 5%;
 }
 
 .vegetable:hover .description
 {
     display: block;
     width: 95%;
+    margin: 2%;
     white-space: normal;
 }
 
@@ -47,7 +43,7 @@ html
     border-radius: 2%;
     vertical-align: top;
     position: relative;
-    width: 23%;
+    width: 23.5%;
     cursor: pointer;
     transition: width .5s;
 }
@@ -58,11 +54,6 @@ html
     overflow: hidden;
     padding: 5px 0;
 
-}
-
-.vegetable:first-child
-{
-    margin-left: 1%;
 }
 
 input
@@ -80,6 +71,22 @@ input
     color: #000;
 }
 
+.big-image
+{
+
+    visibility: hidden;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    right: 2%;
+    bottom: 2%;
+}
+
+.big-image img
+{
+    display: none;
+}
+
 .close:hover
 {
     color: #fff;
@@ -91,27 +98,40 @@ input
     position: fixed;
     top: 0;
     left: 0;
+    margin-left: 0 !important;
     width: 100%;
     height: 100%;
     z-index: -1;
     background: #8a8b8d;
 }
 
-.big-foto:checked + div label .foto
-{
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.big-foto:checked ~ .grey-background
+input[id='eggplant']:checked ~ .big-image img:nth-child(1),
+input[id='peas']:checked ~ .big-image img:nth-child(2),
+input[id='cabbage']:checked ~ .big-image img:nth-child(3),
+input[id='corn']:checked ~ .big-image img:nth-child(4),
+input[id='onion']:checked ~ .big-image img:nth-child(5),
+input[id='carrot']:checked ~ .big-image img:nth-child(6),
+input[id='cucumber']:checked ~ .big-image img:nth-child(7),
+input[id='squash']:checked ~ .big-image img:nth-child(8),
+input[id='pumpkin']:checked ~ .big-image img:nth-child(9),
+input[id='beet']:checked ~ .big-image img:nth-child(10),
+input[id='tomato']:checked ~ .big-image img:nth-child(11),
+input[id='dill']:checked ~ .big-image img:nth-child(12)
 {
     visibility: visible;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
 }
 
-.big-foto:checked ~ .close
+.big-foto:checked ~ .main-content
+{
+    display: none;
+}
+
+.big-foto:checked ~ .big-image .grey-background,
+.big-foto:checked ~ .big-image .close
 {
     visibility: visible;
 }
@@ -119,11 +139,6 @@ input
 .close-cross:checked ~ .close
 {
     visibility: hidden;
-}
-
-.big-foto:checked + div p
-{
-    display: none;
 }
 
 .roll-slide1:checked ~ label:nth-of-type(3),
@@ -150,20 +165,18 @@ input
 
 .roll-slide1:checked ~ .inner-content .roll
 {
-    margin-left: .5%;
+    margin: 0 3% 0 -3%;
     transition: all .5s;
 }
 
 .roll-slide2:checked ~ .inner-content .roll
 {
-    margin-left: -101%;
-    margin-right: 101%;
+    margin: 0 103% 0 -103%;
     transition: all 1s;
 }
 
 .roll-slide3:checked ~ .inner-content .roll
 {
-    margin-left: -202.5%;
-    margin-right: 202.5%;
+    margin: 0 203% 0 -203%;
     transition: all 1s;
 }
