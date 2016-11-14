@@ -84,7 +84,7 @@ section:target:hover .text-hover
 }
 
 section:target > .modal-dialog,
-section:target > .close
+section:target > .close,
 section:target > .big
 {
     display: block;
@@ -172,8 +172,8 @@ section:target > .big
     color: #fff;
     display: block;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
+    top: 0;
+    bottom: 0;
     line-height: 80px;
 }
 
