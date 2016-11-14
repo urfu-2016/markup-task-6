@@ -1,0 +1,183 @@
+.html,
+.body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.main
+{
+    display: inline-block;
+    border: 0 solid black;
+    position: relative;
+    margin: 100px auto;
+    width: 1300px;
+    text-align: center;
+}
+
+.scroll
+{
+    display: inline-block;
+}
+
+.pages
+{
+    white-space: normal;
+    width: 1300px;
+}
+
+.veg-content
+{
+    width: 1100px;
+    display: inline-block;
+}
+
+.veg-block
+{
+    vertical-align: middle;
+    position: relative;
+    max-width: 24%;
+    display: inline-block;
+    text-align: center;
+}
+
+.veg-img
+{
+    display: inline-block;
+}
+
+.veg-img > img
+{
+    width: 100%;
+}
+
+.veg-expanded-info
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: top;
+    background: white;
+    width: 110%;
+    border: 10px solid white;
+    box-shadow: 0 0 5px 2px black;
+    z-index: 3;
+}
+
+.veg:hover .veg-expanded-info
+{
+    display: inline-block;
+}
+
+.checkbox-full
+{
+    display: none;
+}
+
+.clicked-img
+{
+    display: block;
+}
+
+.expanded-img
+{
+    width: 100%;
+}
+
+.full-veg-back
+{
+    position: fixed;
+    display: none;
+    background: #bababa;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: .5;
+    height: 100vh;
+    width: 100%;
+}
+
+.full-veg-front
+{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    height: 100vh;
+    width: 100%;
+    min-width: 768px;
+}
+
+.full-veg-img
+{
+    max-width: 60%;
+    max-height: 60%;
+    margin: 100px auto;
+}
+
+.close
+{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.checkbox-full:checked + .full-veg > .full-veg-back
+{
+    display: block;
+}
+
+.checkbox-full:checked + .full-veg > .full-veg-front
+{
+    display: block;
+}
+
+.pages
+{
+    display: none;
+}
+
+.start-radio
+{
+    display: none;
+}
+
+.scroll
+{
+    margin-top: 50px;
+    opacity: .3;
+}
+
+.scroll:hover
+{
+    opacity: .7;
+}
+
+.right-scroll
+{
+    float: right;
+}
+
+.left-scroll
+{
+    float: left;
+}
+
+.right-scroll.last
+{
+    display: none;
+}
+
+.left-scroll.first
+{
+    display: none;
+}
+
+.start-radio:checked + .pages
+{
+    display: block;
+}
+
