@@ -1,0 +1,279 @@
+.but
+{
+    padding-left: 45%;
+    display: block;
+}
+
+input
+{
+    display: none;
+}
+
+.slider
+{
+    display: inline-table;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slides
+{
+      height: 400px;
+      opacity: 0;
+      position: absolute;
+      width: 350px;
+      z-index: 0;
+}
+
+.img
+{
+    background-image: url(img/ananas.jpg);
+    background-size: 350px 400px;
+}
+
+.img1
+{
+    background-image: url(img/Апельсин.jpg);
+    background-size: 350px 400px;
+    left: 400px;
+}
+
+.img2
+{
+    background-image: url(img/Арбуз.jpg);
+    background-size: 350px 400px;
+    left: 750px;
+}
+
+.img3
+{
+    background-image: url(img/Виноград.jpg);
+    background-size: 350px 400px;
+}
+
+.img4
+{
+    background-image: url(img/Вишня.jpg);
+    background-size: 350px 400px;
+    left: 400px;
+}
+
+.img5
+{
+    background-image: url(img/Киви.jpg);
+    background-size: 350px 400px;
+    left: 750px;
+}
+
+.img6
+{
+    background-image: url(img/Клубника.jpg);
+    background-size: 350px 400px;
+}
+
+.img7
+{
+    background-image: url(img/Яблоко.jpeg);
+    background-size: 350px 400px;
+    left: 400px;
+}
+
+.img8
+{
+    background-image: url(img/Яжевика.jpeg);
+    background-size: 350px 400px;
+    left: 750px;
+}
+
+.text,
+.text1,
+.text2,
+.text3,
+.text4,
+.text5,
+.text6,
+.text7,
+.text8
+{
+    height: auto;
+    top: 420px;
+    text-align: center;
+}
+
+.text1
+{
+    left: 400px;
+}
+
+.text2
+{
+    left: 750px;
+}
+
+.text4
+{
+    left: 400px;
+}
+
+.text5
+{
+    left: 750px;
+}
+
+.text7
+{
+    left: 400px;
+}
+
+.text8
+{
+    left: 750px;
+}
+
+#f1:checked ~ .but > .but1,
+#f2:checked ~ .but > .but2,
+#f3:checked ~ .but > .but3
+{
+    color: red;
+}
+
+#f1:checked ~ .slider > label >.img,
+#f2:checked ~ .slider > label > .img3,
+#f3:checked ~ .slider > label > .img6
+{
+    opacity: 1;
+    z-index: 1;
+ }
+
+#f1:checked ~ .slider > label > .img1,
+#f2:checked ~ .slider > label > .img4,
+#f3:checked ~ .slider > label > .img7
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+#f1:checked ~ .slider > label > .img2,
+#f2:checked ~ .slider > label > .img5,
+#f3:checked ~ .slider > label > .img8
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+label:hover + .text,
+label:hover + .text1,
+label:hover + .text2,
+label:hover + .text3,
+label:hover + .text4,
+label:hover + .text5,
+label:hover + .text6,
+label:hover + .text7,
+label:hover + .text8
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+.gray
+{
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2000;
+    background-color: black;
+    opacity: .5;
+    left: 0;
+    top: 0;
+}
+
+.exit
+{
+    display: inherit;
+    z-index: 2001;
+    top: 20px;
+    left: 95%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    background-color: black;
+}
+
+.img_setting
+{
+    background-size: 700px 630px;
+    position: absolute;
+    left: 25%;
+    top: 5%;
+    width: 700px;
+    height: 630px;
+    z-index: 2002;
+    display: inherit;
+}
+
+#standart:checked ~ .shadow
+{
+    display: none;
+}
+
+#little_img:checked ~ .shadow,
+#little_img1:checked ~ .shadow,
+#little_img2:checked ~ .shadow,
+#little_img3:checked ~ .shadow,
+#little_img4:checked ~ .shadow,
+#little_img5:checked ~ .shadow,
+#little_img6:checked ~ .shadow,
+#little_img7:checked ~ .shadow,
+#little_img8:checked ~ .shadow
+{
+    display: block;
+}
+
+#little_img:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/ananas.jpg);
+}
+
+#little_img1:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Апельсин.jpg);
+}
+
+#little_img2:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Арбуз.jpg);
+}
+
+#little_img3:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Виноград.jpg);
+}
+
+#little_img4:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Вишня.jpg);
+}
+
+#little_img5:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Киви.jpg);
+}
+
+#little_img6:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Клубника.jpg);
+}
+
+#little_img7:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Яблоко.jpeg);
+}
+
+#little_img8:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Яжевика.jpeg);
+}
