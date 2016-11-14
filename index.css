@@ -1,0 +1,58 @@
+.pages
+{
+    text-align: center;
+    border: solid 2px black;
+}
+
+.main
+{
+    text-align: center;
+}
+
+.title
+{
+    color: #008000;
+    text-align: center;
+}
+
+.image
+{
+    width: 280px;
+    height: auto;
+    padding: 15px 14px 0;
+}
+
+.description
+{
+    display: none;
+    width: 280px;
+    padding: 15px 15px 0;
+}
+
+.content
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 10px;
+}
+
+.content:hover .description
+{
+    display: block;
+}
+
+.content:hover
+{
+    box-shadow: 0 0 5px #000;
+    transform: scale(1.1, 1.1);
+}
+
+.first:checked ~ .second-page,
+.first:checked ~ .third-page,
+.second:checked ~ .first-page,
+.second:checked ~ .third-page,
+.third:checked ~ .first-page,
+.third:checked ~ .second-page
+{
+    display: none;
+}
