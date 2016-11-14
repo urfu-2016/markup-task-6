@@ -1,0 +1,238 @@
+html
+{
+    overflow: hidden;
+    background-image: url(img/tr.jpg);
+}
+
+img
+{
+    width: 350px;
+    margin: 20px;
+    float: left;
+}
+
+
+.text-hover
+{
+    display: none;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    max-width: 300px;
+}
+
+.vegetables
+{
+    position: relative;
+}
+
+.item
+{
+    position: relative;
+    width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+
+}
+
+.item .text-hover
+{
+    padding: 10px;
+    position: absolute;
+    z-index: -1;
+    top: 300px;
+    opacity: 0;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px 0;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.item:hover > div.text-hover
+{
+    display: block;
+    top: 90%;
+    opacity: 1;
+}
+
+.item img:hover
+{
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+section:target:hover .text-hover
+{
+    display: none;
+}
+
+.modal-dialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: block;
+    pointer-events: none;
+}
+
+section:target > .modal-dialog,
+section:target > .close
+section:target > .big
+{
+    display: block;
+    pointer-events: auto;
+}
+
+.modal-dialog
+{
+    width: 100%;
+    position: relative;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+    z-index: 1000;
+}
+
+.big
+{
+    width: 800px;
+    display: none;
+}
+
+.close
+{
+    display: none;
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    top: 20px;
+    width: 24px;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover
+{
+    background: #00d9ff;
+}
+
+.slider
+{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider > input
+{
+    display: none;
+}
+
+.slider > label
+{
+    display: none;
+}
+
+.slider > input:checked + div + label,
+.slider > input:checked + div + label + label
+{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #000;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.slider > input:checked + div + label:after,
+.slider > input:checked + div + label + label:after
+{
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    line-height: 80px;
+}
+
+.slider > input:checked + div + label
+{
+    left: -40px;
+}
+
+.slider > input:checked + div + label:after
+{
+    content: '◀';
+    left: 55%;
+}
+
+.slider > input:checked + div + label + label
+{
+    right: -40px;
+}
+
+.slider > input:checked + div + label + label:after
+{
+    content: '▶';
+    right: 55%;
+}
+
+.slider > div
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    }
+
+.slider > div
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .8 ease-out .1, visibility .1 ease-out .9;
+}
+
+.slider > input:checked + div
+{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .8 ease-out .1, visibility .1 ease-out 0;
+}
+
+.slider > div > p
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
