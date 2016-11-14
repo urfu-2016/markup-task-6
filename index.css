@@ -121,16 +121,16 @@ body
     opacity: 0;
 }
 
-.page1:checked ~ .controller .icon-1-page,
-.page2:checked ~ .controller .icon-2-page,
-.page3:checked ~ .controller .icon-3-page
+.page1-selected:checked ~ .controller .icon-1-page,
+.page2-selected:checked ~ .controller .icon-2-page,
+.page3-selected:checked ~ .controller .icon-3-page
 {
     color: #1de9b6;
 }
 
-.page1:checked ~ .page1,
-.page2:checked ~ .page2,
-.page3:checked ~ .page3
+.page1-selected:checked ~ .page1,
+.page2-selected:checked ~ .page2,
+.page3-selected:checked ~ .page3
 {
     z-index: 1;
     opacity: 1;
@@ -142,17 +142,17 @@ body
     transition: all .5s;
 }
 
-.img1:checked ~ .modal,
-.img2:checked ~ .modal,
-.img3:checked ~ .modal,
-.img4:checked ~ .modal,
-.img5:checked ~ .modal,
-.img6:checked ~ .modal,
-.img7:checked ~ .modal,
-.img8:checked ~ .modal,
-.img9:checked ~ .modal,
-.img10:checked ~ .modal,
-.img11:checked ~ .modal
+.img1-selected:checked ~ .modal,
+.img2-selected:checked ~ .modal,
+.img3-selected:checked ~ .modal,
+.img4-selected:checked ~ .modal,
+.img5-selected:checked ~ .modal,
+.img6-selected:checked ~ .modal,
+.img7-selected:checked ~ .modal,
+.img8-selected:checked ~ .modal,
+.img9-selected:checked ~ .modal,
+.img10-selected:checked ~ .modal,
+.img11-selected:checked ~ .modal
 {
     top: 0;
     bottom: 0;
@@ -173,57 +173,57 @@ body
     transition: all .5s;
 }
 
-.img1:checked ~ .modal .selectedPhotoSrc
+.img1-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/kapusta.jpg');
 }
 
-.img2:checked ~ .modal .selectedPhotoSrc
+.img2-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/morkov.jpg');
 }
 
-.img3:checked ~ .modal .selectedPhotoSrc
+.img3-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/ogurec.jpg');
 }
 
-.img4:checked ~ .modal .selectedPhotoSrc
+.img4-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/shavel.jpg');
 }
 
-.img5:checked ~ .modal .selectedPhotoSrc
+.img5-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/strawberry.jpg');
 }
 
-.img6:checked ~ .modal .selectedPhotoSrc
+.img6-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/svekla.jpg');
 }
 
-.img7:checked ~ .modal .selectedPhotoSrc
+.img7-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/tikva.jpg');
 }
 
-.img8:checked ~ .modal .selectedPhotoSrc
+.img8-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/tomat.jpg');
 }
 
-.img9:checked ~ .modal .selectedPhotoSrc
+.img9-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/chesnok.jpg');
 }
 
-.img10:checked ~ .modal .selectedPhotoSrc
+.img10-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/kartoshka.jpg');
 }
 
-.img11:checked ~ .modal .selectedPhotoSrc
+.img11-selected:checked ~ .modal .selectedPhotoSrc
 {
     background-image: url('./img/luk.jpg');
 }
