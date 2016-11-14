@@ -1,9 +1,22 @@
-p.images 
+body 
+{
+    margin: 0px;
+}
+main 
 {
     width: 100%;
 }
-
-a.image > img 
+p.image 
 {
     width: 24%;
+    float: left;
+    margin: 0.5%;
+}
+p.image > img 
+{
+    width: 100%;
+}
+img:hover 
+{
+    display: none;
 }
