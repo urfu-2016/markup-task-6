@@ -46,13 +46,13 @@ header
     text-align: center;
 }
 
-.first-slide:checked~.second-part,
-.first-slide:checked~.third-part,
-.third-slide:checked~.second-part,
-.second-slide:checked~.first-part,
-.second-slide:checked~.third-part,
-.third-slide:checked~.second-part,
-.third-slide:checked~.first-part
+.first-slide:checked ~ .second-part,
+.first-slide:checked ~ .third-part,
+.third-slide:checked ~ .second-part,
+.second-slide:checked ~ .first-part,
+.second-slide:checked ~ .third-part,
+.third-slide:checked ~ .second-part,
+.third-slide:checked ~ .first-part
 {
     display: none;
 }
