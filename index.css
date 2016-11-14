@@ -122,12 +122,6 @@ footer
     transition: opacity .6s;
 }
 
-.full-view-bg,
-.close-full-view-button
-{
-    z-index: 3;
-}
-
 .full-view-bg
 {
     top: 0;
@@ -139,6 +133,7 @@ footer
     height: 100%;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 
 .close-full-view-button
@@ -217,7 +212,7 @@ footer
 {
     max-height: 80%;
     max-width: 80%;
-    z-index: 4;
+    z-index: 3;
 }
 
 .show-item:checked ~ .content-section .description,
@@ -230,13 +225,6 @@ footer
 .close-full-view:checked ~ .content-section article
 {
     position: relative;
-}
-
-.close-full-view:checked ~ .content-section .image-container img
-{
-    max-height: 100%;
-    max-width: 100%;
-    z-index: auto;
 }
 
 .content-container
