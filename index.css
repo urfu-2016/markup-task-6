@@ -1,5 +1,6 @@
 .container
 {
+    white-space: nowrap;
     margin: 10%;
 }
 
@@ -13,8 +14,8 @@
     width: 95%;
 }
 
-.vagetable:target ~ .close,
-.vagetable:target ~ .background-shadow
+(section .vagetable:target) ~ .close,
+(section .vagetable:target) ~ .background-shadow
 {
     display: block;
 }
@@ -24,6 +25,12 @@
 .description
 {
     display: none;
+}
+
+.description
+{
+
+    white-space: normal;
 }
 
 .background-shadow
@@ -62,10 +69,10 @@
 .vagetable:target .img-vagetable
 {
     position: relative;
-    max-width: 30%;
+    max-width: 40%;
     display: block;
     margin: 0 auto;
-    z-index: 4;
+    z-index: 3;
 }
 
 .vagetable:not(:target) .content:hover .description
@@ -91,16 +98,12 @@
     vertical-align: top;
 }
 
-.first:checked ~ .second-slide,
-.first:checked ~ .third-slide,
-.second:checked ~ .first-slide,
-.second:checked ~ .third-slide,
-.third:checked ~ .first-slide,
-.third:checked ~ .second-slide
-{
-    display: none;
-}
-
+.first-slider:checked ~ .second-slide,
+.first-slider:checked ~ .third-slide,
+.second-slider:checked ~ .first-slide,
+.second-slider:checked ~ .third-slide,
+.third-slider:checked ~ .first-slide,
+.third-slider:checked ~ .second-slide,
 .slider
 {
     display: none;
