@@ -19,8 +19,3 @@ p.image > img
 {
     width: 100%;
 }
-
-img:hover
-{
-    display: none;
-}
