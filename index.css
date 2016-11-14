@@ -1,14 +1,18 @@
 html
 {
     overflow: hidden;
-    background-image: url(img/tr.jpg);
+    /*background-image: url(img/tr.jpg);*/
 }
 
-img
+.img
 {
     width: 350px;
     margin: 20px;
-    float: left;
+}
+
+.big
+{
+    width: 900px;
 }
 
 .text-hover
@@ -68,46 +72,41 @@ section:target:hover .text-hover
 
 .modal-dialog
 {
+    transition: 10s;
     position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .8);
     z-index: 1;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    display: block;
-    pointer-events: none;
-}
-
-section:target > .modal-dialog,
-section:target > .close,
-section:target > .big
-{
-    display: block;
-    pointer-events: auto;
-}
-
-.modal-dialog
-{
     width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+}
+
+div:target ~ .modal-dialog,
+div:target ~ .close,
+{
+    display: block;
+}
+
+div:target img
+{
     position: relative;
-    background: #fff;
-    z-index: 1000;
+    top: 10%;
+    display: block;
+    max-height: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    z-index: 9;
 }
 
 .big
 {
-    width: 800px;
     display: none;
 }
 
 .close
 {
     display: none;
+    z-index: 9999;
     background: #606061;
     color: #fff;
     line-height: 25px;
@@ -133,7 +132,7 @@ section:target > .big
 .slider
 {
     width: 100%;
-    height: 1000px;
+    height: 800px;
     position: relative;
     overflow: hidden;
 }
