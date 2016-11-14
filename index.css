@@ -1,0 +1,114 @@
+.first-scroll
+{
+    position: absolute;
+    top: 90%;
+    left: 43%;
+}
+
+.second-scroll
+{
+    position: absolute;
+    top: 90%;
+    left: 45%;
+}
+
+body
+{
+    font-size: 10px;
+}
+
+.gallery
+{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.background
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    visibility: hidden;
+    background: rgba(0, 0, 0, .7);
+}
+
+.background:target
+{
+    visibility: visible;
+}
+
+.image-popup
+{
+    left: 40%;
+    bottom: 10%;
+    top: 10%;
+    right: 10%;
+    position: absolute;
+}
+
+.image-popup > img
+{
+    width: 40%;
+}
+
+.gallery-item
+{
+    -webkit-transition: all, 1s;
+    transition: all 1s;
+    display: inline-block;
+    width: 25%;
+    left: 0;
+    position: relative;
+    max-height: 600px;
+    margin: 3em 0;
+    font-size: 2em;
+    max-width: 200px;
+}
+
+.gallery-item img
+{
+    width: 100%;
+}
+
+.close
+{
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+
+.close img
+{
+    max-width: 70px;
+}
+
+.gallery-item:hover
+{
+    box-shadow: .03em .03em 1em .1em #aaa;
+    transform: scale(1.2);
+    background: #fff;
+    z-index: 1;
+}
+
+.gallery-item:hover .description
+{
+    visibility: visible;
+}
+
+.description
+{
+    visibility: hidden;
+    font-size: .7em;
+}
+
+.second-scroll:checked ~ .gallery > .gallery-item
+{
+    left: -103%;
+}
