@@ -1,0 +1,87 @@
+main
+{
+    margin: 5%;
+}
+
+header
+{
+    font-size: 4em;
+    text-align: center;
+    margin: 5%;
+}
+
+.vegetable
+{
+    width: 24%;
+    display: inline-block;
+    white-space: normal;
+}
+
+.description
+{
+    visibility: hidden;
+}
+
+.vegetable:hover .card
+{
+    position: relative;
+    width: 100%;
+    background: #f00;
+    box-shadow: 0 0 1px #000;
+}
+
+.vegetable:hover .description
+{
+    visibility: visible;
+}
+
+.vegetable:hover .vegetable-image
+{
+    position: relative;
+    width: 100%;
+}
+
+.vegetable-image
+{
+    text-align: center;
+}
+
+.first-slide:checked ~.second-part,
+.first-slide:checked ~.third-part,
+.third-slide:checked ~.second-part,
+.second-slide:checked ~.first-part,
+.second-slide:checked ~.third-part,
+.third-slide:checked ~.second-part,
+.third-slide:checked ~.first-part
+{
+    display: none;
+}
+
+.slide
+{
+    display: none;
+}
+
+main
+{
+    white-space: nowrap;
+}
+
+label
+{
+    display: inline-block;
+    background-color: #f60;
+    height: 10px;
+    width: 10px;
+    border-radius: 70%;
+}
+
+footer
+{
+    text-align: center;
+}
+
+
+
+
+
