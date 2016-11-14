@@ -1,0 +1,62 @@
+.photos
+{
+    margin-top: 50px;
+    text-align: center;
+    height: 400px;
+}
+
+.item
+{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.image
+{
+    width: 100%;
+}
+
+.main-header
+{
+    text-align: center;
+}
+
+.description
+{
+    display: none;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.item:hover .description
+{
+    display: block;
+    cursor: pointer;
+}
+
+.item:hover
+{
+    box-shadow: 0 0 10px 5px rgb(195, 167, 202);
+    width: 400px;
+    padding: 20px;
+}
+
+.first-input
+{
+    margin-left: 43%;
+}
+
+.page-one,
+.page-two,
+.page-three
+{
+    display: none;
+}
+
+.first-input:checked ~ .photos .page-one,
+.second-input:checked ~ .photos .page-two,
+.third-input:checked ~ .photos .page-three
+{
+    display: block;
+}
