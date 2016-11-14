@@ -132,32 +132,32 @@ input
     left: 750px;
 }
 
-#f1:checked ~ .but > .but1,
-#f2:checked ~ .but > .but2,
-#f3:checked ~ .but > .but3
+.fruit1:checked ~ .but > .but1,
+.fruit2:checked ~ .but > .but2,
+.fruit3:checked ~ .but > .but3
 {
     color: red;
 }
 
-#f1:checked ~ .slider > label >.img,
-#f2:checked ~ .slider > label > .img3,
-#f3:checked ~ .slider > label > .img6
+.fruit1:checked ~ .slider > label > .img,
+.fruit2:checked ~ .slider > label > .img3,
+.fruit3:checked ~ .slider > label > .img6
 {
     opacity: 1;
     z-index: 1;
 }
 
-#f1:checked ~ .slider > label > .img1,
-#f2:checked ~ .slider > label > .img4,
-#f3:checked ~ .slider > label > .img7
+.fruit1:checked ~ .slider > label > .img1,
+.fruit2:checked ~ .slider > label > .img4,
+.fruit3:checked ~ .slider > label > .img7
 {
     opacity: 1;
     z-index: 1;
 }
 
-#f1:checked ~ .slider > label > .img2,
-#f2:checked ~ .slider > label > .img5,
-#f3:checked ~ .slider > label > .img8
+.fruit1:checked ~ .slider > label > .img2,
+.fruit2:checked ~ .slider > label > .img5,
+.fruit3:checked ~ .slider > label > .img8
 {
     opacity: 1;
     z-index: 1;
@@ -215,65 +215,65 @@ label:hover + .text8
     display: inherit;
 }
 
-#standart:checked ~ .shadow
+.default:checked ~ .shadow
 {
     display: none;
 }
 
-#little_img:checked ~ .shadow,
-#little_img1:checked ~ .shadow,
-#little_img2:checked ~ .shadow,
-#little_img3:checked ~ .shadow,
-#little_img4:checked ~ .shadow,
-#little_img5:checked ~ .shadow,
-#little_img6:checked ~ .shadow,
-#little_img7:checked ~ .shadow,
-#little_img8:checked ~ .shadow
+.l_img:checked ~ .shadow,
+.l_img1:checked ~ .shadow,
+.l_img2:checked ~ .shadow,
+.l_img3:checked ~ .shadow,
+.l_img4:checked ~ .shadow,
+.l_img5:checked ~ .shadow,
+.l_img6:checked ~ .shadow,
+.l_img7:checked ~ .shadow,
+.l_img8:checked ~ .shadow
 {
     display: block;
 }
 
-#little_img:checked ~ .shadow > .img_setting
+.l_img:checked ~ .shadow > .img_setting
 {
     background-image: url(img/ananas.jpg);
 }
 
-#little_img1:checked ~ .shadow > .img_setting
+.l_img1:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Апельсин.jpg);
 }
 
-#little_img2:checked ~ .shadow > .img_setting
+.l_img2:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Арбуз.jpg);
 }
 
-#little_img3:checked ~ .shadow > .img_setting
+.l_img3:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Виноград.jpg);
 }
 
-#little_img4:checked ~ .shadow > .img_setting
+.l_img4:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Вишня.jpg);
 }
 
-#little_img5:checked ~ .shadow > .img_setting
+.l_img5:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Киви.jpg);
 }
 
-#little_img6:checked ~ .shadow > .img_setting
+.l_img6:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Клубника.jpg);
 }
 
-#little_img7:checked ~ .shadow > .img_setting
+.l_img7:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Яблоко.jpeg);
 }
 
-#little_img8:checked ~ .shadow > .img_setting
+.l_img8:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Яжевика.jpeg);
 }
