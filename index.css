@@ -1,0 +1,40 @@
+.page
+{
+    border: 1px solid black;
+    display: inline-block;
+    width: 100%;
+}
+
+.image-container
+{
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid black;
+    width: 24%;
+}
+
+.image-container:hover > .image-description
+{
+    display: block;
+}
+
+.image
+{
+    border: 1px solid black;
+    width: 100%;
+}
+
+.image-description
+{
+    display: none;
+}
+
+.first-switch:checked ~ .second-page,
+.first-switch:checked ~ .third-page,
+.second-switch:checked ~ .first-page,
+.second-switch:checked ~ .third-page,
+.third-switch:checked ~ .first-page,
+.third-switch:checked ~ .second-page
+{
+    display: none;
+}
