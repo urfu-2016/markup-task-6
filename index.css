@@ -1,0 +1,118 @@
+main,
+h1
+{
+    text-align: center;
+}
+
+article
+{
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    max-width: 24%;
+    vertical-align: top;
+}
+
+label
+{
+    display: inline-block;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin: 3px;
+}
+
+label:hover,
+.list_1:checked ~ .buttons .button1,
+.list_2:checked ~ .buttons .button2,
+.list_3:checked ~ .buttons .button3,
+.list_4:checked ~ .buttons .button4
+{
+    background: #aaa;
+}
+
+.harvest
+{
+    width: 100%;
+}
+
+.list
+{
+    display: none;
+    vertical-align: center;
+}
+
+.description
+{
+    position: fixed;
+    display: none;
+    width: inherit;
+}
+
+article:hover .description
+{
+    display: block;
+    background: #fff;
+}
+
+.list_1,
+.list_2,
+.list_3,
+.list_4
+{
+    visibility: hidden;
+
+}
+
+.list_1:checked ~ .list1,
+.list_2:checked ~ .list2,
+.list_3:checked ~ .list3,
+.list_4:checked ~ .list4
+{
+    display: block;
+}
+
+.close
+{
+    width: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+.harvest
+{
+    cursor: pointer;
+}
+
+.harvest:focus
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 700px;
+    max-width: 99%;
+    max-height: 99%;
+    margin: auto;
+}
+
+.harvest:focus ~ .close
+{
+    position: fixed;
+    z-index: 2;
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+.close:focus
+{
+    pointer-events: none;
+}
