@@ -99,18 +99,18 @@ input
     background: #8a8b8d;
 }
 
-#eggplant:checked ~ .big-image img:nth-child(1),
-#peas:checked ~ .big-image img:nth-child(2),
-#cabbage:checked ~ .big-image img:nth-child(3),
-#corn:checked ~ .big-image img:nth-child(4),
-#onion:checked ~ .big-image img:nth-child(5),
-#carrot:checked ~ .big-image img:nth-child(6),
-#cucumber:checked ~ .big-image img:nth-child(7),
-#squash:checked ~ .big-image img:nth-child(8),
-#pumpkin:checked ~ .big-image img:nth-child(9),
-#beet:checked ~ .big-image img:nth-child(10),
-#tomato:checked ~ .big-image img:nth-child(11),
-#dill:checked ~ .big-image img:nth-child(12)
+input[id='eggplant']:checked ~ .big-image img:nth-child(1),
+input[id='peas']:checked ~ .big-image img:nth-child(2),
+input[id='cabbage']:checked ~ .big-image img:nth-child(3),
+input[id='corn']:checked ~ .big-image img:nth-child(4),
+input[id='onion']:checked ~ .big-image img:nth-child(5),
+input[id='carrot']:checked ~ .big-image img:nth-child(6),
+input[id='cucumber']:checked ~ .big-image img:nth-child(7),
+input[id='squash']:checked ~ .big-image img:nth-child(8),
+input[id='pumpkin']:checked ~ .big-image img:nth-child(9),
+input[id='beet']:checked ~ .big-image img:nth-child(10),
+input[id='tomato']:checked ~ .big-image img:nth-child(11),
+input[id='dill']:checked ~ .big-image img:nth-child(12)
 {
     visibility: visible;
     display: block;
