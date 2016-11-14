@@ -1,0 +1,115 @@
+header
+{
+    font-family: cursive;
+    text-align: center ;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+main
+{
+    text-align: center;
+}
+
+.item
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+
+.img_food
+{
+    width: 80%;
+}
+
+.description
+{
+    font-family: cursive;
+    display: none;
+    text-align: left;
+    font-size: 13px;
+    margin: 5px 15px;
+}
+
+.food:hover
+{
+    position: relative;
+    background: white;
+    box-shadow: 0 0 1em #6e797f;
+    width: 300px;
+    right: 15px;
+}
+
+.item:hover .description
+{
+    display: block;
+}
+
+.shadow
+{
+    background: #413e40;
+    opacity: .7;
+    display: none;
+}
+
+.close
+{
+    cursor: pointer;
+    display: none;
+    width: 80px;
+}
+
+.img_food:focus
+{
+    z-index: 1;
+    width: 450px;
+}
+
+.img_food:focus ~ .close
+{
+    display: block;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.img_food:focus ~ .description
+{
+    font-family: Cambria;
+    display: none;
+}
+
+.img_food:focus ~ .shadow
+{
+    display: block;
+}
+
+.img_food:focus,
+.shadow
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+input[type='radio'].page_one:checked ~ .content .secondSlide,
+input[type='radio'].page_one:checked ~ .content .thirdSlide,
+input[type='radio'].page_two:checked ~ .content .firstSlide,
+input[type='radio'].page_two:checked ~ .content .thirdSlide,
+input[type='radio'].page_three:checked ~ .content .firstSlide,
+input[type='radio'].page_three:checked ~ .content .secondSlide
+{
+    display: none;
+}
+
+.page_one,
+.page_two,
+.page_three
+{
+    margin-bottom: 50px;
+}
