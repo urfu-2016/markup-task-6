@@ -47,8 +47,8 @@
 
 .card:hover
 {
-    border: 1px solid #D3D3D3;
-    box-shadow: 2px 2px #E3E3E3;
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px #e3e3e3;
 }
 
 .card:hover .description
@@ -112,7 +112,7 @@
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
-    color: #D3D3D3;
+    color: #d3d3d3;
 }
 
 .group-label:before
@@ -168,7 +168,7 @@
     left: 50px;
     font: 4em 'icomoon', fantasy;
     content: '\f00d';
-    color: #F00;
+    color: #f00;
 }
 
 .arrow:before
@@ -182,7 +182,7 @@
     transition: .2s;
     -webkit-transition: .2s;
     -moz-transition: .2s;
-    color: #FFF;
+    color: #fff;
 }
 
 .arrow-prev:before
