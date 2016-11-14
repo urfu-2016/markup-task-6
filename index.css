@@ -1,0 +1,211 @@
+@import url(https://i.icomoon.io/public/temp/dd5e421130/fair/style.css);
+
+@font-face
+{
+    font-family: 'Kurale-Regular';
+    src: local('Kurale-Regular'), url('./fonts/Kurale-Regular.ttf')
+        format('ttf'), url('./fonts/Kurale-Regular.woff') format('woff');
+}
+
+.head
+{
+    margin: 20px 0 0;
+    min-width: 1200px;
+    text-align: center;
+    font: 36pt 'Kurale-Regular', serif;
+}
+
+.group-label
+{
+    font-family: 'Kurale-Regular', serif;
+}
+
+.content
+{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.row
+{
+    width: 100%;
+    height: 400px;
+    min-width: 1200px;
+    display: block;
+    float: left;
+    margin: 20px 0 50px;
+}
+
+.labels
+{
+    min-width: 1200px;
+    display: block;
+}
+
+.card
+{
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.card:hover
+{
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px #e3e3e3;
+}
+
+.card:hover .description
+{
+    display: block;
+}
+
+.image-wrapper
+{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.image-wrapper img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description
+{
+    font: 13pt 'Kurale-Regular', serif;
+    display: none;
+}
+
+.group-1:checked ~ .row-2,
+.group-1:checked ~ .row-3,
+.group-1:checked ~ .row-4,
+.group-2:checked ~ .row-1,
+.group-2:checked ~ .row-3,
+.group-2:checked ~ .row-4,
+.group-3:checked ~ .row-1,
+.group-3:checked ~ .row-2,
+.group-3:checked ~ .row-4,
+.group-4:checked ~ .row-1,
+.group-4:checked ~ .row-2,
+.group-4:checked ~ .row-3,
+.arrow,
+.groups,
+.fullscreen-input,
+.close-input,
+.fullscreen-wrapper,
+.arrow-input
+{
+    display: none;
+}
+
+.group-2:checked ~ .labels .arrow-prev-1,
+.group-3:checked ~ .labels .arrow-prev-2,
+.group-4:checked ~ .labels .arrow-prev-3,
+.group-1:checked ~ .labels .arrow-next-2,
+.group-2:checked ~ .labels .arrow-next-3,
+.group-3:checked ~ .labels .arrow-next-4,
+.group-1:checked ~ .row-1,
+.group-2:checked ~ .row-2,
+.group-3:checked ~ .row-3,
+.group-4:checked ~ .row-4
+{
+    display: inline-block;
+}
+
+.group-1:checked ~ .labels .group-label-1,
+.group-2:checked ~ .labels .group-label-2,
+.group-3:checked ~ .labels .group-label-3,
+.group-4:checked ~ .labels .group-label-4
+{
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    color: #d3d3d3;
+}
+
+.group-label:before
+{
+    font: 3em 'icomoon', fantasy;
+}
+
+.group-label-1:before
+{
+    content: '\e900';
+}
+
+.group-label-2:before
+{
+    content: '\e901';
+}
+
+.group-label-3:before
+{
+    content: '\e902';
+}
+
+.group-label-4:before
+{
+    content: '\e903';
+}
+
+.fullscreen-input:checked + .fullscreen-wrapper
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+}
+
+.fullscreen-input:checked + .fullscreen-wrapper img
+{
+    margin: 30px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-label:before
+{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    font: 4em 'icomoon', fantasy;
+    content: '\f00d';
+    color: #f00;
+}
+
+.arrow:before
+{
+    font: 3em 'icomoon', fantasy;
+}
+
+.prev:active ~ .labels .arrow-prev:before,
+.next:active ~ .labels .arrow-next:before
+{
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    color: #fff;
+}
+
+.arrow-prev:before
+{
+    content: '\f0d9';
+}
+
+.arrow-next:before
+{
+    content: '\f0da';
+}
