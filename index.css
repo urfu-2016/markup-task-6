@@ -11,7 +11,6 @@ img
     float: left;
 }
 
-
 .text-hover
 {
     display: none;
@@ -67,14 +66,15 @@ section:target:hover .text-hover
     display: none;
 }
 
-.modal-dialog {
+.modal-dialog
+{
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, .8);
     z-index: 1;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -96,9 +96,6 @@ section:target > .big
     width: 100%;
     position: relative;
     background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
     z-index: 1000;
 }
 
@@ -112,7 +109,7 @@ section:target > .big
 {
     display: none;
     background: #606061;
-    color: #FFFFFF;
+    color: #fff;
     line-height: 25px;
     position: fixed;
     right: 10px;
@@ -205,12 +202,12 @@ section:target > .big
 .slider > div
 {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 0;
-    }
+}
 
 .slider > div
 {
@@ -229,9 +226,9 @@ section:target > .big
 .slider > div > p
 {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
