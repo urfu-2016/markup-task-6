@@ -1,0 +1,168 @@
+body
+{
+    text-align: center;
+}
+
+.images
+{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.cross
+{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5%;
+    height: 5%;
+}
+
+.images div div:nth-child(odd)
+{
+    float: left;
+    padding: 0 2%;
+}
+
+.images div div:nth-child(odd):hover
+{
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.images div div:nth-child(odd):hover img
+{
+    margin: auto;
+}
+
+.images div div:nth-child(odd):hover:after
+{
+    display: block;
+    margin: auto;
+    width: 200px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.images div input
+{
+    float: left;
+    opacity: 0;
+}
+
+.foodRadio1:checked + div
+{
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.foodRadio1:checked + div + div
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+.foodRadio1:checked + div > label > img
+{
+    width: 30%;
+    height: auto;
+    margin: auto;
+}
+
+.tomato:hover:after
+{
+    content: 'Привет, я помидор от бабушки';
+}
+
+.cucumber:hover:after
+{
+    content: 'Привет, я огурец от бабушки';
+}
+
+.pineapple:hover:after
+{
+    content: 'Привет, я ананас от бабушки';
+}
+
+.eggplant:hover:after
+{
+    content: 'Привет, я большооооооооооооооооо\A
+    ооооооооооооооооооооооооооооооооооооой фиолетовый огурец от бабушки';
+}
+
+.zucchini:hover:after
+{
+    content: 'Привет, я\A
+                большоооооооооооооооооооооооооооооооооооооооооооооооооооооой\A
+                зеленый огурец от бабушки';
+}
+
+.orange:hover:after
+{
+    content: 'Привет, я апельсин';
+}
+
+.mandarin:hover:after
+{
+    content: 'Привет, я мандарин. Меня много едят на новый год';
+}
+
+.apple:hover:after
+{
+    content: 'Привет, я дорогой';
+}
+
+img
+{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 10%;
+    height: auto;
+}
+
+.unit1,
+.unit2,
+.unit3
+{
+    min-width: 700px;
+}
+
+.unit3Radio
+{
+    margin-right: 10%;
+}
+
+.unit2Radio:checked ~ .unit1,
+.unit2Radio:checked ~ .unit3,
+.unit3Radio:checked ~ .unit1,
+.unit3Radio:checked ~ .unit2,
+.unit1Radio:checked ~ .unit2,
+.unit1Radio:checked ~ .unit3
+{
+    display: none;
+}
+
+.unit2Radio:checked ~ .unit2,
+.unit3Radio:checked ~ .unit3,
+.unit1Radio:checked ~ .unit1
+{
+    display: block;
+}
+
+.unit2
+{
+    display: none;
+}
+
+.unit3
+{
+    display: none;
+}
