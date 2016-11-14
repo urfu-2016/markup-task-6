@@ -1,0 +1,146 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body
+{
+    overflow: hidden;
+    font-size: 16px;
+    text-align: center;
+}
+
+.page
+{
+    margin: 10%;
+}
+
+.title
+{
+    font-size: 1.8em;
+}
+
+.item-container
+{
+    /*padding: 1%;*/
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item-description,
+.cover,
+.cancel
+{
+    display: none;
+}
+
+.item-image
+{
+    width: 100%;
+}
+
+.item-container:not(:target) .item:hover .item-description
+{
+    display: block;
+}
+
+.item-container:not(:target) .item:hover
+{
+    box-shadow: 0 0 20px #444;
+    padding: 5%;
+    margin: -20%;
+    width: 140%;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    z-index: 1;
+}
+
+.item-container:target .item
+{
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 0;
+}
+
+.item-container:target .item-image
+{
+    position: relative;
+    max-width: 40%;
+    z-index: 3;
+}
+
+.item-container:target ~ .cancel,
+.item-container:target ~ .cover
+{
+    display: block;
+}
+
+.cover
+{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #000;
+    opacity: .7;
+    z-index: 2;
+}
+
+.cancel
+{
+    height: 4%;
+    width: 3%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    color: black;
+    background: #fff;
+    opacity: .7;
+    font-size: 2em;
+    text-decoration: none;
+    z-index: 3;
+}
+
+input.slider
+{
+    display: none;
+}
+
+.turn-left:before
+{
+    font-family: FontAwesome;
+    font-size: 2em;
+    content: '\f060';
+}
+
+.turn-right:before
+{
+    font-family: FontAwesome;
+    font-size: 2em;
+    content: '\f061';
+}
+
+.turn-wrapper
+{
+    display: inline-block;
+    width: 30px;
+}
+
+input[type='radio'].page1:checked ~ main .second-page,
+input[type='radio'].page1:checked ~ main .third-page
+{
+    display: none;
+}
+
+input[type='radio'].page2:checked ~ main .first-page,
+input[type='radio'].page2:checked ~ main .third-page
+{
+    display: none;
+}
+
+input[type='radio'].page3:checked ~ main .first-page,
+input[type='radio'].page3:checked ~ main .second-page
+{
+    display: none;
+}
