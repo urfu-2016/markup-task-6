@@ -70,10 +70,10 @@ input
 
     visibility: hidden;
     position: absolute;
-    top: 2%;
-    left: 2%;
-    right: 2%;
-    bottom: 2%;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
 }
 
 .big-image img
