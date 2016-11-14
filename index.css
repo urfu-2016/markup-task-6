@@ -7,6 +7,14 @@
         format('ttf'), url('./fonts/Kurale-Regular.woff') format('woff');
 }
 
+.head
+{
+    margin: 20px 0 0;
+    min-width: 1200px;
+    text-align: center;
+    font: 36pt 'Kurale-Regular', serif;
+}
+
 .group-label
 {
     font-family: 'Kurale-Regular', serif;
@@ -75,14 +83,6 @@
     display: none;
 }
 
-.group-1:checked ~ .row-1,
-.group-2:checked ~ .row-2,
-.group-3:checked ~ .row-3,
-.group-4:checked ~ .row-4
-{
-    display: inline-block;
-}
-
 .group-1:checked ~ .row-2,
 .group-1:checked ~ .row-3,
 .group-1:checked ~ .row-4,
@@ -95,6 +95,7 @@
 .group-4:checked ~ .row-1,
 .group-4:checked ~ .row-2,
 .group-4:checked ~ .row-3,
+.arrow,
 .groups,
 .fullscreen-input,
 .close-input,
@@ -102,6 +103,20 @@
 .arrow-input
 {
     display: none;
+}
+
+.group-2:checked ~ .labels .arrow-prev-1,
+.group-3:checked ~ .labels .arrow-prev-2,
+.group-4:checked ~ .labels .arrow-prev-3,
+.group-1:checked ~ .labels .arrow-next-2,
+.group-2:checked ~ .labels .arrow-next-3,
+.group-3:checked ~ .labels .arrow-next-4,
+.group-1:checked ~ .row-1,
+.group-2:checked ~ .row-2,
+.group-3:checked ~ .row-3,
+.group-4:checked ~ .row-4
+{
+    display: inline-block;
 }
 
 .group-1:checked ~ .labels .group-label-1,
@@ -151,7 +166,7 @@
     background-color: rgba(0, 0, 0, .8);
     z-index: 2;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .fullscreen-input:checked + .fullscreen-wrapper img
