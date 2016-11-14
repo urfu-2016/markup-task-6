@@ -1,0 +1,144 @@
+body 
+{
+    background-color: #faebd7;
+}
+
+.img2
+{
+    left: 340px;
+}
+
+.closer
+{
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin: -110px 0;
+    display: none;
+}
+
+.blackout
+{
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background: #2f353b;
+    opacity: .8;
+}
+
+main
+{
+    margin: 120px 130px 0;
+}
+
+.picture:focus ~ .blackout
+{
+    display: block;
+}
+
+.picture:focus ~ .closer
+{
+    z-index: 2;
+    display: block;
+}
+
+.picture:focus ~ .radios
+{
+    display: none;
+}
+
+.picture:focus
+{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 600px;
+    max-width: 600px;
+}
+
+.picture:focus ~ .text
+{
+    display: none;
+}
+
+.picture:hover ~ .text
+{
+    display: block;
+}
+
+.slides:hover
+{
+    background-color: #fff;
+    box-shadow: 0 0 4px #000;
+    height: 480px;
+}
+
+.picture
+{
+    float: left;
+    height: 240px;
+    margin: 0 20px;
+    max-width: 240px;
+}
+
+.slides
+{
+    float: left;
+    max-width: 350px;
+}
+
+.radios
+{
+    position: fixed;
+    top: 600px;
+}
+
+.slide1
+{
+    left: 550px;
+}
+
+.slide2
+{
+    left: 570px;
+}
+
+.slide3
+{
+    left: 590px;
+}
+
+.text
+{
+    margin: 10%;
+    max-width: 180px;
+    text-align: justify;
+    color: #007fff;
+    display: none;
+}
+
+input.slide1:checked ~ main .img5,
+input.slide1:checked ~ main .img6
+{
+    display: none;
+}
+
+input.slide2:checked ~ main .img1,
+input.slide2:checked ~ main .img6
+{
+    display: none;
+}
+
+input.slide3:checked ~ main .img2,
+input.slide3:checked ~ main .img1
+{
+    display: none;
+}
