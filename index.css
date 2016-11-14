@@ -1,0 +1,111 @@
+body
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main
+{
+    padding: 150px 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.gallery
+{
+    display: inline-block;
+    width: 1030px;
+}
+
+.container
+{
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.page
+{
+    display: inline-block;
+    float: left;
+    width: 1030px;
+}
+
+.elements
+{
+    display: inline-block;
+    width: 5000px;
+    position: relative;
+}
+
+.element
+{
+    display: inline-block;
+    max-width: 23%;
+    vertical-align: middle;
+}
+
+
+.image
+{
+    display: block;
+    max-width: 95%;
+    cursor: zoom-in;
+}
+
+.description
+{
+    display: none;
+}
+
+div.element:hover > div.description
+{
+    display: block;
+}
+
+.element:hover
+{
+    box-shadow: 0 0 3px 3px lightgrey;
+}
+
+
+.image:focus
+{
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 0 0 500px rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close
+{
+    display: none;
+    font-size: 50px;
+}
+
+.image:focus ~ div.close
+{
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.page-2:checked ~ section.container > div.elements
+{
+    right: 1050px;
+}
+
+.page-3:checked ~ section.container > div.elements
+{
+    right: 2060px;
+}
