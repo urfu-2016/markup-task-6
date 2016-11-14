@@ -1,0 +1,137 @@
+body 
+{
+    width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header
+{
+    font: 30px Arial, serif;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+header:first-letter
+{
+    color: #f00;
+}
+
+main 
+{
+    position: relative;
+}
+
+.one-element-of-gallery
+{
+    display: inline-block;
+    width: 170px;
+    padding: 15px 5px;
+    margin: 0;
+    vertical-align: top;
+    text-align: center;
+}
+
+.one-element-of-gallery:hover 
+{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: .5;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.gallery 
+{
+    width: 750px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+}
+
+.first:checked ~ .first-four,
+.second:checked ~ .second-four,
+.third:checked ~ .third-four,
+.forth:checked ~ .forth-four,
+.photo:hover ~ .description,
+.full-screen:target
+{
+    display: block;
+
+}
+
+.first-four,
+.second-four,
+.third-four,
+.forth-four
+{
+    display: none;
+}
+
+.description 
+{
+    display: none;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.full-screen 
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(220, 220, 220, .6);
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.full-size-photo 
+{
+    max-width: 750px;
+    max-height: 500px;
+    margin: 50px auto;
+}
+
+.close 
+{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+.first,
+.second,
+.third,
+.forth 
+{
+    position: absolute;
+    top: 180px;
+}
+
+.first 
+{
+    left: 375px;
+}
+
+.second 
+{
+    left: 400px;
+}
+
+.third 
+{
+    left: 425px;
+}
+
+.forth 
+{
+    left: 450px;
+}
