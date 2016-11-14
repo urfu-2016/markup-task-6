@@ -1,0 +1,151 @@
+html,
+body
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.harvest-page
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.harvest-wrap
+{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    padding: 0 9px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.harvest-item
+{
+    position: relative;
+    vertical-align: top;
+    padding: 9px;
+    display: inline-block;
+    width: 23%;
+}
+
+.harvest__info
+{
+    display: none;
+    white-space: normal;
+}
+
+.harvest__img-wrap
+{
+    width: 100%;
+}
+
+.harvest__img
+{
+    width: 100%;
+}
+
+.close-img
+{
+    display: none;
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    width: 30px;
+}
+
+.harvest-item:hover
+{
+    box-shadow: 0 0 8px 8px #aaa;
+}
+
+.harvest-item:hover > .harvest__info
+{
+    display: block;
+}
+
+.slider-button__item
+{
+    position: absolute;
+    top: 70%;
+}
+
+.slide1-inp
+{
+    left: 43%;
+}
+
+.slide2-inp
+{
+    left: 48%;
+}
+
+.slide3-inp
+{
+    left: 53%;
+}
+
+.slider-button__item[value='1']:checked ~ .harvest-wrap > .harvest-item
+{
+    left: 0;
+    -webkit-transition-duration: .9s;
+    -webkit-transition-timing-function: ease;
+}
+
+.slider-button__item[value='2']:checked ~ .harvest-wrap > .harvest-item
+{
+    left: -100%;
+    -webkit-transition-duration: .9s;
+    -webkit-transition-timing-function: ease;
+}
+
+.slider-button__item[value='3']:checked ~ .harvest-wrap > .harvest-item
+{
+    left: -200%;
+    -webkit-transition-duration: .9s;
+    -webkit-transition-timing-function: ease;
+}
+
+.harvest__img-wrap:focus
+{
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    z-index: 2;
+}
+
+.harvest__img-wrap:focus ~ .cover
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 1;
+}
+
+.harvest__img-wrap:focus ~ .close-img
+{
+    display: block;
+    z-index: 30;
+    opacity: 0;
+}
+
+.close-img:focus ~ .harvest__img-wrap
+{
+    background: red;
+}
+
+input[type='checkbox']:before
+{
+    content: url('images/1.jpg');
+    display: block;
+    width: 100%;
+}
