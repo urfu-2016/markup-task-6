@@ -14,8 +14,8 @@
     width: 95%;
 }
 
-(section .vagetable:target) ~ .close,
-(section .vagetable:target) ~ .background-shadow
+.vagetable:target ~ .close,
+.vagetable:target ~ .background-shadow
 {
     display: block;
 }
@@ -111,6 +111,8 @@
 
 .active 
 {
+    position: relative;
+    top: -50px;
     text-align: center;
     margin-top: 10px;
 }
