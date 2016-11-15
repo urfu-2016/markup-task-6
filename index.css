@@ -1,0 +1,136 @@
+body,
+html
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.closing
+{
+    font-size: 200%;
+    margin-left: 90%;
+}
+
+.gallery-picture
+{
+    width: 140px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    height: 180px;
+}
+
+p
+{
+    display: none;
+}
+
+.gallery-img
+{
+    width: 140px;
+    height: 140px;
+}
+
+.gallery-picture:hover > p
+{
+    display: inline;
+}
+
+.gallery-thumbs
+{
+    position: absolute;
+    display: block;
+    width: 560px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.row
+{
+    position: absolute;
+    -webkit-transition: left 1s, 2s ease;
+    -moz-transition: left 1s, 2s ease;
+    -o-transition: left 1s, 2s ease;
+    transition: left 1s, 2s ease;
+}
+
+a > div:target
+{
+    background-color: #d0d0d0;
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+a > div:target img
+{
+    position: absolute;
+    z-index: 100;
+    display: block;
+    margin: 0 auto;
+    margin-left: 33%;
+    top: 27%;
+    width: 30%;
+    height: 45%;
+}
+
+a > div:target:hover p
+{
+    display: none;
+}
+
+input[value='first']:checked ~ .gallery-thumbs .first-row
+{
+    left: 0;
+}
+
+input[value='first']:checked ~ .gallery-thumbs .second-row
+{
+    left: 570px;
+}
+
+input[value='first']:checked ~ .gallery-thumbs .third-row
+{
+    left: 1140px;
+}
+
+input[value='second']:checked ~ .gallery-thumbs .first-row
+{
+    left: -570px;
+}
+
+input[value='second']:checked ~ .gallery-thumbs .second-row
+{
+    left: 0;
+}
+
+input[value='second']:checked ~ .gallery-thumbs .third-row
+{
+    left: 570px;
+}
+
+input[value='third']:checked ~ .gallery-thumbs .first-row
+{
+    left: -1440px;
+}
+
+input[value='third']:checked ~ .gallery-thumbs .second-row
+{
+    left: -570px;
+}
+
+input[value='third']:checked ~ .gallery-thumbs .third-row
+{
+    left: 0;
+}
