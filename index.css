@@ -190,19 +190,6 @@ section.slider
     transition: opacity .2s ease-out;
 }
 
-.slide1:checked ~ section.slides article:nth-child(1) .cctooltip,
-.slide2:checked ~ section.slides article:nth-child(2) .cctooltip,
-.slide3:checked ~ section.slides article:nth-child(3) .cctooltip,
-.slide4:checked ~ section.slides article:nth-child(4) .cctooltip,
-.slide5:checked ~ section.slides article:nth-child(5) .cctooltip
-{
-    opacity: 1;
-    -webkit-transition: all 1s ease-out .6s;
-    -moz-transition: all 1s ease-out .6s;
-    -o-transition: all 1s ease-out .6s;
-    transition: all 1s ease-out .6s;
-}
-
 .info
 {
     position: absolute;
