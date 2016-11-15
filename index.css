@@ -8,20 +8,28 @@ body
 img
 {
     width: 90%;
-    height: 75%;
+    height: 70%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
 
 h3
 {
     text-align: center;
     display: none;
+    margin: 0;
+}
+
+a
+{
+    color: black;
 }
 
 .gallery
 {
     position: absolute;
     width: 70%;
-    height: 25%;
+    height: 30%;
     overflow: hidden;
     left: 15%;
     top: 30%;
@@ -49,11 +57,9 @@ h3
 
 .close
 {
-    display: block;
+    display: none;
     width: 5%;
     height: 10%;
-    margin-left: 90%;
-    z-index: 10000;
 }
 
 input[value='first_elem']
@@ -125,7 +131,7 @@ input[value='third_elem']:checked ~ .gallery .third_block
     left: 0;
 }
 
-a > div:target
+div:target
 {
     position: fixed;
     width: 100%;
@@ -135,7 +141,7 @@ a > div:target
     left: 0;
 }
 
-a > div:target img
+div:target img
 {
     display: block;
     width: 70%;
@@ -143,7 +149,23 @@ a > div:target img
     margin: 5% auto;
 }
 
-a > div:hover h3
+div:target span
+{
+    display: block;
+    margin-left: 85%;
+}
+
+div > div > div:hover
+{
+    background-color: rgba(192,192,192, .5);
+}
+
+div > div > div:hover img
+{
+    border: 2px groove gray;
+}
+
+div > div > div:hover h3
 {
     display: inline;
 }
