@@ -1,0 +1,127 @@
+@font-face
+{
+    font-family: LirussTYGRA;
+    src: local('LirussTYGRA'), url('fonts/LirussTYGRA.eot');
+    src: local('LirussTYGRA'), url('fonts/LirussTYGRA.woff') format('woff'), url('fonts/LirussTYGRA.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    font: 14px Kurale, sans-serif;
+    min-width: 1000px;
+}
+
+header
+{
+    text-align: center;
+    font: 4.5em LirussTYGRA, sans-serif;
+    color: #323232;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.label
+{
+    width: 85px;
+}
+
+main
+{
+    text-align: center;
+}
+
+input
+{
+    position: relative;
+    top: 280px;
+}
+
+.page1,
+.page2,
+.page3
+{
+    display: none;
+}
+
+.page1-input:checked ~ .page1,
+.page2-input:checked ~ .page2,
+.page3-input:checked ~ .page3
+{
+    display: block;
+}
+
+.harvest
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+}
+
+.harvest:hover
+{
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    margin: 20px -30px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.image
+{
+    width: 230px;
+    margin-top: 10px;
+}
+
+.harvest:hover .image
+{
+    width: 270px;
+}
+
+.description
+{
+    margin: 5px;
+    display: none;
+}
+
+.harvest:not(:target):hover .description
+{
+    display: block;
+}
+
+.harvest:target .container
+{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+}
+
+.harvest:target .image
+{
+    width: auto;
+    max-width: 45%;
+    margin-top: 25px;
+}
+
+.close
+{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background: url(image/close.png);
+    z-index: 2;
+}
+
+.harvest:target ~ .close
+{
+    display: block;
+}
