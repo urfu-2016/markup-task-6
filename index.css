@@ -1,0 +1,119 @@
+main
+{
+    width: 1050px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+a
+{
+    text-decoration: none;
+    font-size: 34px;
+    color: #111;
+}
+
+.vegetables-gallery
+{
+    width: 3400px;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+}
+
+.page1,
+.page2,
+.page3
+{
+    display: inline-block;
+    margin: 0 auto;
+    font: 14px Arial;
+}
+
+.vegetable
+{
+    margin: 5px;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.vegetable img
+{
+    width: 100%;
+}
+
+.vegetable .vegetable-name,
+.vegetable .description,
+.modal
+{
+    display: none;
+}
+
+.modal
+{
+    position: fixed;
+    background: rgba(25, 184, 11, .2);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.modal .hidden-image
+{
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+.modal:target
+{
+    display: block;
+}
+
+.vegetable:hover
+{
+    box-shadow: 0 0 1px;
+}
+
+.vegetable:hover .vegetable-name,
+.vegetable:hover .description
+{
+    margin: 10px;
+    display: inline-block;
+}
+
+.slide1:checked ~ .vegetables-gallery
+{
+    margin-left: 0;
+}
+
+.slide2:checked ~ .vegetables-gallery
+{
+    margin-left: -1055px;
+}
+
+.slide3:checked ~ .vegetables-gallery
+{
+    margin-left: -2110px;
+}
+
+.close
+{
+    position: absolute;
+    font-size: 28px;
+    top: 30px;
+    right: 30px;
+    z-index: 15;
+}
+
+.close:hover
+{
+    cursor: pointer;
+}
