@@ -1,0 +1,149 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+img
+{
+    width: 90%;
+    height: 75%;
+}
+
+h3
+{
+    text-align: center;
+    display: none;
+}
+
+.gallery
+{
+    position: absolute;
+    width: 70%;
+    height: 25%;
+    overflow: hidden;
+    left: 15%;
+    top: 30%;
+}
+
+.first_block,
+.second_block,
+.third_block
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: left 1s ease-out;
+    -moz-transition: left 1s ease-out;
+    -o-transition: left 1s ease-out;
+    transition: left 1s ease-out;
+}
+
+.vegetables
+{
+    display: inline-block;
+    width: 24%;
+    height: 100%;
+}
+
+.close
+{
+    display: block;
+    width: 5%;
+    height: 10%;
+    margin-left: 90%;
+    z-index: 10000;
+}
+
+input[value='first_elem']
+{
+    position: absolute;
+    left: 44%;
+    top: 57%;
+    margin: 2%;
+}
+
+input[value='second_elem']
+{
+    position: absolute;
+    left: 47%;
+    top: 57%;
+    margin: 2%;
+}
+
+input[value='third_elem']
+{
+    position: absolute;
+    left: 50%;
+    top: 57%;
+    margin: 2%;
+}
+
+input[value='first_elem']:checked ~ .gallery .first_block
+{
+    left: 0;
+}
+
+input[value='first_elem']:checked ~ .gallery .second_block
+{
+    left: 100%;
+}
+
+input[value='first_elem']:checked ~ .gallery .third_block
+{
+    left: 200%;
+}
+
+input[value='second_elem']:checked ~ .gallery .first_block
+{
+    left: -100%;
+}
+
+input[value='second_elem']:checked ~ .gallery .second_block
+{
+    left: 0;
+}
+
+input[value='second_elem']:checked ~ .gallery .third_block
+{
+    left: 100%;
+}
+
+input[value='third_elem']:checked ~ .gallery .first_block
+{
+    left: -200%;
+}
+
+input[value='third_elem']:checked ~ .gallery .second_block
+{
+    left: -100%;
+}
+
+input[value='third_elem']:checked ~ .gallery .third_block
+{
+    left: 0;
+}
+
+a > div:target
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(192,192,192, .5);
+    top: 0;
+    left: 0;
+}
+
+a > div:target img
+{
+    display: block;
+    width: 70%;
+    height: 70%;
+    margin: 5% auto;
+}
+
+a > div:hover h3
+{
+    display: inline;
+}
