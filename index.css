@@ -36,6 +36,12 @@ main
     width: 15000px;
     vertical-align: middle;
     position: relative;
+    right: 0;
+    -webkit-transition: right .5s;
+    -moz-transition: right .5s;
+    -ms-transition: right .5s;
+    -o-transition: right .5s;
+    transition: right .5s;
 }
 
 .block
@@ -58,8 +64,7 @@ main
 .images
 {
     display: block;
-    max-width: 99%;
-    padding: 1%;
+    max-width: 100%;
     cursor: zoom-in;
 }
 
@@ -72,12 +77,12 @@ main
 
 .text
 {
-    display: none;
+    opacity: 0;
 }
 
-span.element:hover > span.text
+.element:hover > span.text
 {
-    display: block;
+    opacity: 1;
 }
 
 .element:hover
@@ -85,32 +90,61 @@ span.element:hover > span.text
     box-shadow: 0 0 10px 5px #808080;
 }
 
-.images:focus
+.popup_img:focus
 {
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    width: auto;
-    height: auto;
-    margin: auto;
-    padding: 0;
-    max-width: 99%;
-    max-height: 99%;
-    box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
 }
 
-.images:focus ~ img.cross
+.popup_img:focus > .images
+{
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 98%;
+    max-height: 98%;
+}
+
+.popup_img:focus > label.exit-label > .cross
 {
     display: block;
-    z-index: 101;
+    z-index: 1002;
     position: fixed;
     top: 20px;
     right: 50px;
-    pointer-events: none;
     cursor: zoom-out;
+}
+
+.cross-checkbox
+{
+    opacity: 0;
+}
+
+.exit-label:after > .cross
+{
+    opacity: 0;
+}
+
+.exit-label:after ~ .images
+{
+    max-width: 100%;
+}
+
+.exit-label:after ~ .popup_img
+{
+    position: relative;
+    background: none;
 }
 
 .radio2:checked ~ section.wrapper > div.items
