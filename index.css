@@ -23,7 +23,7 @@
     width: 23.5%;
 }
 
-div:nth-child(4n+1)
+.section-of-four-elem
 {
     margin-left: 5%;
 }
@@ -61,7 +61,7 @@ input
     position: fixed;
     top: 0;
     font-size: 4rem;
-    left: 97%;
+    right: 1%;
     color: #000;
 }
 
@@ -135,9 +135,7 @@ input[id='dill']:checked ~ .big-image img:nth-child(12)
     visibility: hidden;
 }
 
-.roll-slide1:checked ~ label:nth-of-type(3),
-.roll-slide2:checked ~ label:nth-of-type(1),
-.roll-slide3:checked ~ label:nth-of-type(2)
+.arrow
 {
     float: left;
     margin-top: 2%;
@@ -146,15 +144,20 @@ input[id='dill']:checked ~ .big-image img:nth-child(12)
     border-bottom: 50px solid transparent;
 }
 
-.roll-slide1:checked ~ label:nth-of-type(5),
-.roll-slide2:checked ~ label:nth-of-type(6),
-.roll-slide3:checked ~ label:nth-of-type(4)
+.roll-slide1:checked ~ [for='roll-slide1'],
+.roll-slide2:checked ~ [for='roll-slide2'],
+.roll-slide3:checked ~ [for='roll-slide3']
+{
+    display: none;
+}
+
+.roll-slide1:checked ~ [for='roll-slide2'],
+.roll-slide2:checked ~ [for='roll-slide3'],
+.roll-slide3:checked ~ [for='roll-slide1']
 {
     float: right;
-    margin-top: 2%;
-    border-top: 50px solid transparent;
     border-left: 60px solid #6d6e71;
-    border-bottom: 50px solid transparent;
+    border-right: none;
 }
 
 .roll-slide1:checked ~ .inner-content .roll

@@ -5,37 +5,31 @@
     <title>Бабулькин огород</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<main>
-<input checked type="radio" name="big-foto" class="close-cross" id="close">
+<body>
+<input checked type="radio" name="imput-for-foto" class="close-cross" id="close">
 <label class="close" for="close">&times;</label>
-<input type="radio" name="big-foto" class="big-foto" id="eggplant">
-
-<input type="radio" name="big-foto" class="big-foto" id="peas">
-<input type="radio" name="big-foto" class="big-foto" id="cabbage">
-<input type="radio" name="big-foto" class="big-foto" id="corn">
-<input type="radio" name="big-foto" class="big-foto" id="onion">
-<input type="radio" name="big-foto" class="big-foto" id="carrot">
-<input type="radio" name="big-foto" class="big-foto" id="cucumber">
-<input type="radio" name="big-foto" class="big-foto" id="squash">
-<input type="radio" name="big-foto" class="big-foto" id="pumpkin">
-<input type="radio" name="big-foto" class="big-foto" id="beet">
-<input type="radio" name="big-foto" class="big-foto" id="tomato">
-<input type="radio" name="big-foto" class="big-foto" id="dill">
-<div class="main-content">
+<input type="radio" name="imput-for-foto" class="big-foto" id="eggplant">
+<input type="radio" name="imput-for-foto" class="big-foto" id="peas">
+<input type="radio" name="imput-for-foto" class="big-foto" id="cabbage">
+<input type="radio" name="imput-for-foto" class="big-foto" id="corn">
+<input type="radio" name="imput-for-foto" class="big-foto" id="onion">
+<input type="radio" name="imput-for-foto" class="big-foto" id="carrot">
+<input type="radio" name="imput-for-foto" class="big-foto" id="cucumber">
+<input type="radio" name="imput-for-foto" class="big-foto" id="squash">
+<input type="radio" name="imput-for-foto" class="big-foto" id="pumpkin">
+<input type="radio" name="imput-for-foto" class="big-foto" id="beet">
+<input type="radio" name="imput-for-foto" class="big-foto" id="tomato">
+<input type="radio" name="imput-for-foto" class="big-foto" id="dill">
+<main class="main-content">
     <input checked type="radio" name="slider" id="roll-slide1" class="roll-slide1">
     <input type="radio" name="slider" id="roll-slide2" class="roll-slide2">
     <input type="radio" name="slider" id="roll-slide3" class="roll-slide3">
-    <label for="roll-slide1"></label>
-    <label for="roll-slide2"></label>
-    <label for="roll-slide3"></label>
-    <label for="roll-slide1"></label>
-    <label for="roll-slide2"></label>
-    <label for="roll-slide3"></label>
-
-    <div class="inner-content">
+    <label for="roll-slide1" class="arrow"></label>
+    <label for="roll-slide2" class="arrow"></label>
+    <label for="roll-slide3" class="arrow"></label>
+    <section class="inner-content">
         <div class="roll" id="roll">
-
-            <div class="vegetable">
+            <div class="vegetable section-of-four-elem">
                 <label for="eggplant" title="Баклажан">
                     <img class="foto" src="img/baklazhan.jpg" title="Баклажан" alt="Баклажан">
                 </label>
@@ -88,7 +82,7 @@
                         Посевы в фазе 3-4 листьев прореживают до двух растений в гнезде.</p>
                 </div>
             </div>
-            <div class="vegetable">
+            <div class="vegetable section-of-four-elem">
                 <label for="onion" title="Лук">
                     <img class="foto" src="img/luk.jpg" title="Лук" alt="Лук">
                 </label>
@@ -149,7 +143,7 @@
                         или артишок.</p>
                 </div>
             </div>
-            <div class="vegetable">
+            <div class="vegetable section-of-four-elem">
                 <label for="pumpkin" title="Тыква">
                     <img class="foto" src="img/pumpkin.jpg" title="Тыква" alt="Тыква">
                 </label>
@@ -211,9 +205,9 @@
             </div>
 
         </div>
-    </div>
-</div>
-<div class="big-image">
+    </section>
+</main>
+<section class="big-image">
     <img src="img/baklazhan.jpg" title="Баклажан" alt="Баклажан">
     <img src="img/goroh.jpg" title="Горох" alt="Горох">
     <img src="img/kapusta.jpg" title="Капуста" alt="Капуста">
@@ -228,7 +222,6 @@
     <img src="img/ukrop.jpg" title="Укроп" alt="Укроп">
     <div class="grey-background"></div>
     <label class="close" for="close">&times;</label>
-</div>
-</main>
+</section>
 </body>
 </html>
