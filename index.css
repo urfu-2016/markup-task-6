@@ -1,0 +1,179 @@
+.foto
+{
+    width: 85%;
+    margin: 5%;
+}
+
+.description
+{
+    display: none;
+    text-align: justify;
+}
+
+.main-content
+{
+    min-width: 960px;
+    max-width: 1750px;
+    margin: 5%;
+}
+
+.vegetable
+{
+    display: inline-block;
+    width: 23.5%;
+}
+
+.section-of-four-elem
+{
+    margin-left: 5%;
+}
+
+.vegetable:hover .description
+{
+    display: block;
+    width: 95%;
+    margin: 2%;
+    white-space: normal;
+}
+
+.vegetable:hover
+{
+    box-shadow: 0 0 5px 3px #8a8b8d;
+    border-radius: 2%;
+    vertical-align: top;
+}
+
+.inner-content
+{
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+input
+{
+    display: none;
+}
+
+.close
+{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    font-size: 4rem;
+    right: 1%;
+    color: #000;
+}
+
+.big-image
+{
+
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+}
+
+.big-image img
+{
+    display: none;
+}
+
+.close:hover
+{
+    color: #fff;
+}
+
+.grey-background
+{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0 !important;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #8a8b8d;
+}
+
+input[id='eggplant']:checked ~ .big-image img:nth-child(1),
+input[id='peas']:checked ~ .big-image img:nth-child(2),
+input[id='cabbage']:checked ~ .big-image img:nth-child(3),
+input[id='corn']:checked ~ .big-image img:nth-child(4),
+input[id='onion']:checked ~ .big-image img:nth-child(5),
+input[id='carrot']:checked ~ .big-image img:nth-child(6),
+input[id='cucumber']:checked ~ .big-image img:nth-child(7),
+input[id='squash']:checked ~ .big-image img:nth-child(8),
+input[id='pumpkin']:checked ~ .big-image img:nth-child(9),
+input[id='beet']:checked ~ .big-image img:nth-child(10),
+input[id='tomato']:checked ~ .big-image img:nth-child(11),
+input[id='dill']:checked ~ .big-image img:nth-child(12)
+{
+    visibility: visible;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.big-foto:checked ~ .main-content
+{
+    display: none;
+}
+
+.big-foto:checked ~ .big-image .grey-background,
+.big-foto:checked ~ .big-image .close
+{
+    visibility: visible;
+}
+
+.close-cross:checked ~ .close
+{
+    visibility: hidden;
+}
+
+.arrow
+{
+    float: left;
+    margin-top: 2%;
+    border-top: 50px solid transparent;
+    border-right: 60px solid #6d6e71;
+    border-bottom: 50px solid transparent;
+}
+
+.roll-slide1:checked ~ [for='roll-slide1'],
+.roll-slide2:checked ~ [for='roll-slide2'],
+.roll-slide3:checked ~ [for='roll-slide3']
+{
+    display: none;
+}
+
+.roll-slide1:checked ~ [for='roll-slide2'],
+.roll-slide2:checked ~ [for='roll-slide3'],
+.roll-slide3:checked ~ [for='roll-slide1']
+{
+    float: right;
+    border-left: 60px solid #6d6e71;
+    border-right: none;
+}
+
+.roll-slide1:checked ~ .inner-content .roll
+{
+    margin: 0 3% 0 -3%;
+    transition: all .5s;
+}
+
+.roll-slide2:checked ~ .inner-content .roll
+{
+    margin: 0 103% 0 -103%;
+    transition: all 1s;
+}
+
+.roll-slide3:checked ~ .inner-content .roll
+{
+    margin: 0 203% 0 -203%;
+    transition: all 1s;
+}
