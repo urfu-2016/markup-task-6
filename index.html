@@ -11,10 +11,12 @@
     <input class="first-input" name="page" type="radio" id="first" checked><label for="first">first</label>
     <input class="second-input" name="page" type="radio" id="second"><label for="second">second</label>
     <input class="third-input" name="page" type="radio" id="third"><label for="third">third</label>
-    <div class="photos">
+    <div class="content">
         <div class="page-one">
-            <section class="item">
-                <img src="pictures/apple.jpg" alt="Яблоко" title="Яблоко" class="image">
+            <section class="item" id="page1-item1">
+                <a href="#page1-item1">
+                    <img src="pictures/apple.jpg" alt="Яблоко" title="Яблоко" class="image">
+                </a>
                 <article class="description">
                     Яблоко — плод яблони, который употребляется в пищу в свежем виде, служит сырьём в
                     кулинарии и для приготовления напитков. Считается, что родиной яблони является
@@ -22,10 +24,11 @@
                     существует множество сортов этого вида яблони, произрастающих в различных климатических
                     условиях.
                 </article>
-                <div class="background"></div>
             </section>
-            <section class="item">
-                <img src="pictures/beet.jpg" alt="Свекла" title="Свекла" class="image">
+            <section class="item" id="page1-item2">
+                <a href="#page1-item2">
+                    <img src="pictures/beet.jpg" alt="Свекла" title="Свекла" class="image">
+                </a>
                 <article class="description">
                     Листья и корнеплоды практически всех видов тем или иным образом используются в пищу для
                     людей и корм для животных, а также как сырьё для промышленности. По данным Лондонской
@@ -33,8 +36,10 @@
                     кислотой, хорошо понижает кровяное давление.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/carrot.jpg" alt="Морковь" title="Морковь" class="image">
+            <section class="item" id="page1-item3">
+                <a href="#page1-item3">
+                    <img src="pictures/carrot.jpg" alt="Морковь" title="Морковь" class="image">
+                </a>
                 <article class="description">
                     Долгое время считалось, что употребление в пищу моркови способствует улучшению зрения.
                     Несмотря на то, что в моркови действительно содержится витамин А, который необходим для
@@ -42,8 +47,10 @@
                     употребления моркови не подтверждён.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/potato.jpg" alt="Картофель" title="Картофель" class="image">
+            <section class="item" id="page1-item4">
+                <a href="#page1-item4">
+                    <img src="pictures/potato.jpg" alt="Картофель" title="Картофель" class="image">
+                </a>
                 <article class="description">
                     Родина картофеля — Южная Америка, где до сих пор можно встретить дикорастущий картофель.
                     Введение картофеля в культуру (сначала путём эксплуатации диких зарослей) было начато
@@ -51,51 +58,73 @@
                     употребляли картофель в пищу, но и поклонялись ему, считая одушевлённым существом.
                 </article>
             </section>
+            <section class="attributes">
+                <div id="close-page-one" class="modal-window-background">
+                    <a href="#close-page-one" class="cross" title="Закрыть">X</a>
+                </div>
+            </section>
         </div>
         <div class="page-two">
-            <section class="item">
-                <img src="pictures/cherry.jpg" alt="Вишня" title="Вишня" class="image">
+            <section class="item" id="page2-item1">
+                <a href="#page2-item1">
+                    <img src="pictures/cherry.jpg" alt="Вишня" title="Вишня" class="image">
+                </a>
                 <article class="description">
                     Обладает ценными пищевыми свойствами плодов. Морозостойка, способна переносить суровые
                     зимы. Засухоустойчива. Неприхотлива к условиям произрастания. Первое плодоношение
                     начинается в возрасте 3-4 лет. На родине достигает до10 м в высоту.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/cucumber.jpg" alt="Огурец" title="Огурец" class="image">
+            <section class="item" id="page2-item2">
+                <a href="#page2-item2">
+                    <img src="pictures/cucumber.jpg" alt="Огурец" title="Огурец" class="image">
+                </a>
                 <article class="description">
                     Огурцы богаты сложными органическими веществами, которые играют важную роль в обмене
                     веществ. Эти вещества возбуждают аппетит, способствуют усвоению других продуктов питания.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/strawberry.jpg" alt="Клубника" title="Клубника" class="image">
+            <section class="item" id="page2-item3">
+                <a href="#page2-item3">
+                    <img src="pictures/strawberry.jpg" alt="Клубника" title="Клубника" class="image">
+                </a>
                 <article class="description">
                     Клубника очень богата минеральными элементами. Содержание железа, меди, марганца,
                     кобальта и бора в ней таково, что при условии съедания в день хотя одного стакана
                     клубники необходимость в биологически активных добавках к своему рациону напрочь отпадает.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/raspberry.jpg" alt="Малина" title="Малина" class="image">
+            <section class="item" id="page2-item4">
+                <a href="#page2-item4">
+                    <img src="pictures/raspberry.jpg" alt="Малина" title="Малина" class="image">
+                </a>
                 <article class="description">
                     Плоды малины употребляют как свежими, так и замороженными или используют для
                     приготовления варенья, желе, мармелада, соков. В народной медицине используются плоды и
                     листья при простуде, гриппе, как жаропонижающее средство.
                 </article>
             </section>
+            <section class="attributes">
+                <div id="close-page-two" class="modal-window-background">
+                    <a href="#close-page-two" class="cross" title="Закрыть">X</a>
+                </div>
+            </section>
         </div>
         <div class="page-three">
-            <section class="item">
-                <img src="pictures/cabbage.jpg" alt="Капуста" title="Капуста" class="image">
+            <section class="item" id="page3-item1">
+                <a href="#page3-item1">
+                    <img src="pictures/cabbage.jpg" alt="Капуста" title="Капуста" class="image">
+                </a>
                 <article class="description">
                     Капуста принадлежит к числу важнейших овощных растений. Она введена в культуру,
                     по-видимому, в доисторические времена. Археологические раскопки свидетельствуют о том,
                     что капусту люди стали использовать со времён каменного и бронзового веков.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/eggplant.jpg" alt="Баклажан" title="Баклажан" class="image">
+            <section class="item" id="page3-item2">
+                <a href="#page3-item2">
+                    <img src="pictures/eggplant.jpg" alt="Баклажан" title="Баклажан" class="image">
+                </a>
                 <article class="description">
                     Баклажаны активно используются в кулинарии многих стран мира. Их варят, жарят,
                     запекают, тушат, готовят на гриле, маринуют, используют для приготовления баклажанных
@@ -103,13 +132,20 @@
                     поскольку лишены горечи изначально.
                 </article>
             </section>
-            <section class="item">
-                <img src="pictures/tomato.jpg" alt="Помидоры" title="Помидоры" class="image">
+            <section class="item" id="page3-item3">
+                <a href="#page3-item3">
+                    <img src="pictures/tomato.jpg" alt="Помидоры" title="Помидоры" class="image">
+                </a>
                 <article class="description">
                     Плоды томата употребляют в пищу свежими, варёными, жареными, консервированными, из них
                     готовят томат-пасту, томат-пюре, томатный сок, кетчуп и другие соусы, лечо. В Испании
                     популярны холодные томатные супы — гаспачо, сальморехо.
                 </article>
+            </section>
+            <section class="attributes">
+                <div id="close-page-three" class="modal-window-background">
+                    <a href="#close-page-three" class="cross" title="Закрыть">X</a>
+                </div>
             </section>
         </div>
     </div>
