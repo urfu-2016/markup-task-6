@@ -2,17 +2,15 @@ html,
 body
 {
     margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .content
 {
     text-align: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 
 .slide,
@@ -26,41 +24,48 @@ body
 
 .slide
 {
-    margin: 10%;
+    margin-top: 10%;
 }
 
 .picture
 {
+    width: 21%;
+    margin: 1%;
+    display: inline-block;
     vertical-align: top;
-    width: 20%;
-    border: solid 1px #000;
-    display: table-cell;
+    border: solid 2px #000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
 }
 
 .push
 {
     width: 20%;
-    display: table-cell;
+    height: 100%;
 }
 
-.cross
+.cross-img
 {
+    z-index: 668;
     position: absolute;
     width: 30px;
-    top: 0;
-    right: 0;
+    right: 10px;
+    top: 10px;
+}
+
+.cross-img:target
+{
+    display: none;
 }
 
 .navigation
 {
-    background: #fff;
     z-index: 10;
     position: relative;
     display: inline-block;
-    width: 80%;
-    height: 10px;
+    width: 92%;
+    height: 2vh;
     border: solid 1px #000;
-    font: 1vh sans-serif;
+    font: 2vh sans-serif;
 }
 
 .thumb-image
@@ -71,6 +76,7 @@ body
 .hidden
 {
     color: #fff;
+    border: hidden;
 }
 
 .control-slide:checked + .slide
@@ -78,12 +84,22 @@ body
     display: inline-block;
 }
 
-.picture :hover ~ .picture-description
+.picture :hover ~ .picture-description,
+.picture-description:hover
 {
     display: inline-block;
+    background: #c2c2c2;
+    width: 100%;
 }
 
-.control-view:checked ~ .fullscreen-view
+.picture-description
+{
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.fullscreen-view:target
 {
     width: 100%;
     height: 100%;
@@ -97,6 +113,21 @@ body
 
 .big-picture-img-div
 {
-    vertical-align: middle;
-    margin: 5% auto;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.big-image
+{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.thumbnail-view
+{
+    position: relative;
 }
