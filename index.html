@@ -2,7 +2,162 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <title>Бабуленький урожай</title>
 </head>
 <body>
+<header>
+    <h1>Бабуленькин урожай</h1>
+</header>
+<main>
+    <input type="radio" name="page-number" class="page-one" checked>
+    <input type="radio" name="page-number" class="page-two">
+    <input type="radio" name="page-number" class="page-three">
+    <div class="content">
+        <div class="first-slide">
+            <div class="food" id="tomato">
+                <a href="#tomato">
+                    <img class="img-food" src="img/tomato.jpg" title="Помидорки" alt="Помидорки">
+                </a>
+                <article class="description">
+                    Помидор – название растения и одноименных плодов. Название «помидор» в переводе
+                    с итальянского обозначает - золотое яблоко, а слово томат произошло от ацтекского
+                    «матль».
+                </article>
+            </div>
+            <div class="food" id="eggplant">
+                <a href="#eggplant">
+                    <img class="img-food" src="img/eggplant.png" title="Баклажан" alt="Баклажан">
+                </a>
+                <article class="description">
+                    В зрелых плодах баклажанов содержится много клетчатки, пищевых волокон, пектин,
+                    органические кислоты, каротин, дубильные вещества, натуральный сахар, минеральные
+                    и биологически-активные вещества. Среди минералов следует отметить наличие алюминия,
+                    кобальта, фосфора, железа, меди, цинка и марганца.
+                </article>
+            </div>
+            <div class="food" id="pumpkin">
+                <a href="#pumpkin">
+                    <img class="img-food" src="img/pumpkin.png" title="Тыква" alt="Тыква">
+                </a>
+                <article class="description">
+                    Тыква обыкновенная — однолетнее, очень распространенное растение, которое выращивают
+                    на огородах и баштанах. Тыква стелится по земле, имеет волосистый стебель и крупные,
+                    жесткие, лопастные листья. Может цепляться за другие растения или предметы с помощью
+                    ветвистых усиков.
+                </article>
+            </div>
+            <div class="food" id="peas">
+                <a href="#peas">
+                    <img class="img-food" src="img/peas.png" title="Горох" alt="Горох">
+                </a>
+                <article class="description">
+                    Горох – самоопыляющееся однолетнее травянистое растение с хорошо разветвленной
+                    стержневой корневой системой, ветвящимся стеблем и непарноперистыми сложными листьями,
+                    черешки которых оканчиваются цепкими усиками, из семейства Бобовых.
+                </article>
+            </div>
+            <div class="shadow">
+                <div id="close1" class="modal-window">
+                    <a href="#close1" title="Закрыть">
+                        <img class="close" src="img/icon.png" alt="close">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="second-slide">
+            <div class="food" id="cabbage">
+                <a href="#cabbage">
+                    <img class="img-food" src="img/cabbage.jpg" title="Капуста" alt="Капуста">
+                </a>
+                <article class="description">
+                    Капуста белокочанная является двухлетним растением семейства Капустных.
+                    Большинство стран для выращивания этого полезного овоща отводят немалые площади.
+                    Её начали возделывать ещё в Древней Иберии, жители которой назвали овощ «ащи».
+                </article>
+            </div>
+            <div class="food" id="potato">
+                <a href="#potato">
+                    <img class="img-food" src="img/potato.jpg" title="Картошка" alt="Картошка">
+                </a>
+                <article class="description">
+                    Клубень картофеля представляет собой разросшуюся почку, состоящую из наполненных
+                    крахмалом клеток, снаружи покрытую тонким слоем пробковой ткани.
+                    На поверхности клубня располагаются пазушные почки, так называемые глазки,
+                    из которых развиваются молодые побеги.
+                </article>
+            </div>
+            <div class="food" id="strawberry">
+                <a href="#strawberry">
+                    <img class="img-food" src="img/strawberry.jpg" title="клубника" alt="клубника">
+                </a>
+                <article class="description">
+                    Клубника вызывает самые яркие ассоциации с летом. Начиная свое цветение в мае,
+                    уже в первый месяц лета она радует нас своими спелыми ягодами.
+                    Благодаря ей, можно пополнить запасы своего организма на макро микро элементы,
+                    которые растратились в осенне-зимний период.
+                </article>
+            </div>
+            <div class="shadow">
+                <div id="close2" class="modal-window">
+                    <a href="#close2" title="Закрыть">
+                        <img class="close" src="img/icon.png" alt="close">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="third-slide">
+            <div class="food" id="sorrel">
+                <a href="#sorrel">
+                    <img class="img-food" src="img/sorrel.png" title="Щавель" alt="Щавель">
+                </a>
+                <article class="description">
+                    Щавель – название рода растений из семейства Гречишных. История культивирования
+                    этой овощной культуры началась несколько тысячелетий назад, упоминания о щавеле
+                    встречаются в работах Вергилия и Плиния Старшего, а Авиценна в своем
+                    "Каноне врачебной науки" описал его лечебные свойства.
+                </article>
+            </div>
+            <div class="food" id="cauliflower">
+                <a href="#cauliflower">
+                    <img class="img-food" src="img/cauliflower.jpg" title="ЦветКапуста" alt="ЦветКапуста">
+                </a>
+                <article class="description">
+                    Цветная капуста — однолетнее яровое или озимое растение. Корневая система
+                    мочковатая, близко расположенная к поверхности почвы. Стебель цилиндрический,
+                    15—70 см высоты, с горизонтально расположенными или прямо или косо вверх
+                    направленными листьями, весьма часто спиральнообразно изогнутыми.
+                </article>
+            </div>
+            <div class="food" id="beet">
+                <a href="#beet">
+                    <img class="img-food" src="img/beet.jpg" title="свекла" alt="свекла">
+                </a>
+                <article class="description">
+                    Свекла – название растения и одноименного плода. История окультуривания свеклы
+                    берет свое начало на территории современной Индии, где и сейчас можно повстречать
+                    ее в диком виде. Свеклу выращивали в древнем Вавилоне, Египте, Греции и Риме.
+                </article>
+            </div>
+            <div class="food" id="grapes">
+                <a href="#grapes">
+                    <img class="img-food" src="img/grapes.jpg" title="виноград" alt="виноград">
+                </a>
+                <article class="description">
+                    Виноград - название куста и одноименного плода. Виноград – одно из первых растений,
+                    которое начал культивировать человек. Первые упоминания о винограде датируются 5-6
+                    тысячелетиями до н.э. – уже тогда его выращивали в Египте и Месопотамии.
+                </article>
+            </div>
+            <div class="shadow">
+                <div id="close3" class="modal-window">
+                    <a href="#close3" title="Закрыть">
+                        <img class="close" src="img/icon.png" alt="close">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 </body>
 </html>
