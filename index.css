@@ -95,31 +95,27 @@ header
     height: 50px;
 }
 
-.controls label
-{
-    display: none;
-    width: 50px;
-    height: 50px;
-
-}
-
-.controls label:hover
+.controls label:hover,
+.controls span:hover
 {
     opacity: .8;
     color: #ff0042;
 }
 
-.controls label
+.controls label,
+.controls span
 {
+    display: none;
+    width: 50px;
+    height: 50px;
     color: #ef023f;
     cursor: pointer;
     text-decoration: none;
-    transition: all .3s ease-in-out;
 }
 
 .slide1:checked ~ .controls label:nth-child(2),
 .slide2:checked ~ .controls label:nth-child(3),
-.slide3:checked ~ .controls label:nth-child(4)
+.slide3:checked ~ .controls span
 {
     background: url('next.png') no-repeat;
     float: right;
@@ -128,7 +124,7 @@ header
     background-color: #ef023f;
 }
 
-.slide1:checked ~ .controls label:nth-child(4),
+.slide1:checked ~ .controls span,
 .slide2:checked ~ .controls label:nth-child(1),
 .slide3:checked ~ .controls label:nth-child(2)
 {
@@ -139,8 +135,8 @@ header
     background-color: #ef023f;
 }
 
-.slide3:checked ~ .controls label:nth-child(4),
-.slide1:checked ~ .controls label:nth-child(4)
+.slide3:checked ~ .controls span,
+.slide1:checked ~ .controls span
 {
     opacity: .5;
     color: #a2a2a2;
