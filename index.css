@@ -3,10 +3,11 @@ body
     margin: 0;
 }
 
-span.images {
+span.images 
+{
     position: fixed;
-	top: 20vh;
-	height: auto;
+    top: 20vh;
+    height: auto;
     left: 10vw;
     width: 80vw;
     padding: 0;
@@ -14,7 +15,8 @@ span.images {
     overflow: hidden;
 }
 
-span.qq {
+span.qq 
+{
     height: 100%;
     margin: 0;
     padding: 0;
@@ -23,17 +25,19 @@ span.qq {
     word-wrap: break-word;
 }
 
-span.image {
+span.image 
+{
     position: relative;
-	right: 0;
-	height: auto;
+    right: 0;
+    height: auto;
     width: 25%;
     display: inline-block;
     transition: 1s;
 }
 
 input:nth-of-type(1):checked ~ label:nth-of-type(2):after,
-input:nth-of-type(2):checked ~ label:nth-of-type(3):after{
+input:nth-of-type(2):checked ~ label:nth-of-type(3):after
+{
     content: "\3009";
     position: fixed;
     right: -3%;
@@ -41,11 +45,12 @@ input:nth-of-type(2):checked ~ label:nth-of-type(3):after{
 }
 
 input:nth-of-type(2):checked ~ label:nth-of-type(1):after,
-input:nth-of-type(3):checked ~ label:nth-of-type(2):after {
+input:nth-of-type(3):checked ~ label:nth-of-type(2):after
+{
     content: "\3008";
     position: fixed;
     left: -3%;
-	top: 30%;
+    top: 30%;
 }
 
 input:nth-of-type(2):checked ~ span.qq span.image
@@ -60,7 +65,7 @@ input:nth-of-type(3):checked ~ span.qq span.image
 
 span.image > img.small
 {
-	position: relative;
+    position: relative;
     width: 80%;
     padding: 10%;
 }
@@ -73,7 +78,7 @@ span.image:hover > img.small
 
 span.image:hover
 {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 span.image:hover > p
@@ -96,29 +101,29 @@ div.cross
 
 div.cross > img
 {
-	position: relative;
+    position: relative;
     width: 100%;
 }
 
 div.bigimg > img
 {
-	position: relative;
-	top: 10vh;
-	left: 25vw;
-	width: 50vw;
-	z-index: 9500;
+    position: relative;
+    top: 10vh;
+    left: 25vw;
+    width: 50vw;
+    z-index: 9500;
 }
 
 span.image:focus > div.bigimg
 {
     position: fixed;
-	top: 0;
-	left: 0;
+    top: 0;
+    left: 0;
     display: block;
     width: 100vw;
-	height: 100vh;
-	z-index: 9000;
-	background: rgba(0,0,0,.4);
+    height: 100vh;
+    z-index: 9000;
+    background: rgba(0,0,0,.4);
 }
 
 span.image:focus > div.cross
@@ -134,21 +139,23 @@ span.image:focus > div.cross
 
 p
 {
-	display: none;
+    display: none;
     position: relative;
-	width: 100%;
-	margin: 2% 0 0 0;
-	white-space: normal;
-	word-wrap: break-word;
+    width: 100%;
+    margin: 2% 0 0 0;
+    white-space: normal;
+    word-wrap: break-word;
     font: italic normal bold 12px Arial;
-	background-color: #dddddd;
+    background-color: #ddd;
 }
 
-input {
+input 
+{
     display: none;
 }
 
-label {
+label 
+{
     cursor: pointer;
     font-weight: 600;
     font-size: 5em;
