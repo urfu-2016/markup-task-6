@@ -18,7 +18,7 @@ h1
 input
 {
     position: absolute;
-    margin-top: 280px;
+    top: 90%;
     margin-left: -100px;
 }
 
@@ -36,7 +36,7 @@ label
 {
     position: absolute;
     margin-top: 50px;
-    margin-left: -700px;
+    margin-left: -50%;
     font-size: 150px;
     opacity: .3;
     -moz-user-select: none;
@@ -48,55 +48,58 @@ label
 .third-block
 {
     margin: 0 auto;
-    width: 1050px;
+    width: 70%;
     position: relative;
     display: none;
     text-align: left;
 }
 
-.item
+.vegetable-card
 {
     display: inline-block;
-    width: 250px;
+    width: 24%;
     position: relative;
 }
 
 .information
 {
     position: absolute;
-    left: 0;
-    right: 0;
+    padding: 20px 15px 10px;
 }
 
 .information img
 {
-    max-width: 250px;
+    max-width: 100%;
     max-height: 200px;
-    margin-top: 20px;
 }
 
 .description
 {
     display: none;
-    width: 400px;
-    -moz-user-select: text;
-    user-select: text;
+    max-width: 100%;
 }
 
 .description p
 {
     margin: 0 10px 20px;
+    font-size: .8em;
 }
 
 .information:hover
 {
-    width: 400px;
+    width: 150%;
     border-radius: 10px;
     background: #e0ffff;
+    margin-left: -60px;
     z-index: 1;
     box-shadow: inset #bfbfbf 0 -3px 8px
         , #000 0 3px 8px -10px;
     text-align: center;
+}
+
+.information:hover img
+{
+    max-width: 70%;
 }
 
 .modal
@@ -141,7 +144,7 @@ label:active
 .first:checked ~ .third + label + label,
 .second:checked ~ .third + label + label + label + label
 {
-    margin-left: 500px;
+    margin-left: 35%;
 }
 
 .modal .image
@@ -160,6 +163,7 @@ label:active
 
 .modal a
 {
+    margin-right: 10px;
     font-family: Arial;
     float: right;
     font-size: 50px;
