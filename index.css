@@ -11,14 +11,14 @@ main
     text-align: center;
 }
 
-.item
+.food
 {
     display: inline-block;
     vertical-align: top;
     width: 20%;
 }
 
-.img_food
+.img-food
 {
     width: 80%;
 }
@@ -38,78 +38,69 @@ main
     background: white;
     box-shadow: 0 0 1em #6e797f;
     width: 300px;
-    right: 15px;
 }
 
-.item:hover .description
+.food:hover .description
 {
     display: block;
 }
 
-.shadow
+.modal-window
 {
-    background: #413e40;
-    opacity: .7;
+    z-index: 1;
     display: none;
+    background: rgba(0,0,0,.6);
 }
 
 .close
 {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
     cursor: pointer;
     display: none;
-    width: 80px;
 }
 
-.img_food:focus
+.food:target ~ .shadow .close,
+.food:target ~ .shadow .modal-window
 {
-    z-index: 1;
+    display: block;
+}
+
+.food:target .img-food
+{
+    pointer-events: none;
+    z-index: 2;
     width: 450px;
 }
 
-.img_food:focus ~ .close
+.food:target .img-food,
+.modal-window
 {
-    display: block;
-    z-index: 1;
     position: fixed;
     top: 0;
     right: 0;
-}
-
-.img_food:focus ~ .description
-{
-    font-family: Cambria;
-    display: none;
-}
-
-.img_food:focus ~ .shadow
-{
-    display: block;
-}
-
-.img_food:focus,
-.shadow
-{
-    position: fixed;
-    top: 0;
-    left: 0;
     bottom: 0;
-    right: 0;
+    left: 0;
     margin: auto;
 }
 
-input[type='radio'].page_one:checked ~ .content .secondSlide,
-input[type='radio'].page_one:checked ~ .content .thirdSlide,
-input[type='radio'].page_two:checked ~ .content .firstSlide,
-input[type='radio'].page_two:checked ~ .content .thirdSlide,
-input[type='radio'].page_three:checked ~ .content .firstSlide,
-input[type='radio'].page_three:checked ~ .content .secondSlide
+.food:target .description,
+input[type='radio'].page-one:checked ~ .content .second-slide,
+input[type='radio'].page-one:checked ~ .content .third-slide,
+input[type='radio'].page-two:checked ~ .content .first-slide,
+input[type='radio'].page-two:checked ~ .content .third-slide,
+input[type='radio'].page-three:checked ~ .content .first-slide,
+input[type='radio'].page-three:checked ~ .content .second-slide
 {
     display: none;
 }
 
-.page_one,
-.page_two,
-.page_three
+.page-one,
+.page-two,
+.page-three
 {
     margin-bottom: 50px;
 }
