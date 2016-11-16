@@ -1,8 +1,24 @@
 body > input,
 body > label,
-.gray-screen
+.gray-screen,
+.gray-screen div,
+.gray-screen img,
+.gallery .card-container
 {
     display: none;
+}
+
+h1
+{
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+img
+{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .exit
@@ -11,8 +27,7 @@ body > label,
     top: 5%;
     right: 5%;
     width: 5%;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0);
+    z-index: 3;
 }
 
 .gray-screen
@@ -23,15 +38,15 @@ body > label,
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 1;
+    z-index: 2;
 }
 
 .gray-screen > div
 {
     position: relative;
-    display: table-cell;
     vertical-align: middle;
     text-align: center;
+    height: 100%;
 }
 
 .gray-screen img
@@ -43,100 +58,61 @@ body > label,
 
 .gallery
 {
-    position: fixed;
-    vertical-align: middle;
-    display: table;
-    top: 0;
+    position: relative;
+    display: block;
     left: 10%;
-    height: 100%;
     width: 80%;
-    border-spacing: 10px;
-    background-color: #fff;
 }
 
 .slider
 {
     position: fixed;
-    display: table;
     left: 0;
-    top: 0;
     width: 10%;
-    height: 100%;
     background-color: #fff;
+    height: 90%;
+    top: 10%;
 }
 
+.gallery > div:nth-of-type(2),
 .gallery > label:nth-of-type(n + 3)
 {
     left: 90%;
 }
 
-.gallery > div:nth-of-type(2)
+.slider > span,
+article
 {
-    left: 90%;
-}
-
-.slider > span
-{
-    display: table-cell;
-    vertical-align: middle;
-}
-
-img
-{
-    max-width: 100%;
-    max-height: 100%;
+    vertical-align: top;
 }
 
 article
 {
-    display: table-cell;
-    position: relative;
-    vertical-align: middle;
-    width: 20%;
+    display: inline-block;
+    width: 22%;
+    margin: 0 1%;
     height: 100%;
 }
 
 .card-container
 {
     z-index: 1;
-}
 
-label.fullsizing,
-.description
-{
-    padding: 0 5%;
 }
 
 .description
 {
     display: none;
     text-align: justify;
-    padding-bottom: 15px;
-    padding-top: 5px;
+    padding: 5px 5% 15px;
 }
 
 label.fullsizing
 {
-    display: inline-block;
-}
-
-label.fullsizing
-{
+    display: block;
     margin: 0;
     background-color: #fff;
-    padding-top: 15px;
-    padding-bottom: 5px;
-}
-
-section .page1,
-section .page2,
-section .page3,
-.gray-screen .f1,
-.gray-screen .f2,
-.gray-screen .f3,
-.gray-screen .f4
-{
-    display: none;
+    padding: 15px 5% 5px;
 }
 
 /*-------------------------actions--------------------------------*/
@@ -146,24 +122,14 @@ section .page3,
 {
     position: relative;
     width: 150%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
-    overflow-y: scroll;
-}
-
-.card-container:hover label.fullsizing
-{
-    box-shadow: 0 15px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    z-index: 2;
 }
 
 .card-container:hover .description
 {
     display: block;
-    position: absolute;
-    /*По ширине*/
-    right: 0;
-    left: 0;
     background-color: #fff;
-    box-shadow: 5px 15px rgba(0, 0, 0, .5);
 }
 /*----------------------------------------------------------------*/
 /*-------------------------fullsize-------------------------------*/
