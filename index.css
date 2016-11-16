@@ -113,6 +113,7 @@ label.fullsizing
     margin: 0;
     background-color: #fff;
     padding: 15px 5% 5px;
+    cursor: pointer;
 }
 
 /*-------------------------actions--------------------------------*/
