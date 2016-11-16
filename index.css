@@ -33,7 +33,7 @@ body
     width: 2rem;
     height: 2rem;
     margin: 7.5% 2rem 0;
-    background: url(images/arrowLeft.svg) 0 0 no-repeat;
+    background: 0 0 no-repeat;
     background-size: cover;
     cursor: pointer;
 }
@@ -41,6 +41,7 @@ body
 .left-arrow
 {
     float: left;
+    background-image: url(images/arrowLeft.svg);
 }
 
 .right-arrow
@@ -49,22 +50,42 @@ body
     background-image: url(images/arrowRight.svg);
 }
 
-.arrow-on-page-1
+.arrow-on-page-1,
+input[id='pineapple']:checked ~ .modal-window,
+input[id='pineapple']:checked ~ .modal-window img[id='big-image-1'],
+input[id='orange']:checked ~ .modal-window,
+input[id='orange']:checked ~ .modal-window img[id='big-image-2'],
+input[id='watermelon']:checked ~ .modal-window,
+input[id='watermelon']:checked ~ .modal-window img[id='big-image-3'],
+input[id='banana']:checked ~ .modal-window,
+input[id='banana']:checked ~ .modal-window img[id='big-image-4'],
+input[id='broccoli']:checked ~ .modal-window,
+input[id='broccoli']:checked ~ .modal-window img[id='big-image-5'],
+input[id='grapes']:checked ~ .modal-window,
+input[id='grapes']:checked ~ .modal-window img[id='big-image-6'],
+input[id='pear']:checked ~ .modal-window,
+input[id='pear']:checked ~ .modal-window img[id='big-image-7'],
+input[id='lemon']:checked ~ .modal-window,
+input[id='lemon']:checked ~ .modal-window img[id='big-image-8'],
+input[id='carrot']:checked ~ .modal-window,
+input[id='carrot']:checked ~ .modal-window img[id='big-image-9'],
+input[id='turnip']:checked ~ .modal-window,
+input[id='turnip']:checked ~ .modal-window img[id='big-image-10'],
+input[id='lettuce']:checked ~ .modal-window,
+input[id='lettuce']:checked ~ .modal-window img[id='big-image-11'],
+input[id='pumpkin']:checked ~ .modal-window,
+input[id='pumpkin']:checked ~ .modal-window img[id='big-image-12'],
+input[id='apple']:checked ~ .modal-window,
+input[id='apple']:checked ~ .modal-window img[id='big-image-13'],
+.product:hover > .product-name,
+.product:hover > .product-description
 {
     display: block;
 }
 
 .arrow-on-page-2,
-.arrow-on-page-3
-{
-    display: none;
-}
-
-.go-to-page
-{
-    display: none;
-}
-
+.arrow-on-page-3,
+.go-to-page,
 input[id='back-to-page-3']:checked ~ label.arrow-on-page-1,
 input[id='back-to-page-3']:checked ~ label.arrow-on-page-2,
 input[id='back-to-page-3']:checked ~ .gallery-content .product.page-1,
@@ -88,7 +109,9 @@ input[id='back-to-page-2']:checked ~ .gallery-content .product.page-1,
 input[id='go-to-page-1']:checked ~ label.arrow-on-page-3,
 input[id='go-to-page-1']:checked ~ label.arrow-on-page-2,
 input[id='go-to-page-1']:checked ~ .gallery-content .product.page-3,
-input[id='go-to-page-1']:checked ~ .gallery-content .product.page-2
+input[id='go-to-page-1']:checked ~ .gallery-content .product.page-2,
+.check-big-image,
+input[id='close-window']:checked ~ .modal-window
 {
     display: none;
 }
@@ -128,41 +151,6 @@ input[id='go-to-page-1']:checked ~ .gallery-content .product.page-1
     vertical-align: top;
 }
 
-.check-big-image
-{
-    display: none;
-}
-
-input[id='pineapple']:checked ~ .modal-window,
-input[id='pineapple']:checked ~ .modal-window img[id='big-image-1'],
-input[id='orange']:checked ~ .modal-window,
-input[id='orange']:checked ~ .modal-window img[id='big-image-2'],
-input[id='watermelon']:checked ~ .modal-window,
-input[id='watermelon']:checked ~ .modal-window img[id='big-image-3'],
-input[id='banana']:checked ~ .modal-window,
-input[id='banana']:checked ~ .modal-window img[id='big-image-4'],
-input[id='broccoli']:checked ~ .modal-window,
-input[id='broccoli']:checked ~ .modal-window img[id='big-image-5'],
-input[id='grapes']:checked ~ .modal-window,
-input[id='grapes']:checked ~ .modal-window img[id='big-image-6'],
-input[id='pear']:checked ~ .modal-window,
-input[id='pear']:checked ~ .modal-window img[id='big-image-7'],
-input[id='lemon']:checked ~ .modal-window,
-input[id='lemon']:checked ~ .modal-window img[id='big-image-8'],
-input[id='carrot']:checked ~ .modal-window,
-input[id='carrot']:checked ~ .modal-window img[id='big-image-9'],
-input[id='turnip']:checked ~ .modal-window,
-input[id='turnip']:checked ~ .modal-window img[id='big-image-10'],
-input[id='lettuce']:checked ~ .modal-window,
-input[id='lettuce']:checked ~ .modal-window img[id='big-image-11'],
-input[id='pumpkin']:checked ~ .modal-window,
-input[id='pumpkin']:checked ~ .modal-window img[id='big-image-12'],
-input[id='apple']:checked ~ .modal-window,
-input[id='apple']:checked ~ .modal-window img[id='big-image-13']
-{
-    display: block;
-}
-
 .modal-window
 {
     display: none;
@@ -186,11 +174,6 @@ input[id='apple']:checked ~ .modal-window img[id='big-image-13']
     cursor: pointer;
 }
 
-input[id='close-window']:checked ~ .modal-window
-{
-    display: none;
-}
-
 .big-image
 {
     display: none;
@@ -202,12 +185,6 @@ input[id='close-window']:checked ~ .modal-window
 .product:hover
 {
     box-shadow: 0 0 10px rgba(0,0,0, .25);
-}
-
-.product:hover > .product-name,
-.product:hover > .product-description
-{
-    display: block;
 }
 
 .product-image
