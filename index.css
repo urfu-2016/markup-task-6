@@ -4,15 +4,6 @@ h1
     text-align: center;
 }
 
-article
-{
-    display: inline-block;
-    width: 300px;
-    height: 400px;
-    max-width: 24%;
-    vertical-align: top;
-}
-
 label
 {
     display: inline-block;
@@ -25,26 +16,37 @@ label
     border-radius: 50%;
     border: 2px solid #000;
     margin: 3px;
+    z-index: 6;
 }
 
 label:hover,
-.list_1:checked ~ .buttons .button1,
-.list_2:checked ~ .buttons .button2,
-.list_3:checked ~ .buttons .button3,
-.list_4:checked ~ .buttons .button4
+.gallery_1:checked ~ .buttons .button1,
+.gallery_2:checked ~ .buttons .button2,
+.gallery_3:checked ~ .buttons .button3,
+.gallery_4:checked ~ .buttons .button4
 {
     background: #aaa;
 }
 
 .harvest
 {
-    width: 100%;
+    display: inline-block;
+    width: 300px;
+    box-sizing: border-box;
+    max-width: 20%;
+    vertical-align: top;
+    height: 600px;
 }
 
-.list
+.harvest a img
+{
+    width: 100%;
+    cursor: pointer;
+}
+
+.gallery
 {
     display: none;
-    vertical-align: center;
 }
 
 .description
@@ -52,27 +54,33 @@ label:hover,
     position: fixed;
     display: none;
     width: inherit;
+    max-width: 20%;
 }
 
-article:hover .description
+.harvest:hover .description
 {
     display: block;
-    background: #fff;
 }
 
-.list_1,
-.list_2,
-.list_3,
-.list_4
+article:hover
 {
-    visibility: hidden;
+
+    box-shadow: 2px 2px 2px 2px #aaa;
+}
+
+.gallery_1,
+.gallery_2,
+.gallery_3,
+.gallery_4
+{
+    display: none;
 
 }
 
-.list_1:checked ~ .list1,
-.list_2:checked ~ .list2,
-.list_3:checked ~ .list3,
-.list_4:checked ~ .list4
+.gallery_1:checked ~ .gallery1,
+.gallery_2:checked ~ .gallery2,
+.gallery_3:checked ~ .gallery3,
+.gallery_4:checked ~ .gallery4
 {
     display: block;
 }
@@ -84,15 +92,11 @@ article:hover .description
     cursor: pointer;
 }
 
-.harvest
+.big_pictures img:target
 {
-    cursor: pointer;
-}
-
-.harvest:focus
-{
+    display: block;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 0;
     bottom: 0;
@@ -103,16 +107,37 @@ article:hover .description
     margin: auto;
 }
 
-.harvest:focus ~ .close
+.big_pictures img:target ~ a .close
 {
     position: fixed;
-    z-index: 2;
     display: block;
-    top: 0;
-    right: 0;
+    z-index: 20;
+    top: 10px;
+    right: 10px;
+    margin: auto;
 }
 
-.close:focus
+.big_pictures img:target ~ .background
 {
-    pointer-events: none;
+    z-index: 5;
+    display: block;
+    position: fixed;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.big_pictures img
+{
+    display: none;
+}
+
+.buttons
+{
+    margin-top: 10px;
 }
