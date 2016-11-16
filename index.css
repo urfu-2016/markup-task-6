@@ -5,48 +5,29 @@
     margin: 0;
 }
 
-.main
+.album-content
 {
-    display: inline-block;
-    border: 0 solid black;
     position: relative;
-    margin: 100px auto;
-    width: 1300px;
-    text-align: center;
-}
-
-.scroll
-{
-    display: inline-block;
-}
-
-.pages
-{
-    white-space: normal;
+    margin: 200px auto;
     width: 1300px;
 }
 
 .veg-content
 {
     width: 1100px;
-    display: inline-block;
+    margin: 0 100px auto;
 }
 
 .veg-block
 {
     vertical-align: middle;
     position: relative;
-    max-width: 24%;
-    display: inline-block;
-    text-align: center;
-}
-
-.veg-img
-{
+    width: 270px;
     display: inline-block;
 }
 
-.veg-img > img
+.veg-img > img,
+.expanded-img
 {
     width: 100%;
 }
@@ -57,32 +38,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    vertical-align: top;
-    background: white;
+    background: #fff;
     width: 110%;
-    border: 10px solid white;
-    box-shadow: 0 0 5px 2px black;
+    border: 10px solid #fff;
+    box-shadow: 0 0 5px 2px #000;
     z-index: 3;
-}
-
-.veg:hover .veg-expanded-info
-{
-    display: inline-block;
-}
-
-.checkbox-full
-{
-    display: none;
-}
-
-.clicked-img
-{
-    display: block;
-}
-
-.expanded-img
-{
-    width: 100%;
 }
 
 .full-veg-back
@@ -95,7 +55,7 @@
     z-index: 5;
     opacity: .5;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .full-veg-front
@@ -106,15 +66,16 @@
     left: 0;
     z-index: 6;
     height: 100vh;
-    width: 100%;
-    min-width: 768px;
+    width: 100vw;
 }
 
-.full-veg-img
+.fullscreen-img
 {
-    max-width: 60%;
-    max-height: 60%;
+    display: block;
     margin: 100px auto;
+    max-width: 70vw;
+    max-height: 70vh;
+
 }
 
 .close
@@ -125,24 +86,19 @@
     cursor: pointer;
 }
 
-.checkbox-full:checked + .full-veg > .full-veg-back
-{
-    display: block;
-}
-
-.checkbox-full:checked + .full-veg > .full-veg-front
-{
-    display: block;
-}
-
-.pages
+.pages,
+.start-radio,
+.checkbox-full
 {
     display: none;
 }
 
-.start-radio
+.veg:hover .veg-expanded-info,
+.checkbox-full:checked + .full-veg > .full-veg-back,
+.checkbox-full:checked + .full-veg > .full-veg-front,
+.start-radio:checked + .pages
 {
-    display: none;
+    display: block;
 }
 
 .scroll
@@ -165,19 +121,3 @@
 {
     float: left;
 }
-
-.right-scroll.last
-{
-    display: none;
-}
-
-.left-scroll.first
-{
-    display: none;
-}
-
-.start-radio:checked + .pages
-{
-    display: block;
-}
-
