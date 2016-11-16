@@ -1,0 +1,213 @@
+html
+{
+    margin: 0;
+    background-color: #fff;
+    font: 14px 'PT Sans', sans-serif;
+    color: #333;
+    cursor: default;
+}
+
+body
+{
+    margin: 0;
+}
+
+.gallery
+{
+    margin: 0;
+    padding: 0;
+}
+
+.project-name
+{
+    margin: 0;
+    padding: 2rem 0 3rem;
+    text-align: center;
+    font: 2.5rem 'Marmelad', sans-serif;
+    color: #500;
+}
+
+.left-arrow,
+.right-arrow
+{
+    width: 2rem;
+    height: 2rem;
+    margin: 7.5% 2rem 0;
+    background: 0 0 no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.left-arrow
+{
+    float: left;
+    background-image: url(images/arrowLeft.svg);
+}
+
+.right-arrow
+{
+    float: right;
+    background-image: url(images/arrowRight.svg);
+}
+
+.arrow-on-page-1,
+input[id='pineapple']:checked ~ .modal-window,
+input[id='pineapple']:checked ~ .modal-window img[id='big-image-1'],
+input[id='orange']:checked ~ .modal-window,
+input[id='orange']:checked ~ .modal-window img[id='big-image-2'],
+input[id='watermelon']:checked ~ .modal-window,
+input[id='watermelon']:checked ~ .modal-window img[id='big-image-3'],
+input[id='banana']:checked ~ .modal-window,
+input[id='banana']:checked ~ .modal-window img[id='big-image-4'],
+input[id='broccoli']:checked ~ .modal-window,
+input[id='broccoli']:checked ~ .modal-window img[id='big-image-5'],
+input[id='grapes']:checked ~ .modal-window,
+input[id='grapes']:checked ~ .modal-window img[id='big-image-6'],
+input[id='pear']:checked ~ .modal-window,
+input[id='pear']:checked ~ .modal-window img[id='big-image-7'],
+input[id='lemon']:checked ~ .modal-window,
+input[id='lemon']:checked ~ .modal-window img[id='big-image-8'],
+input[id='carrot']:checked ~ .modal-window,
+input[id='carrot']:checked ~ .modal-window img[id='big-image-9'],
+input[id='turnip']:checked ~ .modal-window,
+input[id='turnip']:checked ~ .modal-window img[id='big-image-10'],
+input[id='lettuce']:checked ~ .modal-window,
+input[id='lettuce']:checked ~ .modal-window img[id='big-image-11'],
+input[id='pumpkin']:checked ~ .modal-window,
+input[id='pumpkin']:checked ~ .modal-window img[id='big-image-12'],
+input[id='apple']:checked ~ .modal-window,
+input[id='apple']:checked ~ .modal-window img[id='big-image-13'],
+.product:hover > .product-name,
+.product:hover > .product-description
+{
+    display: block;
+}
+
+.arrow-on-page-2,
+.arrow-on-page-3,
+.go-to-page,
+input[id='back-to-page-3']:checked ~ label.arrow-on-page-1,
+input[id='back-to-page-3']:checked ~ label.arrow-on-page-2,
+input[id='back-to-page-3']:checked ~ .gallery-content .product.page-1,
+input[id='back-to-page-3']:checked ~ .gallery-content .product.page-2,
+input[id='go-to-page-2']:checked ~ label.arrow-on-page-1,
+input[id='go-to-page-2']:checked ~ label.arrow-on-page-3,
+input[id='go-to-page-2']:checked ~ .gallery-content .product.page-1,
+input[id='go-to-page-2']:checked ~ .gallery-content .product.page-3,
+input[id='back-to-page-1']:checked ~ label.arrow-on-page-2,
+input[id='back-to-page-1']:checked ~ label.arrow-on-page-3,
+input[id='back-to-page-1']:checked ~ .gallery-content .product.page-2,
+input[id='back-to-page-1']:checked ~ .gallery-content .product.page-3,
+input[id='go-to-page-3']:checked ~ label.arrow-on-page-2,
+input[id='go-to-page-3']:checked ~ label.arrow-on-page-1,
+input[id='go-to-page-3']:checked ~ .gallery-content .product.page-2,
+input[id='go-to-page-3']:checked ~ .gallery-content .product.page-1,
+input[id='back-to-page-2']:checked ~ label.arrow-on-page-3,
+input[id='back-to-page-2']:checked ~ label.arrow-on-page-1,
+input[id='back-to-page-2']:checked ~ .gallery-content .product.page-3,
+input[id='back-to-page-2']:checked ~ .gallery-content .product.page-1,
+input[id='go-to-page-1']:checked ~ label.arrow-on-page-3,
+input[id='go-to-page-1']:checked ~ label.arrow-on-page-2,
+input[id='go-to-page-1']:checked ~ .gallery-content .product.page-3,
+input[id='go-to-page-1']:checked ~ .gallery-content .product.page-2,
+.check-big-image,
+input[id='close-window']:checked ~ .modal-window
+{
+    display: none;
+}
+
+input[id='back-to-page-3']:checked ~ label.arrow-on-page-3,
+input[id='back-to-page-3']:checked ~ .gallery-content .product.page-3,
+input[id='go-to-page-2']:checked ~ label.arrow-on-page-2,
+input[id='go-to-page-2']:checked ~ .gallery-content .product.page-2,
+input[id='back-to-page-1']:checked ~ label.arrow-on-page-1,
+input[id='back-to-page-1']:checked ~ .gallery-content .product.page-1,
+input[id='go-to-page-3']:checked ~ label.arrow-on-page-3,
+input[id='go-to-page-3']:checked ~ .gallery-content .product.page-3,
+input[id='back-to-page-2']:checked ~ label.arrow-on-page-2,
+input[id='back-to-page-2']:checked ~ .gallery-content .product.page-2,
+input[id='go-to-page-1']:checked ~ label.arrow-on-page-1,
+input[id='go-to-page-1']:checked ~ .gallery-content .product.page-1
+{
+    display: inline-block;
+}
+
+.gallery-content
+{
+    width: calc(100% - 12rem);
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.product
+{
+    display: none;
+    width: 20%;
+    margin: 0 auto;
+    padding: 1%;
+    overflow: hidden;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.modal-window
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .75);
+}
+
+.icon-close
+{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(images/close.svg) 0 0 no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.big-image
+{
+    display: none;
+    width: 90%;
+    height: calc(100% - 4rem);
+    margin: 2rem auto;
+}
+
+.product:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0, .25);
+}
+
+.product-image
+{
+    width: 75%;
+    cursor: pointer;
+}
+
+.product-name
+{
+    display: none;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #860049;
+}
+
+.product-description
+{
+    display: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1rem;
+}
