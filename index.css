@@ -3,7 +3,7 @@ main
     margin: 0 auto;
     text-align: center;
     margin-top: 50px;
-    width: 1000px;
+    width: 1050px;
     overflow: hidden;
     position: relative;
 }
@@ -11,7 +11,6 @@ main
 .illustration
 {
     background: #fff;
-    cursor: pointer;
 }
 
 .illustration img
@@ -21,6 +20,7 @@ main
     margin: 0;
     background: #fff;
     margin-bottom: -4px;
+    cursor: pointer;
 }
 
 .item
@@ -29,33 +29,23 @@ main
     vertical-align: top;
     width: 4.7%;
     display: inline-block;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    border: 2px solid #111;
-    -webkit-transition: all .1s ease-out 0s;
-    -moz-transition: all .1s ease-out 0s;
-    -o-transition: all .1s ease-out 0s;
-    transition: all .1s ease-out 0s;
-}
-
-.item:first-child
-{
-    margin-left: 20px;
+    transition: all .1s;
+    border: 2px solid rgba(255, 255, 255, 0);
+    margin: 50px 0 50px 15px;
 }
 
 .item .description
 {
     display: none;
+    text-align: center;
 }
 
 .item:hover
 {
+    box-shadow: 0 0 5px #111;
+    border: 2px solid #111;
     transform: scale(1.1);
     position: relative;
-    -webkit-transition: all .1s ease-out 0s;
-    -moz-transition: all .1s ease-out 0s;
-    -o-transition: all .1s ease-out 0s;
-    transition: all .1s ease-out 0s;
 }
 
 .item:hover .description
@@ -78,47 +68,106 @@ main
     display: none;
 }
 
-.modal:target
+input[name='modal']
+{
+    display: none;
+}
+
+input[name='modal']:checked ~ .modal
 {
     display: block;
+}
+
+input[name='close']:checked ~ .modal
+{
+    display: none;
+}
+
+input[id='image-1']:checked ~ .modal > .image-box
+{
+    background-image: url('images/Морковь.jpg');
+}
+
+input[id='image-2']:checked ~ .modal > .image-box
+{
+    background-image: url('images/Виноград.jpg');
+}
+
+input[id='image-3']:checked ~ .modal > .image-box
+{
+    background-image: url('images/Груши.jpg');
+}
+
+input[id='image-4']:checked ~ .modal > .image-box
+{
+    background-image: url('images/Лук.jpg');
+}
+
+input[id='image-5']:checked ~ .modal > .image-box
+{
+    background-image: url('images/Репа.jpg');
+}
+
+input[id='image-6']:checked ~ .modal > .image-box
+{
+    background-image: url('images/Тыква.jpg');
+}
+
+input[id='image-7']:checked ~ .modal > .image-box
+{
+    background-image: url('images/apple.jpg');
+}
+
+input[id='image-8']:checked ~ .modal > .image-box
+{
+    background-image: url('images/baklazhan.jpg');
+}
+
+input[id='image-9']:checked ~ .modal > .image-box
+{
+    background-image: url('images/cherry.jpg');
+}
+
+input[id='image-10']:checked ~ .modal > .image-box
+{
+    background-image: url('images/kapusta.jpg');
+}
+
+input[id='image-11']:checked ~ .modal > .image-box
+{
+    background-image: url('images/kartofel.jpg');
+}
+
+input[id='image-12']:checked ~ .modal > .image-box
+{
+    background-image: url('images/pepper.jpg');
 }
 
 .modal .close
 {
     color: #fff;
-    font-size: 30px;
+    font: bold 30px/30px Arial, sans-serif;
     text-decoration: none;
-    font-weight: bold;
-    font-family: sans-serif;
     position: absolute;
     top: 30px;
     right: 40px;
+    cursor: pointer;
+    transition: color 1s;
 }
 
 .modal .close:hover
 {
-    color: #eee;
+    color: #aaa;
 }
 
-.modal section
+.modal .image-box
 {
-    margin: auto;
-    width: auto;
-    height: auto;
+    margin: 0 auto;
+    height: 100%;
     max-width: 30%;
-    max-height: 30%;
     margin-top: 10%;
-}
-
-.modal img
-{
-    max-width: 100%;
-}
-
-.slides
-{
-    display: inline;
-    margin-right: 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .slider
@@ -127,39 +176,27 @@ main
     list-style: none;
     text-align: left;
     padding: 0;
-    overflow: hidden;
+    transition: margin 1s;
 }
 
 .radio1:checked ~ .slider
 {
     margin-left: 0;
-    -webkit-transition: all 1s ease-out .1s;
-    -moz-transition: all 1s ease-out .1s;
-    -o-transition: all 1s ease-out .1s;
-    transition: all 1s ease-out .1s;
 }
 
 .radio2:checked ~ .slider
 {
-    margin-left: -1080px;
-    -webkit-transition: all 1s ease-out .1s;
-    -moz-transition: all 1s ease-out .1s;
-    -o-transition: all 1s ease-out .1s;
-    transition: all 1s ease-out .1s;
+    margin-left: -1030px;
 }
 
 .radio3:checked ~ .slider
 {
-    margin-left: -2160px;
-    -webkit-transition: all 1s ease-out .1s;
-    -moz-transition: all 1s ease-out .1s;
-    -o-transition: all 1s ease-out .1s;
-    transition: all 1s ease-out .1s;
+    margin-left: -2060px;
 }
 
-.radio1:checked ~ .controls label:nth-of-type(1),
-.radio2:checked ~ .controls label:nth-of-type(2),
-.radio3:checked ~ .controls label:nth-of-type(3)
+.radio1:checked ~ .slider > .controls label:nth-of-type(1),
+.radio2:checked ~ .slider > .controls label:nth-of-type(2),
+.radio3:checked ~ .slider > .controls label:nth-of-type(3)
 {
     background: #aaa;
 }
@@ -172,7 +209,10 @@ main
 .controls
 {
     display: inline-block;
-    margin: 0 auto;
+    left: 45.5%;
+    top: 300px;
+    z-index: 0;
+    position: absolute;
 }
 
 .controls > label
@@ -185,9 +225,6 @@ main
     box-shadow: 0 0 3px #ccc;
     cursor: pointer;
     margin: 0 5px;
-    -webkit-transition: background ease-in-out .5s;
-    -moz-transition: background ease-in-out .5s;
-    -o-transition: background ease-in-out .5s;
     transition: background ease-in-out .5s;
 }
 
