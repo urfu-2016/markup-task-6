@@ -34,6 +34,11 @@ main
     margin: 50px 0 50px 15px;
 }
 
+.item:nth-of-type(4n)
+{
+    margin-right: 100px;
+}
+
 .item .description
 {
     display: none;
@@ -186,12 +191,12 @@ input[id='image-12']:checked ~ .modal > .image-box
 
 .radio2:checked ~ .slider
 {
-    margin-left: -1030px;
+    margin-left: -1130px;
 }
 
 .radio3:checked ~ .slider
 {
-    margin-left: -2060px;
+    margin-left: -2260px;
 }
 
 .radio1:checked ~ .slider > .controls label:nth-of-type(1),
