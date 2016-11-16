@@ -34,27 +34,64 @@ main
 
 input
 {
-    position: relative;
-    top: 280px;
-}
-
-.page1,
-.page2,
-.page3
-{
     display: none;
 }
 
-.page1-input:checked ~ .page1,
-.page2-input:checked ~ .page2,
-.page3-input:checked ~ .page3
+.page1-right:checked ~ .page2,
+.page2-left:checked ~ .page1,
+.page2-right:checked ~ .page3,
+.page3-left:checked ~ .page2
 {
-    display: block;
+    display: inline-block;
+}
+
+.left-arrow,
+.right-arrow
+{
+    display: none;
+    width: 42px;
+    height: 58px;
+    position: relative;
+    top: 99px;
+    cursor: pointer;
+}
+
+.left-arrow
+{
+    background: url(image/chevron-left.svg) no-repeat;
+    background-size: 100%;
+    margin-right: 30px;
+}
+
+.right-arrow
+{
+    background: url(image/chevron-right.svg) no-repeat;
+    background-size: 100%;
+    margin-left: 30px;
+}
+
+.page2-left:checked ~ .left-arrow:nth-of-type(1),
+.page2-left:checked ~ .right-arrow:nth-of-type(4),
+.page1-right:checked ~ .left-arrow:nth-of-type(2),
+.page1-right:checked ~ .right-arrow:nth-of-type(5),
+.page3-left:checked ~ .left-arrow:nth-of-type(2),
+.page3-left:checked ~ .right-arrow:nth-of-type(5),
+.page2-right:checked ~ .left-arrow:nth-of-type(3),
+.page2-right:checked ~ .right-arrow:nth-of-type(6)
+{
+    display: inline-block;
+}
+
+.left-arrow:nth-of-type(1),
+.right-arrow:nth-of-type(6)
+{
+    opacity: .2;
+    cursor: default;
 }
 
 .harvest
 {
-    display: inline-block;
+    display: none;
     vertical-align: top;
     width: 240px;
 }
@@ -82,8 +119,8 @@ input
 
 .description
 {
-    margin: 5px;
     display: none;
+    margin-top: 5px;
 }
 
 .harvest:not(:target):hover .description
