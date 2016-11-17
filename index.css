@@ -22,10 +22,10 @@ body
 
 .screen-bar
 {
-    width: 1000px;
+    width: 1150px;
     height: 600px;
-    display: inline-block;
     position: relative;
+    display: inline-block;
     overflow: hidden;
 }
 
@@ -33,80 +33,50 @@ body
 {
     position: absolute;
     margin-left: -750px;
-    height: 250px;
-    width: 10000px;
+    height: 300px;
+    width: max-content;
+    padding: 30px;
 }
 
-.block
+.buffer
+{
+    float: left;
+    width: 60px;
+    height: 100px;
+}
+
+.item
+{
+    float: left;
+    width: 230px;
+    margin: 20px;
+    margin-bottom: 500px;
+    background: #fff;
+}
+
+.item-info
+{
+    display: none;
+    background: #fff;
+}
+
+.item:hover
 {
     position: relative;
-    display: inline-block;
-    vertical-align: top;
-    height: 200px;
-    width: 950px;
-    margin: 25px;
-}
-
-.block figure
-{
-    margin: 0;
-    position: absolute;
-    width: 230px;
-}
-
-.block figure figcaption
-{
-    text-align: left;
-    font-family: 'Merriweather', serif;
-    display: none;
-}
-
-figure:hover figcaption
-{
-    display: block;
-    background: #fff;
-}
-
-.block figure:hover
-{
-    z-index: 999;
-    width: 350px;
+    width: 330px;
+    margin-left: -30px;
+    margin-right: -32px;
+    z-index: 8;
     border: 1px solid #000;
-    background: #fff;
     box-shadow: 5px 5px 3px #808080;
 }
 
-.block figure:hover img
+.item:hover img
 {
-    width: 350px;
+    width: 330px;
 }
 
-.item2
+.item:hover .item-info
 {
-    left: 240px;
-}
-
-.item2:hover
-{
-    left: 175px;
-}
-
-.item3
-{
-    left: 480px;
-}
-
-.item3:hover
-{
-    left: 405px;
-}
-
-.item4
-{
-    left: 720px;
-}
-
-.item4:hover
-{
-    left: 600px;
+    display: block;
 }
