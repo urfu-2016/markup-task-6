@@ -72,8 +72,6 @@ body
 {
     background-color: #fff;
     margin-top: 0;
-    transition: all .5s;
-    white-space: normal;
 }
 
 .controller
@@ -91,7 +89,7 @@ body
     display: none;
 }
 
-.icon
+.icon-leaf
 {
     color: #004d40;
     font-family: FontAwesome;
@@ -99,7 +97,7 @@ body
     margin: 5px;
 }
 
-.icon:before
+.icon-leaf:before
 {
     content: '\f06c';
 }
@@ -162,9 +160,11 @@ body
     z-index: 1;
 }
 
-.selectedPhotoSrc
+.modal-image
 {
     background-repeat: no-repeat;
+    min-width: 800px;
+    min-height: 600px;
     width: 80%;
     height: 80%;
     max-height: 700px;
@@ -173,57 +173,57 @@ body
     transition: all .5s;
 }
 
-.img1:checked ~ .modal .selectedPhotoSrc
+.img1:checked ~ .modal .modal-image
 {
     background-image: url('./img/kapusta.jpg');
 }
 
-.img2:checked ~ .modal .selectedPhotoSrc
+.img2:checked ~ .modal .modal-image
 {
     background-image: url('./img/morkov.jpg');
 }
 
-.img3:checked ~ .modal .selectedPhotoSrc
+.img3:checked ~ .modal .modal-image
 {
     background-image: url('./img/ogurec.jpg');
 }
 
-.img4:checked ~ .modal .selectedPhotoSrc
+.img4:checked ~ .modal .modal-image
 {
     background-image: url('./img/shavel.jpg');
 }
 
-.img5:checked ~ .modal .selectedPhotoSrc
+.img5:checked ~ .modal .modal-image
 {
     background-image: url('./img/strawberry.jpg');
 }
 
-.img6:checked ~ .modal .selectedPhotoSrc
+.img6:checked ~ .modal .modal-image
 {
     background-image: url('./img/svekla.jpg');
 }
 
-.img7:checked ~ .modal .selectedPhotoSrc
+.img7:checked ~ .modal .modal-image
 {
     background-image: url('./img/tikva.jpg');
 }
 
-.img8:checked ~ .modal .selectedPhotoSrc
+.img8:checked ~ .modal .modal-image
 {
     background-image: url('./img/tomat.jpg');
 }
 
-.img9:checked ~ .modal .selectedPhotoSrc
+.img9:checked ~ .modal .modal-image
 {
     background-image: url('./img/chesnok.jpg');
 }
 
-.img10:checked ~ .modal .selectedPhotoSrc
+.img10:checked ~ .modal .modal-image
 {
     background-image: url('./img/kartoshka.jpg');
 }
 
-.img11:checked ~ .modal .selectedPhotoSrc
+.img11:checked ~ .modal .modal-image
 {
     background-image: url('./img/luk.jpg');
 }
