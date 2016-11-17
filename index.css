@@ -10,7 +10,7 @@
 body
 {
     font: 14px Kurale, sans-serif;
-    min-width: 1000px;
+    min-width: 1150px;
 }
 
 header
@@ -18,8 +18,7 @@ header
     text-align: center;
     font: 4.5em LirussTYGRA, sans-serif;
     color: #323232;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin: 20px 0 40px;
 }
 
 .label
@@ -50,23 +49,22 @@ input
 {
     display: none;
     width: 42px;
-    height: 58px;
+    height: 56px;
+    background-size: 100%;
     position: relative;
-    top: 99px;
+    top: 94px;
     cursor: pointer;
 }
 
 .left-arrow
 {
-    background: url(image/chevron-left.svg) no-repeat;
-    background-size: 100%;
+    background-image: url(image/chevron-left.svg);
     margin-right: 30px;
 }
 
 .right-arrow
 {
-    background: url(image/chevron-right.svg) no-repeat;
-    background-size: 100%;
+    background-image: url(image/chevron-right.svg);
     margin-left: 30px;
 }
 
@@ -123,13 +121,14 @@ input
     margin-top: 5px;
 }
 
-.harvest:not(:target):hover .description
+.harvest:hover .description
 {
     display: block;
 }
 
-.harvest:target .container
+.modal
 {
+    display: none;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -139,26 +138,89 @@ input
     height: 100%;
 }
 
-.harvest:target .image
+.modal-image
 {
-    width: auto;
-    max-width: 45%;
-    margin-top: 25px;
+    width: 500px;
+    height: 500px;
+    background-size: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
 }
 
-.close
+.modal-close
 {
-    display: none;
     position: fixed;
-    right: 0;
+    right: 5px;
     top: 0;
-    width: 35px;
-    height: 35px;
-    background: url(image/close.png);
-    z-index: 2;
+    width: 33px;
+    height: 42px;
+    background: url(image/close.svg);
+    background-size: 100%;
 }
 
-.harvest:target ~ .close
+.harvest:target ~ .modal
 {
-    display: block;
+    display: inline-block;
+}
+
+div[id='pepper']:target ~ .modal .modal-image
+{
+    background-image: url(image/Перцы.jpg);
+}
+
+div[id='currant']:target ~ .modal .modal-image
+{
+    background-image: url(image/Смородина.jpg);
+}
+
+div[id='strawberry']:target ~ .modal .modal-image
+{
+    background-image: url(image/Клубника.jpg);
+}
+
+div[id='apple2']:target ~ .modal .modal-image
+{
+    background-image: url(image/Яблоки2.jpg);
+}
+
+div[id='salad']:target ~ .modal .modal-image
+{
+    background-image: url(image/Салат.jpg);
+}
+
+div[id='peas']:target ~ .modal .modal-image
+{
+    background-image: url(image/Горох.jpg);
+}
+
+div[id='apple']:target ~ .modal .modal-image
+{
+    background-image: url(image/Яблоки.jpg);
+}
+
+div[id='dewberry']:target ~ .modal .modal-image
+{
+    background-image: url(image/Ежевика.jpg);
+}
+
+div[id='pumpkin']:target ~ .modal .modal-image
+{
+    background-image: url(image/Тыква.jpg);
+}
+
+div[id='peach']:target ~ .modal .modal-image
+{
+    background-image: url(image/Персики.jpg);
+}
+
+div[id='carrot']:target ~ .modal .modal-image
+{
+    background-image: url(image/Морковь.jpg);
+}
+
+div[id='persimmon']:target ~ .modal .modal-image
+{
+    background-image: url(image/Хурма.jpg);
 }
