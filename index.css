@@ -9,13 +9,13 @@
     text-align: center;
 }
 
-.img-vagetable 
+.img-vegetable 
 {
-    width: 95%;
+    width: 100%;
 }
 
-.vagetable:target ~ .close,
-.vagetable:target ~ .background-shadow
+.vegetable:target ~ .close,
+.vegetable:target ~ .background-shadow
 {
     display: block;
 }
@@ -29,7 +29,6 @@
 
 .description
 {
-
     white-space: normal;
 }
 
@@ -58,7 +57,7 @@
     z-index: 3;
 }
 
-.vagetable:target .wrapper
+.vegetable:target .wrapper
 {
     position: absolute;
     width: 100%;
@@ -66,7 +65,7 @@
     left: 0;
 }
 
-.vagetable:target .img-vagetable
+.vegetable:target .img-vegetable
 {
     position: relative;
     max-width: 40%;
@@ -75,25 +74,26 @@
     z-index: 3;
 }
 
-.vagetable:not(:target) .content:hover .description
+.vegetable:not(:target) .content:hover .description
 {
     display: block;
 }
 
-.vagetable:not(:target) .content:hover
+.vegetable:not(:target) .content:hover
 {
     background: #fff;
     padding: 10px;
-    margin: -15%;
+    margin: -10%;
     position: relative;
     width: 120%;
     box-shadow: 0 0 1px #000;
     z-index: 1;
 }
 
-.vagetable
+.vegetable
 {
-    width: 24%;
+    margin: 0 5px;
+    width: 25%;
     display: inline-block;
     vertical-align: top;
 }
@@ -114,7 +114,6 @@
     position: relative;
     top: -50px;
     text-align: center;
-    margin-top: 10px;
 }
 
 .active label 
