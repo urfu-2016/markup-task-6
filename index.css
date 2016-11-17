@@ -1,0 +1,226 @@
+@font-face
+{
+    font-family: LirussTYGRA;
+    src: local('LirussTYGRA'), url('fonts/LirussTYGRA.eot');
+    src: local('LirussTYGRA'), url('fonts/LirussTYGRA.woff') format('woff'), url('fonts/LirussTYGRA.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    font: 14px Kurale, sans-serif;
+    min-width: 1150px;
+}
+
+header
+{
+    text-align: center;
+    font: 4.5em LirussTYGRA, sans-serif;
+    color: #323232;
+    margin: 20px 0 40px;
+}
+
+.label
+{
+    width: 85px;
+}
+
+main
+{
+    text-align: center;
+}
+
+input
+{
+    display: none;
+}
+
+.page1-right:checked ~ .page2,
+.page2-left:checked ~ .page1,
+.page2-right:checked ~ .page3,
+.page3-left:checked ~ .page2
+{
+    display: inline-block;
+}
+
+.left-arrow,
+.right-arrow
+{
+    display: none;
+    width: 42px;
+    height: 56px;
+    background-size: 100%;
+    position: relative;
+    top: 94px;
+    cursor: pointer;
+}
+
+.left-arrow
+{
+    background-image: url(image/chevron-left.svg);
+    margin-right: 30px;
+}
+
+.right-arrow
+{
+    background-image: url(image/chevron-right.svg);
+    margin-left: 30px;
+}
+
+.page2-left:checked ~ .left-arrow:nth-of-type(1),
+.page2-left:checked ~ .right-arrow:nth-of-type(4),
+.page1-right:checked ~ .left-arrow:nth-of-type(2),
+.page1-right:checked ~ .right-arrow:nth-of-type(5),
+.page3-left:checked ~ .left-arrow:nth-of-type(2),
+.page3-left:checked ~ .right-arrow:nth-of-type(5),
+.page2-right:checked ~ .left-arrow:nth-of-type(3),
+.page2-right:checked ~ .right-arrow:nth-of-type(6)
+{
+    display: inline-block;
+}
+
+.left-arrow:nth-of-type(1),
+.right-arrow:nth-of-type(6)
+{
+    opacity: .2;
+    cursor: default;
+}
+
+.harvest
+{
+    display: none;
+    vertical-align: top;
+    width: 240px;
+}
+
+.harvest:hover
+{
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    margin: 20px -30px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.image
+{
+    width: 230px;
+    margin-top: 10px;
+}
+
+.harvest:hover .image
+{
+    width: 270px;
+}
+
+.description
+{
+    display: none;
+    margin-top: 5px;
+}
+
+.harvest:hover .description
+{
+    display: block;
+}
+
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-image
+{
+    width: 500px;
+    height: 500px;
+    background-size: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
+}
+
+.modal-close
+{
+    position: fixed;
+    right: 5px;
+    top: 0;
+    width: 33px;
+    height: 42px;
+    background: url(image/close.svg);
+    background-size: 100%;
+}
+
+.harvest:target ~ .modal
+{
+    display: inline-block;
+}
+
+div[id='pepper']:target ~ .modal .modal-image
+{
+    background-image: url(image/Перцы.jpg);
+}
+
+div[id='currant']:target ~ .modal .modal-image
+{
+    background-image: url(image/Смородина.jpg);
+}
+
+div[id='strawberry']:target ~ .modal .modal-image
+{
+    background-image: url(image/Клубника.jpg);
+}
+
+div[id='apple2']:target ~ .modal .modal-image
+{
+    background-image: url(image/Яблоки2.jpg);
+}
+
+div[id='salad']:target ~ .modal .modal-image
+{
+    background-image: url(image/Салат.jpg);
+}
+
+div[id='peas']:target ~ .modal .modal-image
+{
+    background-image: url(image/Горох.jpg);
+}
+
+div[id='apple']:target ~ .modal .modal-image
+{
+    background-image: url(image/Яблоки.jpg);
+}
+
+div[id='dewberry']:target ~ .modal .modal-image
+{
+    background-image: url(image/Ежевика.jpg);
+}
+
+div[id='pumpkin']:target ~ .modal .modal-image
+{
+    background-image: url(image/Тыква.jpg);
+}
+
+div[id='peach']:target ~ .modal .modal-image
+{
+    background-image: url(image/Персики.jpg);
+}
+
+div[id='carrot']:target ~ .modal .modal-image
+{
+    background-image: url(image/Морковь.jpg);
+}
+
+div[id='persimmon']:target ~ .modal .modal-image
+{
+    background-image: url(image/Хурма.jpg);
+}

@@ -2,7 +2,142 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Урожай</title>
+    <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+<header>
+    Бабуленькин урожай
+    <img class="label" src="image/label.jpg" alt="label">
+</header>
+
+<main>
+    <input type="radio" name="pages" class="page1-left" id="page1-left" disabled>
+    <input type="radio" name="pages" class="page1-right" id="page1-right">
+    <input type="radio" name="pages" class="page2-left" id="page2-left" checked>
+    <input type="radio" name="pages" class="page2-right" id="page2-right">
+    <input type="radio" name="pages" class="page3-left" id="page3-left">
+    <input type="radio" name="pages" class="page3-right" id="page3-right" disabled>
+
+    <label for="page1-left" class="left-arrow"></label>
+    <label for="page2-left" class="left-arrow"></label>
+    <label for="page3-left" class="left-arrow"></label>
+
+    <div class="harvest page1" id="pepper">
+        <a href="#pepper">
+            <img class="image" src="image/Перцы.jpg" alt="Перцы" title="Перцы">
+        </a>
+        <p class="description">
+            Перец — общепринятое название некоторых видов растений рода Капсикум семейства Паслёновые
+        </p>
+    </div>
+    <div class="harvest page1" id="currant">
+        <a href="#currant">
+            <img class="image" src="image/Смородина.jpg" alt="Смородина" title="Смородина">
+        </a>
+        <p class="description">
+            Смородина — род растений из семейства Крыжовниковые порядка двудольных цветковых
+            растений Камнеломкоцветные.
+        </p>
+    </div>
+    <div class="harvest page1" id="strawberry">
+        <a href="#strawberry">
+            <img class="image" src="image/Клубника.jpg" alt="Клубника" title="Клубника">
+        </a>
+        <p class="description">
+            Клубника — народное название ягод полуницы, произошло из-за шарообразных плодов этого
+            растения от старорусского слова «клуб» — шаровидный.
+        </p>
+    </div>
+    <div class="harvest page1" id="apple2">
+        <a href="#apple2">
+            <img class="image" src="image/Яблоки2.jpg" alt="Яблоки" title="Яблоки">
+        </a>
+        <p class="description">
+            Яблоко — плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии
+            и для приготовления напитков.
+        </p>
+    </div>
+
+    <div class="harvest page2" id="salad">
+        <a href="#salad">
+            <img class="image" src="image/Салат.jpg" alt="Салат" title="Салат">
+        </a>
+        <p class="description">
+            Латук посевной, или Салат латук — вид однолетних травянистых растений рода Латук семейства
+            Астровые
+        </p>
+    </div>
+    <div class="harvest page2" id="peas">
+        <a href="#peas">
+            <img class="image" src="image/Горох.jpg" alt="Горох" title="Горох">
+        </a>
+        <p class="description">
+            Горох — род травянистых растений семейства Бобовые.
+        </p>
+    </div>
+    <div class="harvest page2" id="apple">
+        <a href="#apple">
+            <img class="image" src="image/Яблоки.jpg" alt="Яблоки" title="Яблоки">
+        </a>
+        <p class="description">
+            Яблоко — плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии
+            и для приготовления напитков.
+        </p>
+    </div>
+    <div class="harvest page2" id="dewberry">
+        <a href="#dewberry">
+            <img class="image" src="image/Ежевика.jpg" alt="Ежевика" title="Ежевика">
+        </a>
+        <p class="description">
+            Ежевика — подрод рода Рубус семейства Розовые.
+        </p>
+    </div>
+
+    <div class="harvest page3" id="pumpkin">
+        <a href="#pumpkin">
+            <img class="image" src="image/Тыква.jpg" alt="Тыква" title="Тыква">
+        </a>
+        <p class="description">
+            Тыква — род травянистых растений семейства Тыквенные.
+        </p>
+    </div>
+    <div class="harvest page3" id="peach">
+        <a href="#peach">
+            <img class="image" src="image/Персики.jpg" alt="Персики" title="Персики">
+        </a>
+        <p class="description">
+            Персик, персиковое дерево — растение из семейства Розовые, подрода Миндаль.
+        </p>
+    </div>
+    <div class="harvest page3" id="carrot">
+        <a href="#carrot">
+            <img class="image" src="image/Морковь.jpg" alt="Морковь" title="Морковь">
+        </a>
+        <p class="description">
+            Морковь — род растений семейства Зонтичные
+        </p>
+    </div>
+    <div class="harvest page3" id="persimmon">
+        <a href="#persimmon">
+            <img class="image" src="image/Хурма.jpg" alt="Хурма" title="Хурма">
+        </a>
+        <p class="description">
+            Не знаю как бабуле удалось вырастить хурму у себя в огороде, ну, видимо, она та еще
+            мастерица
+        </p>
+    </div>
+
+    <label for="page1-right" class="right-arrow"></label>
+    <label for="page2-right" class="right-arrow"></label>
+    <label for="page3-right" class="right-arrow"></label>
+
+    <div class="modal">
+        <div class="modal-image"></div>
+        <a href="#" class="modal-close"></a>
+    </div>
+</main>
 </body>
 </html>
