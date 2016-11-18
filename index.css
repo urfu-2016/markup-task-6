@@ -1,0 +1,197 @@
+body
+{
+    min-width: 600px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+a,
+a:visited,
+a:active
+{
+    color: #000;
+    text-decoration: none;
+}
+
+.gallery-wrapper
+{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    width: 90%;
+    margin-top: 30vh;
+}
+
+.arrow
+{
+    font-size: 8vw;
+    width: 5%;
+    margin-top: 5vh;
+    display: none;
+}
+
+.arrow:hover
+{
+    color: #f00;
+}
+
+.left-arrow
+{
+    float: left;
+}
+
+.right-arrow
+{
+    float: right;
+}
+
+.left-arrow:before
+{
+    content: '<';
+}
+
+.right-arrow:before
+{
+    content: '>';
+}
+
+.gallery-image 
+{
+    vertical-align: top;
+    font-size: initial;
+    width: 25%;
+    display: inline-block;
+}
+
+.shadow-caster
+{
+    margin: 5px;
+}
+
+.gallery-image p
+{
+    word-wrap: break-word;
+    white-space: initial;
+    display: none;
+}
+
+.gallery-image:not(:target):hover > .shadow-caster
+{
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.gallery-image:hover p
+{
+    display: initial;
+}
+
+.gallery-image img
+{
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+
+.image-container
+{
+    display: none;
+}
+
+.gallery-image:target
+{
+    left: 0;
+}
+
+.gallery-image:target > a
+{
+    cursor: default;
+}
+
+.gallery-image:target .preview-container > p
+{
+    opacity: 0;
+}
+
+.gallery-image:target .image-container
+{
+    display: initial;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.gallery-image:target .image-container > img
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.gallery-image:target ~ .close
+{
+    position: fixed;
+    right: 0;
+    top: 0;
+    font-size: initial;
+    z-index: 3;
+}
+
+.gallery-image:target ~ .close:hover
+{
+    color: #f00;
+}
+
+.gallery-image:target ~ .close:before
+{
+    position: relative;
+    top: -.3em;
+    font-size: 3em;
+    content: '✖';
+}
+
+.gallery-image
+{
+    position: relative;
+    transition: .5s;
+}
+
+input.first:checked ~ div .gallery-image
+{
+    left: 0;
+}
+
+input.second:checked ~ div .gallery-image
+{
+    left: -100%;
+}
+
+input.third:checked ~ div .gallery-image
+{
+    left: -200%;
+}
+
+input.first:checked ~ div > .left-arrow[for='third'],
+input.first:checked ~ div > .right-arrow[for='second'],
+input.second:checked ~ div > .left-arrow[for='first'],
+input.second:checked ~ div > .right-arrow[for='third'],
+input.third:checked ~ div > .left-arrow[for='second'],
+input.third:checked ~ div > .right-arrow[for='first']
+{
+    display: initial;
+}
+
+input.first:checked ~ div > .left-arrow[for='third'],
+input.third:checked ~ div > .right-arrow[for='first']
+{
+    color: #777;
+    pointer-events: none;
+}
