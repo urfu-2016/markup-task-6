@@ -1,5 +1,7 @@
 body
 {
+    min-width: 600px;
+    text-align: center;
     margin: 10px 0;
 }
 
@@ -18,24 +20,20 @@ a:active
     white-space: nowrap;
     font-size: 0;
     width: 90%;
+    margin-top: 30vh;
 }
 
 .arrow
 {
-    font-size: 3em;
+    font-size: 8vw;
     width: 5%;
-    height: 100px;
+    margin-top: 5vh;
+    display: none;
 }
 
 .arrow:hover
 {
     color: #f00;
-}
-
-.arrow:before
-{
-    position: relative;
-    top: 50px;
 }
 
 .left-arrow
@@ -74,9 +72,8 @@ a:active
 .gallery-image p
 {
     word-wrap: break-word;
-    display: block;
     white-space: initial;
-    opacity: 0;
+    display: none;
 }
 
 .gallery-image:not(:target):hover > .shadow-caster
@@ -86,14 +83,20 @@ a:active
 
 .gallery-image:hover p
 {
-    opacity: 1;
+    display: initial;
 }
 
-.image-container > img
+.gallery-image img
 {
-    max-width: 80%;
-    max-height: 80%;
-    display: inline-block;
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+
+.image-container
+{
+    display: none;
 }
 
 .gallery-image:target
@@ -106,8 +109,14 @@ a:active
     cursor: default;
 }
 
+.gallery-image:target .preview-container > p
+{
+    opacity: 0;
+}
+
 .gallery-image:target .image-container
 {
+    display: initial;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -127,12 +136,6 @@ a:active
     margin: auto;
 }
 
-.gallery-image:target .image-container > p
-{
-
-    opacity: 0;
-}
-
 .gallery-image:target ~ .close
 {
     position: fixed;
@@ -142,47 +145,53 @@ a:active
     z-index: 3;
 }
 
-.gallery-image:target ~ .close:before
+.gallery-image:target ~ .close:hover
 {
-    font-size: 2em;
-    content: 'x';
+    color: #f00;
 }
 
-.gallery-wrapper > div
+.gallery-image:target ~ .close:before
+{
+    position: relative;
+    top: -.3em;
+    font-size: 3em;
+    content: '✖';
+}
+
+.gallery-image
 {
     position: relative;
     transition: .5s;
 }
 
-input.first:checked ~ div > .gallery-wrapper > div
+input.first:checked ~ div .gallery-image
 {
     left: 0;
 }
 
-input.second:checked ~ div > .gallery-wrapper > div
+input.second:checked ~ div .gallery-image
 {
     left: -100%;
 }
 
-input.third:checked ~ div > .gallery-wrapper > div
+input.third:checked ~ div .gallery-image
 {
     left: -200%;
 }
 
-input,
-label
-{
-    display: none;
-}
-
-input.first:checked ~ div > label.left-arrow[for='third'],
-input.first:checked ~ div > label.right-arrow[for='second'],
-
-input.second:checked ~ div > label.left-arrow[for='first'],
-input.second:checked ~ div > label.right-arrow[for='third'],
-
-input.third:checked ~ div > label.left-arrow[for='second'],
-input.third:checked ~ div > label.right-arrow[for='first']
+input.first:checked ~ div > .left-arrow[for='third'],
+input.first:checked ~ div > .right-arrow[for='second'],
+input.second:checked ~ div > .left-arrow[for='first'],
+input.second:checked ~ div > .right-arrow[for='third'],
+input.third:checked ~ div > .left-arrow[for='second'],
+input.third:checked ~ div > .right-arrow[for='first']
 {
     display: initial;
+}
+
+input.first:checked ~ div > .left-arrow[for='third'],
+input.third:checked ~ div > .right-arrow[for='first']
+{
+    color: #777;
+    pointer-events: none;
 }
