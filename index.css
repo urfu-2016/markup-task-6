@@ -353,7 +353,8 @@ a.logo
     overflow: hidden;
 }
 
-.gallery-page .gallery-card:last-child {
+.gallery-page .gallery-card:last-child
+{
     display: inline-block;
     float: none;
 }
@@ -365,7 +366,6 @@ a.logo
     overflow: hidden;
     padding: 16px;
     position: relative;
-    vertical-align: top;
     width: 25%;
 }
 
