@@ -1,10 +1,11 @@
 main > a
 {
     display: none;
-    width: 98%;
+    width: 100%;
     position: absolute;
     z-index: 2;
-    top: 2%;
+    top: 0;
+    left: 0;
 }
 
 .X
