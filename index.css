@@ -16,10 +16,9 @@ body
 
 .harvest-wrap
 {
-    width: 80%;
+    width: 100%;
     position: absolute;
     top: 10%;
-    left: 7%;
     padding: 0 9px;
     overflow: hidden;
     white-space: nowrap;
@@ -50,13 +49,28 @@ body
 {
     display: none;
     position: fixed;
-    right: 10%;
-    top: 10%;
+    right: 0;
+    top: 0;
     width: 30px;
     height: 30px;
     background: url('img/closeNew.png');
     background-size: 100%;
     cursor: pointer;
+}
+
+.harvest-img-big
+{
+    display: none;
+    width: 100%;
+}
+
+.harvest-img-big > img
+{
+    position: fixed;
+    top: 10%;
+    width: 40%;
+    left: 30%;
+    z-index: 3;
 }
 
 .harvest-item:hover
@@ -72,7 +86,7 @@ body
 .slider-button__item
 {
     position: absolute;
-    top: 70%;
+    top: 80%;
     z-index: 2;
 }
 
@@ -93,30 +107,36 @@ body
 
 .slider-button__item[value='1']:checked ~ .harvest-wrap > .harvest-item
 {
-    left: 0;
+    left: 2%;
     -webkit-transition-duration: .9s;
+    transition-duration: .9s;
     -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 
 .slider-button__item[value='2']:checked ~ .harvest-wrap > .harvest-item
 {
-    left: -100%;
+    left: -96%;
     -webkit-transition-duration: .9s;
+    transition-duration: .9s;
     -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 
 .slider-button__item[value='3']:checked ~ .harvest-wrap > .harvest-item
 {
-    left: -203%;
+    left: -197%;
     -webkit-transition-duration: .9s;
+    transition-duration: .9s;
     -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
 }
 
 .harvest-img
 {
     display: block;
     width: 100%;
-    height: 235px;
+    height: 280px;
 }
 
 input[id='harvest1'] + .harvest-img
@@ -191,13 +211,9 @@ input[id='harvest12'] + .harvest-img
     background-size: 100%;
 }
 
-.harvest-item > input:checked + .harvest-img
+.harvest-item > input:checked ~ .harvest-img-big
 {
-    position: fixed;
-    width: 50%;
-    height: 700px;
-    left: 25%;
-    z-index: 2;
+    display: block;
 }
 
 .harvest-item > input:checked ~ .cover
@@ -209,7 +225,7 @@ input[id='harvest12'] + .harvest-img
     height: 100%;
     background: #000;
     opacity: .8;
-    z-index: 1;
+    z-index: 2;
 }
 
 .harvest-item > input:checked ~ .close-img
@@ -218,13 +234,9 @@ input[id='harvest12'] + .harvest-img
     z-index: 3;
 }
 
-input[id^='close']:checked + .harvest-img
+input[id^='close']:checked + .harvest-img-big
 {
-    position: static;
-    display: block;
-    width: 100%;
-    height: 190px;
-    background-size: 100%;
+    display: none;
 }
 
 input[id^='close']:checked + .close-img
