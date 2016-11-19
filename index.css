@@ -17,7 +17,7 @@ h4
     display: none;
     margin: 0;
     padding: 0;
-    height: 30px
+    height: 30px;
 }
 
 a
@@ -102,7 +102,7 @@ div:target:hover h4
 
 div > div > div:hover
 {
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
 div > div > div:hover h4
