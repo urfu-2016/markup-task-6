@@ -45,16 +45,12 @@ body
 
 .cross-img
 {
+    display: none;
     z-index: 668;
     position: absolute;
     width: 30px;
     right: 10px;
     top: 10px;
-}
-
-.cross-img:target
-{
-    display: none;
 }
 
 .navigation
@@ -77,6 +73,7 @@ body
 {
     color: #fff;
     border: hidden;
+    visibility: hidden;
 }
 
 .control-slide:checked + .slide
@@ -130,4 +127,9 @@ body
 .thumbnail-view
 {
     position: relative;
+}
+
+.fullscreen-view:target ~ .cross .cross-img
+{
+    display: inline-block;
 }
