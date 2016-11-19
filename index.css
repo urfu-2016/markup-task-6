@@ -52,7 +52,6 @@ main
     left: 77%;
 }
 
-
 .card_vegetable > label > img
 {
     width: 100%;
@@ -64,7 +63,6 @@ main
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 .card_vegetable:hover
 {
