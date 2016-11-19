@@ -26,7 +26,7 @@ header
 
 .vegetable:not(:target):hover
 {
-    box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .6);
 }
 
 .vegetable:not(:target):hover .description
@@ -37,6 +37,7 @@ header
 .vegetable:hover .vegetable-image
 {
     position: relative;
+    padding-top: 0;
 }
 
 .vegetable:hover .img
@@ -69,6 +70,7 @@ header
 .vegetable-image
 {
     text-align: center;
+    padding-top: 10px;
 }
 
 .first-slide:checked ~ .second-part,
