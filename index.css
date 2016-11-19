@@ -9,20 +9,36 @@ img
 {
     width: 90%;
     height: 70%;
-    margin-left: 5%;
     margin-top: 5%;
 }
 
 h3
 {
-    text-align: center;
     display: none;
-    margin: 0;
 }
 
 a
 {
     color: black;
+}
+
+input
+{
+    display: none;
+}
+
+label
+{
+    display: inline-block;
+    width: 3%;
+    height: 7%;
+    margin-top: 29%;
+    filter: grayscale(100%);
+}
+
+.big_image
+{
+    display: none;
 }
 
 .gallery
@@ -50,9 +66,11 @@ a
 
 .vegetables
 {
-    display: inline-block;
+    display: block;
     width: 24%;
     height: 100%;
+    text-align: center;
+    float: left;
 }
 
 .close
@@ -60,40 +78,30 @@ a
     display: none;
     width: 5%;
     height: 10%;
+    z-index: 1000;
 }
 
-input[value='first_elem']
+label[for='radio_first']
 {
-    position: absolute;
-    left: 44%;
-    top: 57%;
-    margin: 2%;
+    margin-left: 42%;
 }
 
-input[value='second_elem']
+label[for='radio_second'],
+label[for='radio_third']
 {
-    position: absolute;
-    left: 47%;
-    top: 57%;
-    margin: 2%;
+    margin-left: 2%;
 }
 
-input[value='third_elem']
+input:checked + label
 {
-    position: absolute;
-    left: 50%;
-    top: 57%;
-    margin: 2%;
+    filter: none;
 }
 
-input[value='first_elem']:checked ~ .gallery .first_block
+input[value='first_elem']:checked ~ .gallery .first_block,
+input[value='third_elem']:checked ~ .gallery .third_block,
+input[value='second_elem']:checked ~ .gallery .second_block
 {
     left: 0;
-}
-
-input[value='first_elem']:checked ~ .gallery .second_block
-{
-    left: 100%;
 }
 
 input[value='first_elem']:checked ~ .gallery .third_block
@@ -101,17 +109,14 @@ input[value='first_elem']:checked ~ .gallery .third_block
     left: 200%;
 }
 
-input[value='second_elem']:checked ~ .gallery .first_block
+input[value='second_elem']:checked ~ .gallery .first_block,
+input[value='third_elem']:checked ~ .gallery .second_block
 {
     left: -100%;
 }
 
-input[value='second_elem']:checked ~ .gallery .second_block
-{
-    left: 0;
-}
-
-input[value='second_elem']:checked ~ .gallery .third_block
+input[value='second_elem']:checked ~ .gallery .third_block,
+input[value='first_elem']:checked ~ .gallery .second_block
 {
     left: 100%;
 }
@@ -121,18 +126,9 @@ input[value='third_elem']:checked ~ .gallery .first_block
     left: -200%;
 }
 
-input[value='third_elem']:checked ~ .gallery .second_block
-{
-    left: -100%;
-}
-
-input[value='third_elem']:checked ~ .gallery .third_block
-{
-    left: 0;
-}
-
 div:target
 {
+    display: block;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -155,17 +151,17 @@ div:target span
     margin-left: 85%;
 }
 
-div > div > div:hover
+article > section > div:hover
 {
     background-color: rgba(192,192,192, .5);
 }
 
-div > div > div:hover img
+article > section > div:hover img
 {
     border: 2px groove gray;
 }
 
-div > div > div:hover h3
+article > section > div:hover h3
 {
     display: inline;
 }
