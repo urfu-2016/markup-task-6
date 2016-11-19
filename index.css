@@ -6,20 +6,6 @@ body
     font-family: 'Ubuntu', sans-serif;
 }
 
-.photo
-{
-    width: 350px;
-    margin: 0;
-    border: 1px solid #000;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.photo figcaption
-{
-    text-align: center;
-}
-
 .screen-bar
 {
     width: 1150px;
