@@ -5,7 +5,8 @@ body
     background: url('img/bg.png');
     overflow-x: hidden;
     font: 12px 'Roboto', sans-serif;
-    overflow: hidden;
+    margin: 0;
+    /*overflow: hidden;*/
 }
 
 header
@@ -66,8 +67,7 @@ h3::first-letter
 
 .item:hover > div.description
 {
-    display: block;
-    top: 90%;
+    transform: translateY(-100px);
     opacity: 1;
     z-index: 1;
 }
@@ -93,7 +93,7 @@ section
 
 input[id='set1']:checked ~ div.gallery-container
 {
-    left: 10px;
+    left: 0%;
 }
 
 input[id='set2']:checked ~ div.gallery-container
@@ -103,7 +103,7 @@ input[id='set2']:checked ~ div.gallery-container
 
 input[id='set3']:checked ~ div.gallery-container
 {
-    left: -197%;
+    left: -196%;
 }
 
 input[id='set1']:checked ~ label.next2,
@@ -151,32 +151,40 @@ input[id='set3']:checked ~ label.prev2
     z-index: 1;
 }
 
-article:target ~ .black,
-article:target ~ .exit
+.big-img
+{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+img:target ~ .black,
+img:target ~ .exit
 {
     display: block;
     
 }
 
-article:target:hover .description
+img:target:hover .description
 {
     display: none;
 }
 
-article:target img
+img:target
 {
-    
+    height: auto;
+    opacity: 1;
     border-radius: 0;
     z-index: 2;
     position: fixed;
     width: 50%;
+    max-height: 100%;
     top: 20px;
     left: 50%;
     margin-left: -25%;
-
 }
 
-article:target img:hover
+img:target:hover
 {
     box-shadow: none;
 }
