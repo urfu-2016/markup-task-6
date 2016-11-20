@@ -1,0 +1,193 @@
+body
+{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main
+{
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+.carousel
+{
+    display: inline-block;
+    width: 1030px;
+    vertical-align: middle;
+}
+
+.wrapper
+{
+    padding: 10px;
+    overflow: hidden;
+    max-width: 1030px;
+    width: 100%;
+    min-width: 500px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.items
+{
+    display: inline-block;
+    width: 15000px;
+    vertical-align: middle;
+    position: relative;
+    right: 0;
+    -webkit-transition: right .5s;
+    -moz-transition: right .5s;
+    -ms-transition: right .5s;
+    transition: right .5s;
+}
+
+.block
+{
+    display: inline-block;
+    width: 1024px;
+    float: left;
+    margin: 5px;
+}
+
+.element
+{
+    display: inline-block;
+    max-width: 22%;
+    height: auto;
+    padding: 1%;
+    vertical-align: middle;
+}
+
+.image-Small
+{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    cursor: zoom-in;
+}
+
+.cross
+{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.text
+{
+    opacity: 0;
+}
+
+.element:hover > span.text
+{
+    opacity: 1;
+}
+
+.element:hover
+{
+    box-shadow: 0 0 10px 5px #808080;
+}
+
+.click,
+.cross-radio
+{
+    display: none;
+}
+
+.image1-big,
+.image2-big,
+.image3-big,
+.image4-big,
+.image5-big,
+.image6-big,
+.image7-big,
+.image8-big,
+.image9-big,
+.image10-big,
+.image11-big,
+.image12-big
+{
+    display: none;
+}
+
+.click:checked ~ .popup_img
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+}
+
+.photo1:checked ~ .popup_img > .image1-big,
+.photo2:checked ~ .popup_img > .image2-big,
+.photo3:checked ~ .popup_img > .image3-big,
+.photo4:checked ~ .popup_img > .image4-big,
+.photo5:checked ~ .popup_img > .image5-big,
+.photo6:checked ~ .popup_img > .image6-big,
+.photo7:checked ~ .popup_img > .image7-big,
+.photo8:checked ~ .popup_img > .image8-big,
+.photo9:checked ~ .popup_img > .image9-big,
+.photo10:checked ~ .popup_img > .image10-big,
+.photo11:checked ~ .popup_img > .image11-big,
+.photo12:checked ~ .popup_img > .image12-big
+{
+    display: block;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 98%;
+    max-height: 98%;
+}
+
+.click:checked ~ .exit-label > .cross
+{
+    display: block;
+    z-index: 1002;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    cursor: zoom-out;
+}
+
+.cross-radio:checked ~ .exit-label > .cross
+{
+    opacity: 0;
+}
+
+.cross-radio:checked ~ .popup_img,
+.cross-radio:checked ~ .popup_img > .image1-big,
+.cross-radio:checked ~ .popup_img > .image2-big,
+.cross-radio:checked ~ .popup_img > .image3-big,
+.cross-radio:checked ~ .popup_img > .image4-big,
+.cross-radio:checked ~ .popup_img > .image5-big,
+.cross-radio:checked ~ .popup_img > .image6-big,
+.cross-radio:checked ~ .popup_img > .image7-big,
+.cross-radio:checked ~ .popup_img > .image8-big,
+.cross-radio:checked ~ .popup_img > .image9-big,
+.cross-radio:checked ~ .popup_img > .image10-big,
+.cross-radio:checked ~ .popup_img > .image11-big,
+.cross-radio:checked ~ .popup_img > .image12-big
+{
+    display: none;
+}
+
+.radio2:checked ~ section.wrapper > div.items
+{
+    right: 1030px;
+}
+
+.radio3:checked ~ section.wrapper > div.items
+{
+    right: 2070px;
+}

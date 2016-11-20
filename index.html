@@ -2,7 +2,284 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Бабушкин урожай</title>
 </head>
 <body>
+    <main>
+        <section class="carousel">
+            <input type="radio" name="scroll" class="radio1" checked>
+            <input type="radio" name="scroll" class="radio2">
+            <input type="radio" name="scroll" class="radio3">
+            <input type="radio" name="photo" id="radio-photo1" class="photo1 click">
+            <input type="radio" name="photo" id="radio-photo2" class="photo2 click">
+            <input type="radio" name="photo" id="radio-photo3" class="photo3 click">
+            <input type="radio" name="photo" id="radio-photo4" class="photo4 click">
+            <input type="radio" name="photo" id="radio-photo5" class="photo5 click">
+            <input type="radio" name="photo" id="radio-photo6" class="photo6 click">
+            <input type="radio" name="photo" id="radio-photo7" class="photo7 click">
+            <input type="radio" name="photo" id="radio-photo8" class="photo8 click">
+            <input type="radio" name="photo" id="radio-photo9" class="photo9 click">
+            <input type="radio" name="photo" id="radio-photo10" class="photo10 click">
+            <input type="radio" name="photo" id="radio-photo11" class="photo11 click">
+            <input type="radio" name="photo" id="radio-photo12" class="photo12 click">
+            <input type="radio" name="photo" id="exit" class="cross-radio" checked>
+            <label for="exit" class="exit-label">
+                <img class="cross" src="Photo/cross.png" alt="Закрыть">
+            </label>
+            <section class="popup_img">
+                <img src="Photo/1.jpg" class="image1-big" alt="Редис">
+                <img src="Photo/2.jpg" class="image2-big" alt="Помидор">
+                <img src="Photo/3.jpg" class="image3-big" alt="Капуста">
+                <img src="Photo/4.jpg" class="image4-big" alt="Огурец">
+                <img src="Photo/5.jpg" class="image5-big" alt="Морковь">
+                <img src="Photo/6.jpg" class="image6-big" alt="Кабачок">
+                <img src="Photo/7.jpg" class="image7-big" alt="Картофель">
+                <img src="Photo/8.jpg" class="image8-big" alt="Яблоки">
+                <img src="Photo/9.jpg" class="image9-big" alt="Груша">
+                <img src="Photo/10.jpg" class="image10-big" alt="Вишня">
+                <img src="Photo/11.jpg" class="image11-big" alt="Клубника">
+                <img src="Photo/12.jpg" class="image12-big" alt="Смородина">
+            </section>
+            <section class="wrapper">
+                <div class="items">
+                    <section class="block">
+                        <article class="element">
+                            <label for="radio-photo1" class="click-photo1">
+                                <img src="Photo/1.jpg" class="image-Small"  alt="Редис">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo2" class="click-photo2">
+                                <img src="Photo/2.jpg" class="image-Small" alt="Помидор">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo3" class="click-photo3">
+                                <img src="Photo/3.jpg" class="image-Small" alt="Капуста">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo4" class="click-photo4">
+                                <img src="Photo/4.jpg" class="image-Small" alt="Огурец">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                    </section>
+                    <section class="block">
+                        <article class="element">
+                            <label for="radio-photo5"  class="click-photo5">
+                                <img src="Photo/5.jpg" class="image-Small" alt="Морковь">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo6"  class="click-photo6">
+                                <img src="Photo/6.jpg" class="image-Small" alt="Кабачок">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo7"  class="click-photo7">
+                                <img src="Photo/7.jpg" class="image-Small" alt="Картофель">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo8" class="click-photo8">
+                                <img src="Photo/8.jpg" class="image-Small" alt="Яблоки">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                    </section>
+                    <section class="block">
+                        <article class="element">
+                            <label for="radio-photo9"  class="click-photo9">
+                                <img src="Photo/9.jpg" class="image-Small" alt="Груша">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo10" class="click-photo10">
+                                <img src="Photo/10.jpg" class="image-Small" alt="Вишня">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo11" class="click-photo11">
+                                <img src="Photo/11.jpg" class="image-Small" alt="Клубника">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                        <article class="element">
+                            <label for="radio-photo12" class="click-photo12">
+                                <img src="Photo/12.jpg" class="image-Small" alt="Смородина">
+                            </label>
+                            <span class="text">
+                                За&shy;да&shy;ча ор&shy;га&shy;ни&shy;за&shy;ции, в
+                                осо&shy;бен&shy;но&shy;сти же на&shy;ча&shy;ло по&shy;все&shy;днев&shy;ной
+                                ра&shy;бо&shy;ты по фор&shy;ми&shy;ро&shy;ва&shy;нию по&shy;зи&shy;ции в
+                                зна&shy;чи&shy;тель&shy;ной сте&shy;пе&shy;ни
+                                обу&shy;слав&shy;ли&shy;ва&shy;ет со&shy;зда&shy;ние
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции. Рав&shy;ным об&shy;ра&shy;зом
+                                даль&shy;ней&shy;шее раз&shy;ви&shy;тие раз&shy;лич&shy;ных форм
+                                де&shy;я&shy;тель&shy;но&shy;сти пред&shy;став&shy;ля&shy;ет со&shy;бой
+                                ин&shy;те&shy;рес&shy;ный экс&shy;пе&shy;ри&shy;мент про&shy;вер&shy;ки
+                                со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий усло&shy;вий
+                                ак&shy;ти&shy;ви&shy;за&shy;ции.
+                            </span>
+                        </article>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 </html>
