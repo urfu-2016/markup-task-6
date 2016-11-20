@@ -2,7 +2,313 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <title>Бабуленькин урожай</title>
 </head>
 <body>
+<div class="wrapper">
+    <input type="radio" class="selectSlide" name="currentSlide" id="radioSlide1" checked>
+    <input type="radio" class="selectSlide" name="currentSlide" id="radioSlide2">
+    <input type="radio" class="selectSlide" name="currentSlide" id="radioSlide3">
+    <input type="radio" class="selectSlide" name="currentSlide" id="radioSlide4">
+
+    <main class="slider">
+        <div id="containerSlide1" class="slides">
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage0" id="off0" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage0" id="on0" class="onFullSize">
+                <label for="on0" class="openImage">
+                    <img src="image/vegetable/00.jpg" alt="Помидор">
+                </label>
+
+                <div class="description">
+                    Помидоры содержат в достаточном количестве все необходимые витамины,
+                    богаты щавелевой кислотой.
+                    Томаты благотворно влияют на течение гипертонической болезни.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off0">&times;</label>
+                    <img src="image/vegetable/00.jpg" alt="Помидор">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage1" id="off1" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage1" id="on1" class="onFullSize">
+                <label for="on1" class="openImage">
+                    <img src="image/vegetable/01.jpg" alt="Тыква">
+                </label>
+
+                <div class="description">
+                    Тыкву называют чемпионом по содержанию полезных веществ, которые
+                    необходимы для нормальной работы человеческого организма.
+                    Несмотря на то, что вода в ней составляет более 90%, тыква богата
+                    витаминами А, С, Е, D, РР, К, группы В и достаточно редким витамином Т.
+                    В ее состав входят также пектины, аминокислоты, белки, углеводы, клетчатка,
+                    глюкоза, фруктоза, а также всевозможные минеральные вещества – фтор, магний,
+                    калий, медь, кальций, цинк, марганец, фосфор, йод.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off1">&times;</label>
+                    <img src="image/vegetable/01.jpg" alt="Тыква">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage2" id="off2" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage2" id="on2" class="onFullSize">
+                <label for="on2" class="openImage">
+                    <img src="image/vegetable/02.jpg" alt="Свекла">
+                </label>
+
+                <div class="description">
+                    Особенно хороша свекла в вареном виде, тем более, что польза вареной свеклы для
+                    человеческого
+                    организма просто неоспорима.
+                    С незапамятных времен свекла прочно укоренилась в кулинарии и других сферах на Руси. Ее
+                    используют
+                    во время приготовления столь популярного блюда, как борщ. Также русские красавицы натирали
+                    вареной
+                    свеклой щеки для того, чтобы выглядеть румяными.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off2">&times;</label>
+                    <img src="image/vegetable/02.jpg" alt="Свекла">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage3" id="off3" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage3" id="on3" class="onFullSize">
+                <label for="on3" class="openImage">
+                    <img src="image/vegetable/03.jpg" alt="Огурец">
+                </label>
+
+                <div class="description">
+                    Огурец благотворно влияет на процессы переваривания пищи, производит слабительный эффект.
+                    С лечебной
+                    целью применяется при запорах.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off3">&times;</label>
+                    <img src="image/vegetable/03.jpg" alt="Огурец">
+                </div>
+            </div>
+        </div>
+
+        <div id="containerSlide2" class="slides">
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage4" id="off4" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage4" id="on4" class="onFullSize">
+                <label for="on4" class="openImage">
+                    <img src="image/vegetable/04.jpg" alt="Редис">
+                </label>
+
+                <div class="description">
+                    Салаты из редиса обладают умеренным желчегонным, противоотёчными свойствами, возбуждают
+                    аппетит, способствуют лучшей перистальтике и опорожнению кишечника. Сок, полученный из
+                    редиса, улучшает пищеварение и обмен веществ. Особенно полезен он тем, кто страдает
+                    подагрой, ожирением, сахарным диабетом.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off4">&times;</label>
+                    <img src="image/vegetable/04.jpg" alt="Редис">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage5" id="off5" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage5" id="on5" class="onFullSize">
+                <label for="on5" class="openImage">
+                    <img src="image/vegetable/05.jpg" alt="Картофель">
+                </label>
+
+                <div class="description">
+                    Минеральные элементы в клубне в основном находятся в легкоусвояемой форме и представлены
+                    щелочными солями, которые содействуют поддержанию щелочного равновесия в крови.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off5">&times;</label>
+                    <img src="image/vegetable/05.jpg" alt="Картофель">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage6" id="off6" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage6" id="on6" class="onFullSize">
+                <label for="on6" class="openImage">
+                    <img src="image/vegetable/06.jpg" alt="Кабачок">
+                </label>
+
+                <div class="description">
+                    В кабачках содержатся соли фосфора, калия, магния и кальция. Плоды кабачков содержат
+                    витамины С, В1, В2, а также никотиновую, яблочную и фолиевую кислоты.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off6">&times;</label>
+                    <img src="image/vegetable/06.jpg" alt="Кабачок">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage7" id="off7" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage7" id="on7" class="onFullSize">
+                <label for="on7" class="openImage">
+                    <img src="image/vegetable/07.jpg" alt="Морковь">
+                </label>
+
+                <div class="description">
+                    Бета-коротин (он же витамин A) суточная доза которого содержится в двух корнеплодах
+                    моркови. Бета-коротин благоприятно влияет почти на весь организм и несет в себе массу
+                    полезных качеств.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off7">&times;</label>
+                    <img src="image/vegetable/07.jpg" alt="Морковь">
+                </div>
+            </div>
+        </div>
+
+        <div id="containerSlide3" class="slides">
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage8" id="off8" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage8" id="on8" class="onFullSize">
+                <label for="on8" class="openImage">
+                    <img src="image/vegetable/08.jpg" alt="Брокколи">
+                </label>
+
+                <div class="description">
+                    Лечебные свойства брокколи обусловлены высоким содержанием в ней полезных и активных
+                    веществ – каждый из компонентов выполняет свою функцию в нашем организме, а в процессе
+                    взаимодействия друг с другом эти вещества способны улучшать и восстанавливать здоровье.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off8">&times;</label>
+                    <img src="image/vegetable/08.jpg" alt="Брокколи">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage9" id="off9" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage9" id="on9" class="onFullSize">
+                <label for="on9" class="openImage">
+                    <img src="image/vegetable/09.jpg" alt="Капуста">
+                </label>
+
+                <div class="description">
+                    Ученые открыли, что отличительной особенностью белокочанной капусты является витамин U –
+                    метилметионин, который способен вылечивать язвенные болезни желудка и двенадцатиперстной
+                    кишки, язвенные колиты, гастриты и вялость кишечника.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off9">&times;</label>
+                    <img src="image/vegetable/09.jpg" alt="Капуста">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage10" id="off10" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage10" id="on10" class="onFullSize">
+                <label for="on10" class="openImage">
+                    <img src="image/vegetable/10.jpg" alt="Лук">
+                </label>
+
+                <div class="description">
+                    Лук содержит целый комплекс витаминов, эфирные масла, флавоноиды, серу, фтор, железо,
+                    магний и кальций. Все эти вещества делают лук биологически активным продуктом, способным,
+                    в одних случаях, приносить пользу, а в других - вред.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off10">&times;</label>
+                    <img src="image/vegetable/10.jpg" alt="Лук">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage11" id="off11" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage11" id="on11" class="onFullSize">
+                <label for="on11" class="openImage">
+                    <img src="image/vegetable/11.jpg" alt="Горох">
+                </label>
+
+                <div class="description">
+                    Горох – популярнейший в мире овощ, который любят и взрослые, и дети. Этот недорогой, но
+                    питательный и полезнейший продукт можно добавлять во многие супы, салаты, каши и даже
+                    пироги, поэтому с этим овощем можно очень много экспериментировать.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off11">&times;</label>
+                    <img src="image/vegetable/11.jpg" alt="Горох">
+                </div>
+            </div>
+        </div>
+
+        <div id="containerSlide4" class="slides">
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage12" id="off12" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage12" id="on12" class="onFullSize">
+                <label for="on12" class="openImage">
+                    <img src="image/vegetable/12.jpg" alt="Бобы">
+                </label>
+
+                <div class="description">
+                    Основная польза бобов – возможность получать растительный белок, содержащийся в них в
+                    большом количестве, что особенно важно для тех, кто по какой-то причине не ест продукты
+                    животного происхождения. Кроме этого, в бобах есть витамины РР, С, В, аминокислоты,
+                    ферменты, углеводы, каротин, калий, сера, фосфор, магний, железо, кальций, пектины,
+                    пурины, клетчатка.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off12">&times;</label>
+                    <img src="image/vegetable/12.jpg" alt="Бобы">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage13" id="off13" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage13" id="on13" class="onFullSize">
+                <label for="on13" class="openImage">
+                    <img src="image/vegetable/13.jpg" alt="Болгарский перец">
+                </label>
+
+                <div class="description">
+                    Свойства и польза болгарского перца
+                    Исходя из богатого состава болгарского перца, можно сделать вывод, что он приносит много
+                    пользы для поддержания здоровья. Минералы способствуют обогащению общего состава крови,
+                    что позволяет предупредить анемию и повысить иммунные защиты организма.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off13">&times;</label>
+                    <img src="image/vegetable/13.jpg" alt="Болгарский перец">
+                </div>
+            </div>
+
+            <div class="vegetable">
+                <input type="radio" name="fullScreenImage14" id="off14" class="offFullSize" checked>
+                <input type="radio" name="fullScreenImage14" id="on14" class="onFullSize">
+                <label for="on14" class="openImage">
+                    <img src="image/vegetable/14.jpg" alt="Редька">
+                </label>
+
+                <div class="description">
+                    Главная польза редьки состоит в том, что в ней содержится невероятное количество
+                    необходимых для человека элементов, среди которых в большом количестве минеральные соли
+                    натрия, йода, кальция, магния, железа, калия и фосфора. Это действительно потрясающий, по
+                    своему минеральному составу, продукт.
+                </div>
+                <div class="fullSizeWrapper">
+                    <label class="exitFullScreen" for="off14">&times;</label>
+                    <img src="image/vegetable/14.jpg" alt="Редька">
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="controls">
+        <label for="radioSlide1" class="changeSlide"></label>
+        <label for="radioSlide2" class="changeSlide"></label>
+        <label for="radioSlide3" class="changeSlide"></label>
+        <label for="radioSlide4" class="changeSlide"></label>
+    </div>
+</div>
 </body>
 </html>
