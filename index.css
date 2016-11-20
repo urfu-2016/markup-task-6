@@ -1,0 +1,129 @@
+.content
+{
+    height: 400px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.item
+{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+}
+
+.image
+{
+    width: 100%;
+}
+
+.first-input
+{
+    left: 46%;
+}
+
+.second-input
+{
+    left: 49%;
+}
+
+.third-input
+{
+    left: 52%;
+}
+
+.page-switch
+{
+    position: fixed;
+    top: 80%;
+}
+
+.main-header
+{
+    text-align: center;
+    font: oblique 3em sans-serif;
+}
+
+.description
+{
+    display: none;
+    text-align: justify;
+    font-size: 14px;
+    text-indent: 10px;
+    margin: 0 20px;
+}
+
+.item-section:hover
+{
+    box-shadow: 0 0 10px 5px rgb(195, 167, 202);
+    width: 130%;
+    z-index: 100;
+    position: relative;
+}
+
+.page-one,
+.page-two,
+.page-three,
+.item:target .description,
+.big-image
+{
+    display: none;
+}
+
+.first-input:checked ~ .content .page-one,
+.second-input:checked ~ .content .page-two,
+.third-input:checked ~ .content .page-three,
+.item:hover .description,
+.item:target ~ .attributes .cross
+{
+    display: block;
+}
+
+.big-image:target
+{
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    position: fixed;
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+}
+
+.cross
+{
+    font: bold 30px sans-serif;
+    color: #fff;
+    position: absolute;
+    z-index: 1000;
+    right: 5px;
+    top: 0;
+    text-decoration: none;
+    display: none;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.big-image:target ~ .modal-window-background,
+.big-image:target ~ .modal-window-background .cross
+{
+    display: block;
+    pointer-events: auto;
+}
+
+.modal-window-background
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 100;
+    display: none;
+}
