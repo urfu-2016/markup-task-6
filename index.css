@@ -1,20 +1,42 @@
 .content
 {
-    margin-top: 50px;
-    text-align: center;
     height: 400px;
+    width: 80%;
+    margin: 50px auto;
 }
 
 .item
 {
-    width: 300px;
+    width: 25%;
     display: inline-block;
     vertical-align: top;
+    margin-right: -4px;
 }
 
 .image
 {
     width: 100%;
+}
+
+.first-input
+{
+    left: 46%;
+}
+
+.second-input
+{
+    left: 49%;
+}
+
+.third-input
+{
+    left: 52%;
+}
+
+.page-switch
+{
+    position: fixed;
+    top: 80%;
 }
 
 .main-header
@@ -29,24 +51,22 @@
     text-align: justify;
     font-size: 14px;
     text-indent: 10px;
+    margin: 0 20px;
 }
 
-.item:hover
+.item-section:hover
 {
     box-shadow: 0 0 10px 5px rgb(195, 167, 202);
-    width: 400px;
-    padding: 20px;
-}
-
-.first-input
-{
-    margin-left: 44%;
+    width: 130%;
+    z-index: 100;
+    position: relative;
 }
 
 .page-one,
 .page-two,
 .page-three,
-.item:target .description
+.item:target .description,
+.big-image
 {
     display: none;
 }
@@ -60,40 +80,37 @@
     display: block;
 }
 
-.item:target .image
+.big-image:target
 {
     pointer-events: none;
-    top: 10%;
-    left: 20%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     z-index: 1000;
     position: fixed;
-    max-height: 80%;
-    width: 60%;
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
 }
 
 .cross
 {
-    font: bold 25px sans-serif;
-    background: #353536;
+    font: bold 30px sans-serif;
     color: #fff;
     position: absolute;
     z-index: 1000;
     right: 5px;
-    top: 5px;
-    width: 26px;
+    top: 0;
     text-decoration: none;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
     display: none;
+    user-select: none;
+    -moz-user-select: none;
 }
 
-.cross:hover
-{
-    background: #c3a7ca;
-}
-
-.item:target ~ .attributes .modal-window-background
+.big-image:target ~ .modal-window-background,
+.big-image:target ~ .modal-window-background .cross
 {
     display: block;
     pointer-events: auto;
@@ -106,7 +123,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
     z-index: 100;
     display: none;
 }
