@@ -2,9 +2,16 @@
 
 body
 {
-    overflow: hidden;
     font-size: 16px;
     text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 1366px;
+}
+
+.item-title
+{
+    margin: 0;
 }
 
 .page
@@ -19,7 +26,6 @@ body
 
 .item-container
 {
-    /*padding: 1%;*/
     width: 22%;
     display: inline-block;
     vertical-align: top;
@@ -27,14 +33,17 @@ body
 
 .item-description,
 .cover,
-.cancel
+.cancel,
+.modal-image
 {
     display: none;
 }
 
-.item-image
+.item-image,
+.item-image-second
 {
     width: 100%;
+    cursor: pointer;
 }
 
 .item-container:not(:target) .item:hover .item-description
@@ -54,25 +63,81 @@ body
     z-index: 1;
 }
 
-.item-container:target .item
+.item-container[id='tomato']:target ~ .modal-image
 {
-    position: absolute;
-    width: 100%;
-    top: 20%;
-    left: 0;
+    background-image: url(images/tomato.jpg);
 }
 
-.item-container:target .item-image
+.item-container[id='egg']:target ~ .modal-image
 {
-    position: relative;
-    max-width: 40%;
-    z-index: 3;
+    background-image: url(images/egg.jpg);
+}
+
+.item-container[id='lemon']:target ~ .modal-image
+{
+    background-image: url(images/lemon.jpg);
+}
+
+.item-container[id='pear']:target ~ .modal-image
+{
+    background-image: url(images/pear.jpg);
+}
+
+.item-container[id='cheese']:target ~ .modal-image
+{
+    background-image: url(images/cheese.jpg);
+}
+
+.item-container[id='default']:target ~ .modal-image
+{
+    background-image: url(images/default.jpg);
+}
+
+.item-container[id='noodles']:target ~ .modal-image
+{
+    background-image: url(images/noodles.jpg);
+}
+
+.item-container[id='orange']:target ~ .modal-image
+{
+    background-image: url(images/orange.jpg);
+}
+
+.item-container[id='pepper']:target ~ .modal-image
+{
+    background-image: url(images/pepper.jpg);
+}
+
+.item-container[id='pumpkin']:target ~ .modal-image
+{
+    background-image: url(images/pumpkin.jpg);
+}
+
+.item-container[id='sausage']:target ~ .modal-image
+{
+    background-image: url(images/sausage.jpg);
+}
+
+.item-container[id='bow']:target ~ .modal-image
+{
+    background-image: url(images/bow.jpg);
 }
 
 .item-container:target ~ .cancel,
-.item-container:target ~ .cover
+.item-container:target ~ .cover,
+.item-container:target ~ .modal-image
 {
     display: block;
+}
+
+.modal-image
+{
+    width: 480px;
+    height: 360px;
+    position: relative;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    z-index: 4;
 }
 
 .cover
@@ -107,6 +172,29 @@ input.slider
     display: none;
 }
 
+figcaption
+{
+    display: none;
+}
+
+.turn-left,
+.turn-right
+{
+    cursor: pointer;
+}
+
+.turn-right
+{
+    position: absolute;
+    margin: 5% 38.5%;
+}
+
+.turn-left
+{
+    position: absolute;
+    margin: 5% -40%;
+}
+
 .turn-left:before
 {
     font-family: FontAwesome;
@@ -123,24 +211,31 @@ input.slider
 
 .turn-wrapper
 {
-    display: inline-block;
-    width: 30px;
+    position: relative;
 }
 
 input[type='radio'].page1:checked ~ main .second-page,
-input[type='radio'].page1:checked ~ main .third-page
+input[type='radio'].page1:checked ~ main .third-page,
+input[type='radio'].page1:checked ~ main .sec2first,
+input[type='radio'].page1:checked ~ main .thrid2sec,
+input[type='radio'].page1:checked ~ main .sec2thrid
 {
     display: none;
 }
 
 input[type='radio'].page2:checked ~ main .first-page,
-input[type='radio'].page2:checked ~ main .third-page
+input[type='radio'].page2:checked ~ main .third-page,
+input[type='radio'].page2:checked ~ main .first2sec,
+input[type='radio'].page2:checked ~ main .thrid2sec
 {
     display: none;
 }
 
 input[type='radio'].page3:checked ~ main .first-page,
-input[type='radio'].page3:checked ~ main .second-page
+input[type='radio'].page3:checked ~ main .second-page,
+input[type='radio'].page3:checked ~ main .sec2first,
+input[type='radio'].page3:checked ~ main .first2sec,
+input[type='radio'].page3:checked ~ main .sec2thrid
 {
     display: none;
 }
