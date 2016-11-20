@@ -40,7 +40,6 @@ main
     -webkit-transition: right .5s;
     -moz-transition: right .5s;
     -ms-transition: right .5s;
-    -o-transition: right .5s;
     transition: right .5s;
 }
 
@@ -65,7 +64,13 @@ main
 {
     display: block;
     max-width: 100%;
+    margin-bottom: 5px;
     cursor: zoom-in;
+}
+
+.images1
+{
+    display: none;
 }
 
 .cross
@@ -90,7 +95,7 @@ main
     box-shadow: 0 0 10px 5px #808080;
 }
 
-.popup_img:focus
+.images:focus ~ .popup_img
 {
     position: fixed;
     z-index: 1000;
@@ -103,8 +108,9 @@ main
     background: rgba(0,0,0,.5);
 }
 
-.popup_img:focus > .images
+.images:focus ~ .popup_img > .images1
 {
+    display: block;
     position: fixed;
     z-index: 1001;
     top: 0;
@@ -116,7 +122,7 @@ main
     max-height: 98%;
 }
 
-.popup_img:focus > label.exit-label > .cross
+.images:focus ~ .popup_img > label.exit-label > .cross
 {
     display: block;
     z-index: 1002;
@@ -136,8 +142,9 @@ main
     opacity: 0;
 }
 
-.exit-label:after ~ .images
+.exit-label:after ~ .popup_img
 {
+    display: none;
     max-width: 100%;
 }
 
