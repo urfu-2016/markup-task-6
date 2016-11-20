@@ -4,6 +4,11 @@ h1
     text-align: center;
 }
 
+body
+{
+    min-width: 600px;
+}
+
 label
 {
     display: inline-block;
@@ -20,10 +25,10 @@ label
 }
 
 label:hover,
-.gallery_1:checked ~ .buttons .button1,
-.gallery_2:checked ~ .buttons .button2,
-.gallery_3:checked ~ .buttons .button3,
-.gallery_4:checked ~ .buttons .button4
+.gallery-1:checked ~ .buttons .button1,
+.gallery-2:checked ~ .buttons .button2,
+.gallery-3:checked ~ .buttons .button3,
+.gallery-4:checked ~ .buttons .button4
 {
     background: #aaa;
 }
@@ -35,7 +40,6 @@ label:hover,
     box-sizing: border-box;
     max-width: 20%;
     vertical-align: top;
-    height: 600px;
 }
 
 .harvest a img
@@ -53,34 +57,36 @@ label:hover,
 {
     position: fixed;
     display: none;
-    width: inherit;
+    width: 300px;
     max-width: 20%;
+    height: 300px;
 }
 
-.harvest:hover .description
+a:hover ~ .description
 {
     display: block;
 }
 
 article:hover
 {
-
-    box-shadow: 2px 2px 2px 2px #aaa;
+    box-shadow: 0 0 10px #aaa;
 }
 
-.gallery_1,
-.gallery_2,
-.gallery_3,
-.gallery_4
+
+
+.gallery-1,
+.gallery-2,
+.gallery-3,
+.gallery-4
 {
     display: none;
 
 }
 
-.gallery_1:checked ~ .gallery1,
-.gallery_2:checked ~ .gallery2,
-.gallery_3:checked ~ .gallery3,
-.gallery_4:checked ~ .gallery4
+.gallery-1:checked ~ .gallery1,
+.gallery-2:checked ~ .gallery2,
+.gallery-3:checked ~ .gallery3,
+.gallery-4:checked ~ .gallery4
 {
     display: block;
 }
@@ -88,11 +94,10 @@ article:hover
 .close
 {
     width: 50px;
-    display: none;
     cursor: pointer;
 }
 
-.big_pictures img:target
+.big-pictures img:target
 {
     display: block;
     position: fixed;
@@ -101,13 +106,13 @@ article:hover
     left: 0;
     bottom: 0;
     right: 0;
-    width: 700px;
-    max-width: 99%;
-    max-height: 99%;
+    width: 100%;
+    max-width: 700px;
     margin: auto;
+    background: #aaa;
 }
 
-.big_pictures img:target ~ a .close
+.big-pictures img:target ~ a .close
 {
     position: fixed;
     display: block;
@@ -117,22 +122,20 @@ article:hover
     margin: auto;
 }
 
-.big_pictures img:target ~ .background
+.big-pictures img:target ~ .background
 {
     z-index: 5;
     display: block;
     position: fixed;
-    opacity: .8;
+    background-color: #000;
+    opacity: .5;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     height: 100%;
     width: 100%;
-    margin: auto;
 }
 
-.big_pictures img
+.big-pictures img
 {
     display: none;
 }
