@@ -1,9 +1,4 @@
-﻿body
-{
-    text-align: center;
-}
-
-header
+﻿header
 {
     height: 100px;
     font-size: 2.5em;
@@ -13,30 +8,40 @@ h1
 {
     font-size: 1.4em;
     margin-top: 0;
+    text-align: center;
 }
 
-input
+.first,
+.second,
+.third
 {
     position: absolute;
-    top: 90%;
-    margin-left: -100px;
+    bottom: 10%;
 }
 
-input.second
+.first
 {
-    margin-left: -50px;
+    left: 45%;
 }
 
-input.third
+.second
 {
-    margin-left: 0;
+    left: 50%;
 }
 
-label
+.third
 {
+    left: 55%;
+}
+
+.first-to-second-block,
+.to-third-block,
+.to-first-block,
+.third-to-second-block
+{
+    cursor: pointer;
     position: absolute;
     margin-top: 50px;
-    margin-left: -50%;
     font-size: 150px;
     opacity: .3;
     -moz-user-select: none;
@@ -48,10 +53,8 @@ label
 .third-block
 {
     margin: 0 auto;
-    width: 70%;
-    position: relative;
+    width: 75%;
     display: none;
-    text-align: left;
 }
 
 .vegetable-card
@@ -69,8 +72,8 @@ label
 
 .information img
 {
-    max-width: 100%;
-    max-height: 200px;
+    width: 100%;
+    height: 100%;
 }
 
 .description
@@ -90,8 +93,8 @@ label
     width: 150%;
     border-radius: 10px;
     background: #e0ffff;
-    margin-left: -60px;
     z-index: 1;
+    margin-left: -30%;
     box-shadow: inset #bfbfbf 0 -3px 8px
         , #000 0 3px 8px -10px;
     text-align: center;
@@ -99,7 +102,8 @@ label
 
 .information:hover img
 {
-    max-width: 70%;
+    width: 60%;
+    height: 60%;
 }
 
 .modal
@@ -112,6 +116,7 @@ label
     background: rgba(100, 100, 100, .7);
     display: none;
     z-index: 2;
+    text-align: center;
 }
 
 .information:hover .description,
@@ -129,51 +134,54 @@ label:active
     opacity: 1;
 }
 
-.first:checked ~ .third + label,
-.first:checked ~ .third + label + label + label,
-.first:checked ~ .third + label + label + label + label,
-.second:checked + .third + label + label,
-.second:checked + .third + label + label + label,
-.third:checked + label,
-.third:checked + label + label,
-.third:checked + label + label + label + label
+.first:checked ~ label.to-first-block,
+.first:checked ~ label.third-to-second-block,
+.first:checked ~ label.to-third-block,
+.second:checked ~ label.third-to-second-block,
+.second:checked ~ label.first-to-second-block,
+.third:checked ~ label.to-first-block,
+.third:checked ~ label.to-third-block,
+.third:checked ~ label.first-to-second-block
 {
     display: none;
 }
 
-.first:checked ~ .third + label + label,
-.second:checked ~ .third + label + label + label + label
+.first:checked ~ label.first-to-second-block,
+.second:checked ~ label.to-third-block
 {
-    margin-left: 35%;
+    right: 0;
 }
 
 .modal .image
 {
-    position: relative;
-    margin-top: 100px;
-    left: 0;
-    right: 0;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
 }
 
 .modal .image img
 {
-    max-height: 500px;
-    max-width: 800px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .modal a
 {
-    margin-right: 10px;
-    font-family: Arial;
-    float: right;
-    font-size: 50px;
-    text-decoration: none;
-    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: .7;
 }
 
 label:active,
-header h1::first-letter,
-.modal a:hover
+header h1::first-letter
 {
     color: #eb0c0c;
+}
+
+.modal a:hover
+{
+    opacity: 1;
 }
