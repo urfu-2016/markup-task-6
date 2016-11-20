@@ -1,0 +1,253 @@
+html,
+body
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.harvest-page
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.harvest-wrap
+{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    padding: 0 9px;
+    overflow: hidden;
+    white-space: nowrap;
+    min-width: 1130px;
+}
+
+.harvest-item
+{
+    position: relative;
+    vertical-align: top;
+    padding: 9px;
+    display: inline-block;
+    width: 23%;
+}
+
+.harvest-item > input
+{
+    display: none;
+}
+
+.harvest__info
+{
+    display: none;
+    white-space: normal;
+}
+
+.close-img
+{
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: url('img/closeNew.png');
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.harvest-img-big
+{
+    display: none;
+    width: 100%;
+}
+
+.harvest-img-big > img
+{
+    position: fixed;
+    top: 10%;
+    width: 40%;
+    left: 30%;
+    z-index: 3;
+}
+
+.harvest-item:hover
+{
+    box-shadow: 0 0 8px 8px #aaa;
+}
+
+.harvest-item:hover > .harvest__info
+{
+    display: block;
+}
+
+.slider-button__item
+{
+    position: absolute;
+    top: 5%;
+    z-index: 2;
+}
+
+.slide1-inp
+{
+    left: 43%;
+}
+
+.slide2-inp
+{
+    left: 48%;
+}
+
+.slide3-inp
+{
+    left: 53%;
+}
+
+.slider-button__item[value='1']:checked ~ .harvest-wrap > .harvest-item
+{
+    left: 2%;
+    -webkit-transition-duration: .9s;
+    transition-duration: .9s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.slider-button__item[value='2']:checked ~ .harvest-wrap > .harvest-item
+{
+    left: -96%;
+    -webkit-transition-duration: .9s;
+    transition-duration: .9s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.slider-button__item[value='3']:checked ~ .harvest-wrap > .harvest-item
+{
+    left: -197%;
+    -webkit-transition-duration: .9s;
+    transition-duration: .9s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.harvest-img
+{
+    display: block;
+    width: 100%;
+    height: 280px;
+}
+
+input[id='harvest1'] + .harvest-img
+{
+    background: url(img/1.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest2'] + .harvest-img
+{
+    background: url(img/2.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest3'] + .harvest-img
+{
+    background: url(img/3.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest4'] + .harvest-img
+{
+    background: url(img/4.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest5'] + .harvest-img
+{
+    background: url(img/5.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest6'] + .harvest-img
+{
+    background: url(img/6.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest7'] + .harvest-img
+{
+    background: url(img/7.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest8'] + .harvest-img
+{
+    background: url(img/8.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest9'] + .harvest-img
+{
+    background: url(img/9.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest10'] + .harvest-img
+{
+    background: url(img/10.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest11'] + .harvest-img
+{
+    background: url(img/11.jpg) no-repeat;
+    background-size: 100%;
+}
+
+input[id='harvest12'] + .harvest-img
+{
+    background: url(img/12.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.harvest-item > input:checked ~ .harvest-img-big
+{
+    display: block;
+}
+
+.harvest-item > input:checked ~ .cover
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 2;
+}
+
+.harvest-item > input:checked ~ .close-img
+{
+    display: block;
+    z-index: 3;
+}
+
+input[id^='close']:checked + .harvest-img-big
+{
+    display: none;
+}
+
+input[id^='close']:checked + .close-img
+{
+    display: none;
+    z-index: 0;
+}
+
+input[id^='close']:checked ~ .cover
+{
+    position: static;
+    width: 0;
+    height: 0;
+    z-index: 0;
+}
