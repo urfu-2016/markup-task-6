@@ -6,7 +6,6 @@
 .title
 {
     color: #008000;
-    text-align: center;
 }
 
 .layer
@@ -47,12 +46,12 @@
 {
     display: inline-block;
     vertical-align: top;
-    margin: 20px 10px;
-    width: 300px;
+    margin: 5% 1%;
+    width: 20%;
 }
 
-.content:hover .description,
-.image:focus ~ .layer
+.content:target ~ .layer,
+.content:hover .description
 {
     display: block;
 }
@@ -62,19 +61,17 @@
     box-shadow: 0 0 5px #000;
 }
 
-.image:focus
+.content:target .image
 {
-    width: 500px;
+    width: 30%;
     z-index: 1;
     position: fixed;
-    left: 30%;
+    left: 35%;
+    cursor: default;
 }
 
-.image:focus ~ .description
-{
-    display: none;
-}
-
+.layer:target .cross,
+.content:target .description,
 .first:checked ~ .second-page,
 .first:checked ~ .third-page,
 .second:checked ~ .first-page,
