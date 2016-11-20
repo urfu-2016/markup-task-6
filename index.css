@@ -1,5 +1,3 @@
-
-
 html,
 body
 {
@@ -54,15 +52,16 @@ body
 {
     display: none;
     position: absolute;
-    top: 25%;
-    left: 25%;
-    max-width: 50%;
+    width: 100%;
+    top: 100px;
     z-index: 2;
 }
 
 .main-photo img
 {
-    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
     max-height: 400px;
 }
 
@@ -93,6 +92,7 @@ body
     background-color: white;
 }
 
+.main-photo:target +.veg-profile,
 .veg-profile:hover
 {
     box-shadow: 4px 4px 10px;
@@ -100,10 +100,12 @@ body
 
 .main-photo:target,
 .main-photo:target ~ .fogging,
-.main-photo:target ~ .close
+.main-photo:target ~ .close,
+.main-photo:target + .veg-profile p
 {
     display: block;
 }
+
 
 .second-radio:checked ~ .second-block,
 .third-radio:checked ~ .third-block
