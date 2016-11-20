@@ -6,6 +6,23 @@ body
     text-align: center;
 }
 
+input
+{
+    position: absolute;
+    top: 300px;
+    z-index: -1;
+}
+
+.first-radio
+{
+    transform: translateX(-20px);
+}
+
+.third-radio
+{
+    transform: translateX(20px);
+}
+
 .close
 {
     position: absolute;
@@ -72,6 +89,7 @@ body
     margin: 0 2%;
     vertical-align: top;
     padding: 2px;
+    min-height: 220px;
 
 }
 
@@ -92,7 +110,7 @@ body
     background-color: white;
 }
 
-.main-photo:target +.veg-profile,
+.main-photo:target + .veg-profile,
 .veg-profile:hover
 {
     box-shadow: 4px 4px 10px;
@@ -105,7 +123,6 @@ body
 {
     display: block;
 }
-
 
 .second-radio:checked ~ .second-block,
 .third-radio:checked ~ .third-block
