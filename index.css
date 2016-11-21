@@ -1,0 +1,95 @@
+body
+{
+    text-align: center;
+}
+
+.gallery
+{
+    width: 1260px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+
+.content
+{
+    width: 3186px;
+    transition: all 1s ease-in-out;
+}
+
+.vegetable
+{
+    width: 265px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+}
+
+.description
+{
+    display: none;
+    color: #04b404;
+    padding: 3px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.vegetable:hover > .description
+{
+    display: block;
+}
+
+.vegetable img
+{
+    border: 1px solid #04b404;
+    border-radius: 10px;
+}
+
+.bigimg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(74, 159, 27, .7);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.bigimg:target
+{
+    display: block;
+}
+
+.choice1:checked ~ .gallery .content
+{
+    margin-left: 0;
+}
+
+.choice2:checked ~ .gallery .content
+{
+    margin-left: -970px;
+}
+
+.choice3:checked ~ .gallery .content
+{
+    margin-left: -1925px;
+}
+
+.close
+{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    background: url(close.png);
+}
+
+.forclose:hover ~ .description
+{
+    display: none;
+}
+
+.forclose:target
+{
+    display: none;
+}
