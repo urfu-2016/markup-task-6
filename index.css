@@ -34,12 +34,6 @@ header
     visibility: visible;
 }
 
-.vegetable:hover .vegetable-image
-{
-    position: relative;
-    padding-top: 0;
-}
-
 .vegetable:hover .img
 {
     padding: 10px;
