@@ -23,23 +23,25 @@ main
 
 .gallery-item
 {
-    width: 170px;
-    padding: 15px 5px;
+    width: 150px;
+    padding: 15px 15px;
     margin: 0;
     display: inline-block;
     vertical-align: top;
     text-align: center;
 }
 
-.item-hover:hover 
+.gallery-item:hover 
 {
     background-color: rgba(255, 255, 255, 1);
     border-radius: .5;
     position: relative;
-    left: -35px;
+    right: -40px;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
-    width: 250px;
+    padding: 0;
+    width: 170px;
     padding: 5px;
+    margin: 0;
 }
 
 .photo > img 
@@ -48,7 +50,7 @@ main
     height: 80%;
 }
 
-.item-hover:hover > .photo img
+.gallery-item:hover > .photo img
 {
     width: 100%;
     height: 100%;
@@ -56,17 +58,18 @@ main
 
 .gallery-page
 {
-    width: 750px;
+    width: 850px;
     position: relative;
     top: 10px;
-    left: 50px;
+    left: 0;
+    text-align: center;
 }
 
 .first:checked ~ .first-four,
 .second:checked ~ .second-four,
 .third:checked ~ .third-four,
 .forth:checked ~ .forth-four,
-.photo:hover ~ .description,
+.gallery-item:hover > .description,
 .full-screen:target
 {
     display: block;
@@ -117,9 +120,11 @@ main
 .close 
 {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 20px;
     z-index: 10;
+    font: bold 20px Arial, sans-serif;
+    color: #000;
 }
 
 a 
