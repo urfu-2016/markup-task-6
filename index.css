@@ -1,12 +1,16 @@
 @import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
+html
+{
+    margin: 0 auto;
+    max-width: 1366px;
+    height: 100%;
+}
+
 body
 {
     font-size: 16px;
     text-align: center;
-    margin: 0 auto;
-    height: 100%;
-    width: 1366px;
 }
 
 .item-title
@@ -55,8 +59,8 @@ body
 {
     box-shadow: 0 0 20px #444;
     padding: 5%;
-    margin: -20%;
-    width: 140%;
+    margin: -10%;
+    width: 110%;
     position: relative;
     border-radius: 5px;
     background: #fff;
@@ -154,15 +158,12 @@ body
 
 .cancel
 {
-    height: 4%;
-    width: 3%;
+    padding-right: 1%;
     right: 0;
     top: 0;
     position: absolute;
-    color: black;
-    background: #fff;
-    opacity: .7;
-    font-size: 2em;
+    color: #fff;
+    font-size: 3em;
     text-decoration: none;
     z-index: 3;
 }
