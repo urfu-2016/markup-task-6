@@ -3,6 +3,11 @@ img
     max-width: 100%;
 }
 
+h2
+{
+    text-align: center;
+}
+
 .hover_card
 {
     position: absolute;
