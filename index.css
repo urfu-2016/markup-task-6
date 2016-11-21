@@ -304,11 +304,6 @@ a.logo
 
 .gallery-page-controls label
 {
-    display: inline-block;
-}
-
-.gallery-page-controls label
-{
     background-color: #fff;
     border: 4px solid #fff;
     -webkit-border-radius: 7px;
@@ -317,6 +312,7 @@ a.logo
     -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15);
     -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15);
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .15);
+    display: inline-block;
     height: 6px;
     margin: 0 6px;
     width: 24px;
