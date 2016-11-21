@@ -5,8 +5,6 @@ body
 
 .images
 {
-    width: 100%;
-    height: auto;
     margin: 10% auto;
 }
 
@@ -35,9 +33,20 @@ body
 
 .images > div > .food:hover
 {
-    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .6);
-    -moz-box-shadow: 0 0 11px rgba(0, 0, 0, .6);
     box-shadow: 0 0 11px rgba(0, 0, 0, .6);
+}
+
+.images > div > .food:hover > .invise
+{
+    display: block;
+}
+
+.images > div > .food > .invise
+{
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .images > div > .food img
@@ -52,18 +61,8 @@ body
     padding: 0;
 }
 
-.images > div > .food:hover:after
-{
-    margin: auto;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    word-wrap: break-word;
-}
-
 .images div input
 {
-    float: left;
     display: none;
 }
 
@@ -91,59 +90,6 @@ body
     height: auto;
 }
 
-.tomato:hover:after
-{
-    content: 'Привет, я помидор от бабушки';
-}
-
-.cucumber:hover:after
-{
-    content: 'Привет, я огурец от бабушки';
-}
-
-.pineapple:hover:after
-{
-    content: 'Привет, я ананас от бабушки';
-}
-
-.eggplant:hover:after
-{
-    content: 'Привет, я большооооооооооооооооо\A
-    ооооооооооооооооооооооооооооооооооооой фиолетовый огурец от бабушки';
-}
-
-.zucchini:hover:after
-{
-    content: 'Привет, я\A
-                большоооооооооооооооооооооооооооооооооооооооооооооооооооооой\A
-                зеленый огурец от бабушки';
-}
-
-.orange:hover:after
-{
-    content: 'Привет, я апельсин';
-}
-
-.mandarin:hover:after
-{
-    content: 'Привет, я мандарин. Меня много едят на новый год';
-}
-
-.apple:hover:after
-{
-    content: 'Привет, я дорогой';
-}
-
-.banana:hover:after
-{
-    content: 'Привет, я банан';
-}
-
-.carrots:hover:after
-{
-    content: 'Привет, я морковь';
-}
-
 .images div div label img
 {
     padding-top: 10%;
@@ -165,7 +111,8 @@ body
 .unit-1-radio:checked ~ .unit3,
 .unit2,
 .unit3,
-.invisible
+.invisible,
+.invise
 {
     display: none;
 }
