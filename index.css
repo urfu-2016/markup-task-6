@@ -1,0 +1,135 @@
+html,
+body
+{
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content
+{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide,
+.control-view,
+.control-slide,
+.fullscreen-view,
+.picture-description
+{
+    display: none;
+}
+
+.slide
+{
+    margin-top: 10%;
+}
+
+.picture
+{
+    width: 21%;
+    margin: 1%;
+    display: inline-block;
+    vertical-align: top;
+    border: solid 2px #000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.push
+{
+    width: 20%;
+    height: 100%;
+}
+
+.cross-img
+{
+    display: none;
+    z-index: 668;
+    position: absolute;
+    width: 30px;
+    right: 10px;
+    top: 10px;
+}
+
+.navigation
+{
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    width: 92%;
+    height: 2vh;
+    border: solid 1px #000;
+    font: 2vh sans-serif;
+}
+
+.thumb-image
+{
+    width: 100%;
+}
+
+.hidden
+{
+    color: #fff;
+    border: hidden;
+    visibility: hidden;
+}
+
+.control-slide:checked + .slide
+{
+    display: inline-block;
+}
+
+.picture :hover ~ .picture-description,
+.picture-description:hover
+{
+    display: inline-block;
+    background: #c2c2c2;
+    width: 100%;
+}
+
+.picture-description
+{
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.fullscreen-view:target
+{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: fixed;
+    background-color: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+    z-index: 666;
+}
+
+.big-picture-img-div
+{
+    margin: 0 auto;
+    height: 100%;
+}
+
+.big-image
+{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.thumbnail-view
+{
+    position: relative;
+}
+
+.fullscreen-view:target ~ .cross .cross-img
+{
+    display: inline-block;
+}
