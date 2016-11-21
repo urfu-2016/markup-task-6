@@ -36,8 +36,8 @@
 {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -10px;
+    left: -10px;
     background: #fff;
     width: 110%;
     border: 10px solid #fff;
@@ -45,7 +45,7 @@
     z-index: 3;
 }
 
-.full-veg-back
+.paranja
 {
     position: fixed;
     display: none;
@@ -58,7 +58,7 @@
     width: 100vw;
 }
 
-.full-veg-front
+.modal
 {
     position: fixed;
     display: none;
@@ -94,8 +94,8 @@
 }
 
 .veg:hover .veg-expanded-info,
-.checkbox-full:checked + .full-veg > .full-veg-back,
-.checkbox-full:checked + .full-veg > .full-veg-front,
+.checkbox-full:checked + .full-veg > .paranja,
+.checkbox-full:checked + .full-veg > .modal,
 .start-radio:checked + .pages
 {
     display: block;
