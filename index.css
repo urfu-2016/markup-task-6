@@ -5,26 +5,27 @@ body
 
 .images
 {
-    width: 1200px;
+    width: 100%;
     height: auto;
-    margin: auto;
-    margin-top: 10%;
+    margin: 10% auto;
 }
 
 .cross
 {
-    opacity: 0;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
-    width: 5%;
-    height: 5%;
+    width: 25px;
+    height: 25px;
 }
 
 .images > div > .food
 {
     float: left;
+    margin: 1%;
     padding: 2%;
+    width: 19%;
 }
 
 .invisible img
@@ -37,20 +38,25 @@ body
     -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, .6);
     -moz-box-shadow: 0 0 11px rgba(0, 0, 0, .6);
     box-shadow: 0 0 11px rgba(0, 0, 0, .6);
-    padding: 0;
+}
+
+.images > div > .food img
+{
+    padding: 0 10%;
+    width: 90%;
 }
 
 .images > div > .food:hover img
 {
-    width: 248px;
-    margin: auto;
+    width: 100%;
+    padding: 0;
 }
 
 .images > div > .food:hover:after
 {
     margin: auto;
     display: block;
-    width: 200px;
+    width: 100%;
     overflow: hidden;
     word-wrap: break-word;
 }
@@ -58,7 +64,7 @@ body
 .images div input
 {
     float: left;
-    opacity: 0;
+    display: none;
 }
 
 .food-radio-1:checked + div + div
@@ -71,21 +77,18 @@ body
     left: 0;
     width: 100%;
     height: 100%;
-    min-width: 1250px;
-    min-height: 600px;
 }
 
 .food-radio-1:checked + div + div + div
 {
-    opacity: 1;
+    display: block;
     z-index: 2;
 }
 
 .food-radio-1:checked + div + div > img
 {
-    min-width: 500px;
-    min-height: 500px;
-    margin: auto;
+    width: 30%;
+    height: auto;
 }
 
 .tomato:hover:after
@@ -143,18 +146,15 @@ body
 
 .images div div label img
 {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
     padding-top: 10%;
-    height: auto;
+    width: 100%;
 }
 
 .unit1,
 .unit2,
 .unit3
 {
-    min-width: 700px;
+    margin: 0 auto;
 }
 
 .unit-2-radio:checked ~ .unit1,
