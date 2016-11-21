@@ -12,7 +12,9 @@
 {
     display: inline-block;
     float: right;
-    width: 30px;
+    width: 60px;
+    padding-right: 30px;
+    padding-top: 30px;
 }
 
 .info
@@ -109,13 +111,13 @@ article:hover
 
 article:target .image
 {
-    background-color: rgba(10,10,10,.5);
+    background-color: rgba(20,20,20,.5);
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 article:target img
