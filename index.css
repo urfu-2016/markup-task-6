@@ -1,42 +1,24 @@
 body
 {
-    width: 100%;
-    margin: 0 auto;
+    text-align: center;
 }
 
 main
 {
     padding: 150px 0;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.gallery
-{
     display: inline-block;
     width: 1030px;
-    vertical-align: middle;
-}
-
-.container
-{
-    padding: 15px 0;
     overflow: hidden;
-    vertical-align: middle;
-    text-align: center;
 }
 
 .page
 {
-    display: inline-block;
     float: left;
     width: 1030px;
 }
 
 .elements
 {
-    display: inline-block;
     width: 5000px;
     position: relative;
     vertical-align: middle;
@@ -121,12 +103,12 @@ div.element:hover > div.description
     font-size: 50px;
 }
 
-.page-2:checked ~ section.container > div.elements
+.page-2:checked ~ div.elements
 {
     right: 1050px;
 }
 
-.page-3:checked ~ section.container > div.elements
+.page-3:checked ~ div.elements
 {
     right: 2060px;
 }
