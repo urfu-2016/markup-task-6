@@ -3,16 +3,17 @@ body
     text-align: center;
 }
 
-.galary
+.gallery
 {
+    width: 1260px;
+    margin: 30px auto 0;
     overflow: hidden;
-    margin-top: 30px;
 }
 
 .content
 {
     width: 3200px;
-    transition: .5s;
+    transition: all 1s ease-in-out;
 }
 
 .vegetable
@@ -25,7 +26,7 @@ body
 
 .description
 {
-    visibility: hidden;
+    display: none;
     color: #04b404;
     padding: 3px;
     border: 1px solid;
@@ -34,7 +35,7 @@ body
 
 .vegetable:hover > .description
 {
-    visibility: visible;
+    display: block;
 }
 
 .vegetable img
@@ -45,31 +46,31 @@ body
 
 .bigimg
 {
-    display: none;
-}
-
-.bigimg:target
-{
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(74, 159, 27, .7);
     width: 100%;
     height: 100%;
+    display: none;
 }
 
-.choice1:checked ~ .galary .content
+.bigimg:target
+{
+    display: block;
+}
+
+.choice1:checked ~ .gallery .content
 {
     margin-left: -15px;
 }
 
-.choice2:checked ~ .galary .content
+.choice2:checked ~ .gallery .content
 {
     margin-left: -970px;
 }
 
-.choice3:checked ~ .galary .content
+.choice3:checked ~ .gallery .content
 {
     margin-left: -1925px;
 }
@@ -78,6 +79,11 @@ body
 {
     position: fixed;
     right: 0;
+}
+
+.forclose:hover ~ .description
+{
+    display: none;
 }
 
 .forclose:target
