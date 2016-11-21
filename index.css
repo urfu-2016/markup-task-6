@@ -14,63 +14,39 @@ header
 main
 {
     position: relative;
-    height: 400px;
-}
-
-.vegetable,
-.arrow_right,
-.arrow_left
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    margin-top: 10%;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
 }
 
 .vegetable
 {
+    display: inline-block;
     width: 15%;
-    background: #fff;
+    vertical-align: middle;
+    line-height: normal;
 }
 
-.vegetable:nth-of-type(1)
+.vegetable:hover
 {
-    left: 8%;
-}
-
-.vegetable:nth-of-type(2)
-{
-    left: 31%;
-}
-
-.vegetable:nth-of-type(3)
-{
-    left: 54%;
-}
-
-.vegetable:nth-of-type(4)
-{
-    left: 77%;
+    vertical-align: top;
 }
 
 .card_vegetable > label > img
 {
     width: 100%;
-}
-
-.card_vegetable
-{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    max-height: 200px;
+    object-fit: contain;
 }
 
 .card_vegetable:hover
 {
+    background: #fff;
     padding: 5%;
     box-shadow: 0 0 10px #808080;
     width: 140%;
     z-index: 99;
-    top: 28.5%;
     margin-left: -25%;
     transform: translateY(0);
 }
@@ -114,6 +90,9 @@ main
 .arrow_right,
 .arrow_left
 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     display: block;
     width: 32px;
     height: 64px;
