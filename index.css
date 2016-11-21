@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body
+{
+    background: url('img/bg.png');
+    overflow-x: hidden;
+    font: 12px 'Roboto', sans-serif;
+    margin: 0;
+    /*overflow: hidden;*/
+}
+
+header
+{
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1::first-letter,
+h2::first-letter,
+h3::first-letter
+{
+    color: #f00;
+}
+
+.content
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-container
+{
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    transition: .7s;
+}
+
+.item
+{
+    position: relative;
+    width: calc(100%/12 - 30px);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+
+}
+
+.photo
+{
+    position: relative;
+}
+
+.item .description
+{
+    padding: 10px;
+    position: absolute;
+    top: 300px;
+    opacity: 0;
+    background: rgba(255,255,255, .6);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px 0;
+    transition: 1s;
+}
+
+.item:hover > div.description
+{
+    transform: translateY(-100px);
+    opacity: 1;
+    z-index: 1;
+}
+
+.item img
+{
+
+    width: 100%;
+    border-radius: 200px;
+
+}
+
+.item img:hover
+{
+    box-shadow: 2px 2px 2px 0;
+}
+
+section
+{
+    display: inline;
+
+}
+
+input[id='set1']:checked ~ div.gallery-container
+{
+    left: 0%;
+}
+
+input[id='set2']:checked ~ div.gallery-container
+{
+    left: -98%;
+}
+
+input[id='set3']:checked ~ div.gallery-container
+{
+    left: -196%;
+}
+
+input[id='set1']:checked ~ label.next2,
+input[id='set1']:checked ~ label.prev2,
+input[id='set1']:checked ~ label.prev3
+{
+    display: none;
+}
+
+input[id='set2']:checked ~ label.next1,
+input[id='set2']:checked ~ label.prev3
+{
+    display: none;
+}
+
+input[id='set3']:checked ~ label.next1,
+input[id='set3']:checked ~ label.next2,
+input[id='set3']:checked ~ label.prev2
+{
+    display: none;
+}
+
+.black
+{
+    display: none;
+    transition: 1s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+.exit
+{
+    position: fixed;
+    display: none;
+    font-size: 40px;
+    transition: 1;
+    color: #fff;
+    top: 10px;
+    left: 20px;
+    z-index: 1;
+}
+
+.big-img
+{
+    opacity: 0;
+    height: 50%;
+    border-radius: 0;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:target ~ .black,
+img:target ~ .exit
+{
+    display: block;
+    
+}
+
+img:target:hover .description
+{
+    display: none;
+}
+
+img:target
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+img:target:hover
+{
+    box-shadow: none;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+input[type='radio'] + label
+{
+    overflow: hidden;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    left: calc(50% - 70px);
+    margin: 30px 0 0 20px;
+    border: 2px solid black;
+    border-radius: 200px;
+}
+
+input[type='radio']:checked + label
+{
+    background: #f00;
+    transition: background 1s;
+}
+
+.slider-next,
+.slider-prev
+{
+    position: absolute;
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+}
+
+.slider-next:hover:after,
+.slider-prev:hover:before
+{
+    color: #f00;
+}
+
+.slider-next
+{
+    right: 10px;
+}
+
+.slider-prev
+{
+    left: 10px;
+}
+
+.slider-next:after
+{
+    content: '►';
+}
+
+.slider-prev:before
+{
+    content: '◄';
+}
