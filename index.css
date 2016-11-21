@@ -1,0 +1,114 @@
+body
+{
+    text-align: center;
+}
+
+main
+{
+    padding: 150px 0;
+    display: inline-block;
+    width: 1030px;
+    overflow: hidden;
+}
+
+.page
+{
+    float: left;
+    width: 1030px;
+}
+
+.elements
+{
+    width: 5000px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.element
+{
+    display: inline-block;
+    max-width: 23%;
+    vertical-align: middle;
+    height: auto;
+}
+
+.image
+{
+    display: block;
+    max-width: 95%;
+    cursor: zoom-in;
+}
+
+.modal-img
+{
+    display: none;
+}
+
+.description
+{
+    opacity: 0;
+}
+
+div.element:hover > div.description
+{
+    opacity: 1;
+}
+
+.element:hover
+{
+    box-shadow: 0 0 3px 3px lightgrey;
+}
+
+.image:focus ~ .modal
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+}
+
+.image:focus ~ .modal > .modal-img
+{
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close
+{
+    opacity: 0;
+}
+
+.image:focus ~ .modal > div.close
+{
+    display: block;
+    opacity: 1;
+    z-index: 1010;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: zoom-out;
+    font-size: 50px;
+}
+
+.page-2:checked ~ div.elements
+{
+    right: 1050px;
+}
+
+.page-3:checked ~ div.elements
+{
+    right: 2060px;
+}
