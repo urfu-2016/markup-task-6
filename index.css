@@ -1,0 +1,125 @@
+body
+{
+    text-align: center;
+}
+
+.images
+{
+    margin: 10% auto;
+}
+
+.cross
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.images > div > .food
+{
+    float: left;
+    margin: 1%;
+    padding: 2%;
+    width: 19%;
+}
+
+.invisible img
+{
+    padding: 5%;
+}
+
+.images > div > .food:hover
+{
+    box-shadow: 0 0 11px rgba(0, 0, 0, .6);
+}
+
+.images > div > .food:hover > .invise
+{
+    display: block;
+}
+
+.images > div > .food > .invise
+{
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.images > div > .food img
+{
+    padding: 0 10%;
+    width: 90%;
+}
+
+.images > div > .food:hover img
+{
+    width: 100%;
+    padding: 0;
+}
+
+.images div input
+{
+    display: none;
+}
+
+.food-radio-1:checked + div + div
+{
+    display: block;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.food-radio-1:checked + div + div + div
+{
+    display: block;
+    z-index: 2;
+}
+
+.food-radio-1:checked + div + div > img
+{
+    width: 30%;
+    height: auto;
+}
+
+.images div div label img
+{
+    padding-top: 10%;
+    width: 100%;
+}
+
+.unit1,
+.unit2,
+.unit3
+{
+    margin: 0 auto;
+}
+
+.unit-2-radio:checked ~ .unit1,
+.unit-2-radio:checked ~ .unit3,
+.unit-3-radio:checked ~ .unit1,
+.unit-3-radio:checked ~ .unit2,
+.unit-1-radio:checked ~ .unit2,
+.unit-1-radio:checked ~ .unit3,
+.unit2,
+.unit3,
+.invisible,
+.invise
+{
+    display: none;
+}
+
+.unit-2-radio:checked ~ .unit2,
+.unit-3-radio:checked ~ .unit3,
+.unit-1-radio:checked ~ .unit1
+{
+    display: block;
+}
