@@ -1,4 +1,4 @@
-main > a
+.link-cross
 {
     display: none;
     width: 100%;
@@ -8,11 +8,11 @@ main > a
     left: 0;
 }
 
-.X
+.cross
 {
     display: inline-block;
     float: right;
-    width: 2%;
+    width: 30px;
 }
 
 .info
@@ -22,6 +22,7 @@ main > a
 
 h3
 {
+    word-break: break-all;
     text-align: center;
     font-size: 30px;
 }
@@ -33,7 +34,7 @@ p
 
 article:nth-of-type(4n+1)
 {
-    margin-left: 5.5%;
+    margin-left: 100px;
 }
 
 article
@@ -96,7 +97,7 @@ label > img
     display: none;
 }
 
-article:hover section
+article:hover div
 {
     display: block;
 }
@@ -121,7 +122,7 @@ article:target img
 {
     z-index: 2;
     display: block;
-    width: initial;
+    width: 40%;
     margin: 5% auto;
     max-height: 80%;
 }
@@ -131,24 +132,13 @@ article:target .info
     display: none;
 }
 
-article:target ~ a
+article:target ~ .link-cross
 {
     display: block;
 }
 
+.image,
 .image img
 {
     width: 100%;
 }
-
-.image
-{
-    width: 100%;
-}
-/*
-http://irecommend.ru/sites/default/files/product-images/465607/v0i0clqCJxuJ4FP2ScvJw.jpg
-http://i.otzovik.com/2013/12/21/687059/img/34545574.jpg
-http://i.otzovik.com/2013/12/21/687059/img/14886406.jpg
-http://myakishi.ru/upload/iblock/3c2/3c248d56a7fa868418515b7f5ceaae97.jpg
-http://kesha.com.ua/images/goods/bta-ovoshi03.jpg
-*/
