@@ -60,8 +60,9 @@ header
 {
     position: absolute;
     width: 40%;
-    top: 140px;
-    left: 420px;
+    height: 60%;
+    top: 23%;
+    left: 31%;
     display: block;
     margin: 0 auto;
     z-index: 3;
@@ -98,20 +99,20 @@ label:checked
 {
     display: none;
     opacity: .7;
-    position: absolute;
     top: 0;
     left: 0;
     background-color: #000;
-    width: 100%;
-    height: 100%;
+    min-height: 100%;
     z-index: 2;
+    width: 100%;
+    position: fixed;
 }
 
 .closing-block
 {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 2%;
+    right: 1%;
     z-index: 2;
     display: none;
 }
