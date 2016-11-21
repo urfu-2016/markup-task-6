@@ -11,25 +11,23 @@ h1
     text-align: center;
 }
 
-.first,
-.second,
-.third
+.page-slider
 {
     position: absolute;
     bottom: 10%;
 }
 
-.first
+.first-page-slider
 {
     left: 45%;
 }
 
-.second
+.second-page-slider
 {
     left: 50%;
 }
 
-.third
+.third-page-slider
 {
     left: 55%;
 }
@@ -46,9 +44,12 @@ h1
     user-select: none;
 }
 
-.first-block,
-.second-block,
-.third-block
+.right-slider
+{
+    right: 0;
+}
+
+.vegetables-block
 {
     margin: 0 auto;
     width: 75%;
@@ -106,7 +107,7 @@ h1
 
 .modal
 {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -118,9 +119,9 @@ h1
 }
 
 .information:hover .description,
-.first:checked ~ .first-block,
-.second:checked ~ .second-block,
-.third:checked ~ .third-block,
+.first-page-slider:checked ~ .first-block,
+.second-page-slider:checked ~ .second-block,
+.third-page-slider:checked ~ .third-block,
 .modal:target
 {
     display: block;
@@ -132,19 +133,13 @@ label:active
     opacity: 1;
 }
 
-.first:checked ~ label.left-slider,
-.first:checked ~ label.right-slider[for='third'],
-.second:checked ~ label[for='second'],
-.third:checked ~ label.right-slider,
-.third:checked ~ label.left-slider[for='first']
+.first-page-slider:checked ~ label.left-slider,
+.first-page-slider:checked ~ label.right-slider[for='third'],
+.second-page-slider:checked ~ label[for='second'],
+.third-page-slider:checked ~ label.right-slider,
+.third-page-slider:checked ~ label.left-slider[for='first']
 {
     display: none;
-}
-
-.first:checked ~ label.right-slider,
-.second:checked ~ label.right-slider
-{
-    right: 0;
 }
 
 .modal .image
