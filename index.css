@@ -24,8 +24,8 @@ main
 .gallery-item
 {
     width: 150px;
-    padding: 15px;
-    margin: 0;
+    margin: 15px;
+    padding: 0;
     display: inline-block;
     vertical-align: top;
     text-align: center;
@@ -44,12 +44,6 @@ main
 }
 
 .photo > img 
-{
-    width: 80%;
-    height: 80%;
-}
-
-.gallery-item:hover > .photo img
 {
     width: 100%;
     height: 100%;
