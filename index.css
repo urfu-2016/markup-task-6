@@ -1,120 +1,125 @@
 body
 {
     margin: 0;
+    height: 100vh;
 }
 
-section.images
+.blocks
 {
     position: fixed;
-    top: 20vh;
-    height: auto;
-    left: 10vw;
-    width: 80vw;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-section.qq
-{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    left: 10%;
+    width: 80%;
+    right: 10%;
     white-space: nowrap;
     word-wrap: break-word;
+    display: inline-table;
+    table-layout: auto;
+    overflow: hidden;
 }
 
-section.image
+.externalblock
+{
+    right: 0;
+    width: 25%;
+    position: relative;
+    display: inline-table;
+    height: 100vh;
+    table-layout: auto;
+    vertical-align: middle;
+    transition: 1s;
+}
+
+.centralblock
 {
     position: relative;
-    right: 0;
-    height: auto;
-    width: 25%;
-    display: inline-block;
-    transition: 1s;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100vh;
+}
+
+label:after
+{
+    position: fixed;
+    width: 90px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 90px;
 }
 
 input:nth-of-type(1):checked ~ label:nth-of-type(2):after,
 input:nth-of-type(2):checked ~ label:nth-of-type(3):after
 {
-    content: '\3009';
-    position: fixed;
-    right: -3%;
-    top: 30%;
+    content: url('images/right.png');
+    right: 0;
 }
 
 input:nth-of-type(2):checked ~ label:nth-of-type(1):after,
 input:nth-of-type(3):checked ~ label:nth-of-type(2):after
 {
-    content: '\3008';
-    position: fixed;
-    left: -3%;
-    top: 30%;
+    content: url('images/left.png');
+    left: 0;
 }
 
-input:nth-of-type(2):checked ~ section.qq section.image
+input:nth-of-type(2):checked ~ .blocks > .externalblock
 {
-    right: 76%;
+    right: 75%;
 }
 
-input:nth-of-type(3):checked ~ section.qq section.image
+input:nth-of-type(3):checked ~ .blocks > .externalblock
 {
-    right: 152%;
+    right: 150%;
 }
 
-section.image > img.small
+.internalblock > img.small
 {
     position: relative;
     width: 80%;
     padding: 10%;
+    cursor: pointer;
 }
 
-section.image:hover > img.small
+.internalblock:hover > img.small
 {
     width: 100%;
     padding: 0;
 }
 
-section.image:hover
-{
-    vertical-align: top;
-}
-
-section.image:hover > p
+.internalblock:hover > .description
 {
     display: block;
 }
 
-div.bigimg
+.bigimg
 {
     display: none;
     width: 100%;
 }
 
-div.cross
+.cross
 {
     display: none;
     width: 80px;
     height: 80px;
 }
 
-div.cross > img
+.cross > img
 {
     position: relative;
     width: 100%;
+    cursor: pointer;
 }
 
-div.bigimg > img
+.bigimg > img
 {
     position: relative;
     top: 10vh;
     left: 25vw;
     width: 50vw;
-    z-index: 9500;
+    z-index: 9995;
 }
 
-section.image:focus > div.bigimg
+.internalblock:focus > .bigimg
 {
     position: fixed;
     top: 0;
@@ -122,11 +127,11 @@ section.image:focus > div.bigimg
     display: block;
     width: 100vw;
     height: 100vh;
-    z-index: 9000;
-    background: rgba(0,0,0,.4);
+    z-index: 9800;
+    background: rgba(0, 0, 0, .4);
 }
 
-section.image:focus > div.cross
+.internalblock:focus > .cross
 {
     position: fixed;
     top: 10vh;
@@ -137,7 +142,7 @@ section.image:focus > div.cross
     z-index: 9900;
 }
 
-p
+.description
 {
     display: none;
     position: relative;
@@ -157,6 +162,4 @@ input
 label
 {
     cursor: pointer;
-    font-weight: 600;
-    font-size: 5em;
 }
