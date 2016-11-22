@@ -39,7 +39,7 @@ input
 
 .close a,
 .close a:hover,
-.close :active,
+.close a:active,
 .close a:visited
 {
     color: red;
@@ -82,6 +82,12 @@ input
     max-height: 400px;
 }
 
+figcaption
+{
+    display: none;
+    margin: 0;
+}
+
 .veg-profile
 {
     display: inline-block;
@@ -89,7 +95,6 @@ input
     margin: 0 2%;
     vertical-align: top;
     padding: 2px;
-    min-height: 220px;
 
 }
 
@@ -98,13 +103,13 @@ input
     width: 100%;
 }
 
-.veg-profile p
+.veg-profile figcaption
 {
     display: none;
     margin: 0;
 }
 
-.veg-profile a:hover ~ p
+.veg-profile a:hover ~ figcaption
 {
     display: block;
     background-color: white;
