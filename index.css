@@ -1,13 +1,12 @@
 html
 {
-    overflow: hidden;
+    max-height: 1000px;
 }
 
 .vegetables .img,
 .vegetables
 {
     width: 100%;
-    margin: 20px;
 }
 
 body > a
@@ -23,17 +22,6 @@ body > a
 .grannys-veg
 {
     white-space: nowrap;
-}
-
-.text-hover
-{
-    display: none;
-    text-align: center;
-    padding: 10px;
-    margin: auto;
-    font-size: 18px;
-    max-width: 250px;
-    white-space: normal !important;
 }
 
 .vegetables
@@ -54,15 +42,18 @@ body > a
 
 .item .text-hover
 {
+    display: none;
     margin: auto;
     position: relative;
     text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    max-width: 250px;
+    white-space: normal;
     z-index: -1;
-    opacity: 0;
     border: 1px solid #000;
     border-radius: 20px;
     box-shadow: 1px 2px 2px 0;
-    transition: 1s;
 }
 
 .item:hover > div.text-hover
@@ -75,6 +66,7 @@ body > a
 .item .img:hover
 {
     box-shadow: 0 0 20px rgba(0,0,0,.5);
+    margin-top: 5px;
 }
 
 .item:target:hover .text-hover
@@ -82,23 +74,50 @@ body > a
     display: none;
 }
 
-.item:target .img
+.overlay
 {
-    z-index: 403;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.overlay:target
+{
     display: block;
-    margin: auto;
-    width: 60%;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+
+.table
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.cell
+{
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
     text-align: center;
 }
 
-.item:target
+.modal img
 {
-    background-color: rgba(10,10,10,.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: 400;
+    width: 500px;
+}
+
+.overlay:target .close
+{
+    visibility: visible;
 }
 
 .close
@@ -118,7 +137,7 @@ body > a
     -moz-box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
-    display: inline-block;
+    visibility: hidden;
     float: right;
     width: 2%;
 }
@@ -136,11 +155,7 @@ body > a
     overflow: hidden;
 }
 
-.slider > input
-{
-    display: none;
-}
-
+.slider > input,
 .slider > label
 {
     display: none;
@@ -197,20 +212,13 @@ body > a
     right: 55%;
 }
 
-.slider > div
+.grannys-veg
 {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 0;
-}
-
-.slider > div
-{
     visibility: hidden;
-    opacity: 0;
 }
 
 .slider > input:checked + div
@@ -224,7 +232,6 @@ body > a
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
