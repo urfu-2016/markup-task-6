@@ -1,0 +1,238 @@
+html
+{
+    max-height: 1000px;
+}
+
+.vegetables .img,
+.vegetables
+{
+    width: 100%;
+}
+
+body > a
+{
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.grannys-veg
+{
+    white-space: nowrap;
+}
+
+.vegetables
+{
+    position: relative;
+    margin-right: 20px;
+}
+
+.item
+{
+    position: relative;
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 17px;
+
+}
+
+.item .text-hover
+{
+    display: none;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    max-width: 250px;
+    white-space: normal;
+    z-index: -1;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 1px 2px 2px 0;
+}
+
+.item:hover > div.text-hover
+{
+    display: block;
+    top: 97%;
+    opacity: 1;
+}
+
+.item .img:hover
+{
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    margin-top: 5px;
+}
+
+.item:target:hover .text-hover
+{
+    display: none;
+}
+
+.overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .65);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.overlay:target
+{
+    display: block;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+
+.table
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.cell
+{
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.modal img
+{
+    width: 500px;
+}
+
+.overlay:target .close
+{
+    visibility: visible;
+}
+
+.close
+{
+    z-index: 9999;
+    background: #606061;
+    color: #fff;
+    line-height: 25px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    top: 20px;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+    visibility: hidden;
+    float: right;
+    width: 2%;
+}
+
+.close:hover
+{
+    background: #00d9ff;
+}
+
+.slider
+{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider > input,
+.slider > label
+{
+    display: none;
+}
+
+.slider > input:checked + div + label,
+.slider > input:checked + div + label + label
+{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #000;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.slider > input:checked + div + label:after,
+.slider > input:checked + div + label + label:after
+{
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 80px;
+}
+
+.slider > input:checked + div + label
+{
+    left: -40px;
+}
+
+.slider > input:checked + div + label:after
+{
+    content: '◀';
+    left: 55%;
+}
+
+.slider > input:checked + div + label + label
+{
+    right: -40px;
+}
+
+.slider > input:checked + div + label + label:after
+{
+    content: '▶';
+    right: 55%;
+}
+
+.grannys-veg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.slider > input:checked + div
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.slider > div > p
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
