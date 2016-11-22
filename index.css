@@ -124,7 +124,7 @@ figcaption
 .main-photo:target,
 .main-photo:target ~ .fogging,
 .main-photo:target ~ .close,
-.main-photo:target + .veg-profile p
+.main-photo:target + .veg-profile figcaption
 {
     display: block;
 }
