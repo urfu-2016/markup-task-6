@@ -1,0 +1,197 @@
+main
+{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    width: 1050px;
+    overflow: hidden;
+    position: relative;
+}
+
+.illustration img
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.item
+{
+    background: #fff;
+    width: 235px;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    transition: all .1s;
+    border: 2px solid rgba(255, 255, 255, 0);
+    margin: 50px 0 50px 15px;
+    white-space: normal;
+}
+
+.item:nth-of-type(4n)
+{
+    margin-right: 100px;
+}
+
+.item .description
+{
+    display: none;
+    text-align: center;
+}
+
+.item:hover
+{
+    box-shadow: 0 0 5px #111;
+    border: 2px solid #111;
+    transform: scale(1.1);
+    position: relative;
+}
+
+.item:hover .description
+{
+    background: #fff;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+}
+
+.modal
+{
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+input[name='modal']
+{
+    display: none;
+}
+
+input[name='modal']:checked ~ .modal
+{
+    display: block;
+}
+
+.modal-close:checked ~ .modal
+{
+    display: none;
+}
+
+.modal > .image-box > img
+{
+    width: 100%;
+    display: none;
+}
+
+.image-1:checked ~ .modal > .image-box > img:nth-child(1),
+.image-2:checked ~ .modal > .image-box > img:nth-child(2),
+.image-3:checked ~ .modal > .image-box > img:nth-child(3),
+.image-4:checked ~ .modal > .image-box > img:nth-child(4),
+.image-5:checked ~ .modal > .image-box > img:nth-child(5),
+.image-6:checked ~ .modal > .image-box > img:nth-child(6),
+.image-7:checked ~ .modal > .image-box > img:nth-child(7),
+.image-8:checked ~ .modal > .image-box > img:nth-child(8),
+.image-9:checked ~ .modal > .image-box > img:nth-child(9),
+.image-10:checked ~ .modal > .image-box > img:nth-child(10),
+.image-11:checked ~ .modal > .image-box > img:nth-child(11),
+.image-12:checked ~ .modal > .image-box > img:nth-child(12)
+{
+    display: inline-block;
+}
+
+.modal .close
+{
+    color: #fff;
+    font: bold 30px/30px Arial, sans-serif;
+    text-decoration: none;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+.modal .close:hover
+{
+    color: #aaa;
+}
+
+.modal .image-box
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+.slider
+{
+    width: inherit;
+    display: inline-block;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    transition: margin 1s;
+    white-space: nowrap;
+}
+
+.radio1:checked ~ .slider
+{
+    margin-left: 0;
+}
+
+.radio2:checked ~ .slider
+{
+    margin-left: -1130px;
+}
+
+.radio3:checked ~ .slider
+{
+    margin-left: -2260px;
+}
+
+.radio1:checked ~ .slider > .controls label:nth-of-type(1),
+.radio2:checked ~ .slider > .controls label:nth-of-type(2),
+.radio3:checked ~ .slider > .controls label:nth-of-type(3)
+{
+    background: #aaa;
+}
+
+.radio
+{
+    display: none;
+}
+
+.controls
+{
+    position: absolute;
+    display: block;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 300px;
+}
+
+.controls > label
+{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #ccc;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background ease-in-out .5s;
+}
+
+.controls > label:hover
+{
+    background: #bbb;
+}
