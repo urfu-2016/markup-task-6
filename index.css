@@ -8,30 +8,26 @@ main
     position: relative;
 }
 
-.illustration
-{
-    background: #fff;
-}
-
 .illustration img
 {
     width: 100%;
     padding: 0;
     margin: 0;
     background: #fff;
-    margin-bottom: -4px;
     cursor: pointer;
 }
 
 .item
 {
+    background: #fff;
+    width: 235px;
     text-align: left;
     vertical-align: top;
-    width: 4.7%;
     display: inline-block;
     transition: all .1s;
     border: 2px solid rgba(255, 255, 255, 0);
     margin: 50px 0 50px 15px;
+    white-space: normal;
 }
 
 .item:nth-of-type(4n)
@@ -69,7 +65,6 @@ main
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
     display: none;
 }
 
@@ -83,69 +78,31 @@ input[name='modal']:checked ~ .modal
     display: block;
 }
 
-input[name='close']:checked ~ .modal
+.modal-close:checked ~ .modal
 {
     display: none;
 }
 
-input[id='image-1']:checked ~ .modal > .image-box
+.modal > .image-box > img
 {
-    background-image: url('images/Морковь.jpg');
+    width: 100%;
+    display: none;
 }
 
-input[id='image-2']:checked ~ .modal > .image-box
+.image-1:checked ~ .modal > .image-box > img:nth-child(1),
+.image-2:checked ~ .modal > .image-box > img:nth-child(2),
+.image-3:checked ~ .modal > .image-box > img:nth-child(3),
+.image-4:checked ~ .modal > .image-box > img:nth-child(4),
+.image-5:checked ~ .modal > .image-box > img:nth-child(5),
+.image-6:checked ~ .modal > .image-box > img:nth-child(6),
+.image-7:checked ~ .modal > .image-box > img:nth-child(7),
+.image-8:checked ~ .modal > .image-box > img:nth-child(8),
+.image-9:checked ~ .modal > .image-box > img:nth-child(9),
+.image-10:checked ~ .modal > .image-box > img:nth-child(10),
+.image-11:checked ~ .modal > .image-box > img:nth-child(11),
+.image-12:checked ~ .modal > .image-box > img:nth-child(12)
 {
-    background-image: url('images/Виноград.jpg');
-}
-
-input[id='image-3']:checked ~ .modal > .image-box
-{
-    background-image: url('images/Груши.jpg');
-}
-
-input[id='image-4']:checked ~ .modal > .image-box
-{
-    background-image: url('images/Лук.jpg');
-}
-
-input[id='image-5']:checked ~ .modal > .image-box
-{
-    background-image: url('images/Репа.jpg');
-}
-
-input[id='image-6']:checked ~ .modal > .image-box
-{
-    background-image: url('images/Тыква.jpg');
-}
-
-input[id='image-7']:checked ~ .modal > .image-box
-{
-    background-image: url('images/apple.jpg');
-}
-
-input[id='image-8']:checked ~ .modal > .image-box
-{
-    background-image: url('images/baklazhan.jpg');
-}
-
-input[id='image-9']:checked ~ .modal > .image-box
-{
-    background-image: url('images/cherry.jpg');
-}
-
-input[id='image-10']:checked ~ .modal > .image-box
-{
-    background-image: url('images/kapusta.jpg');
-}
-
-input[id='image-11']:checked ~ .modal > .image-box
-{
-    background-image: url('images/kartofel.jpg');
-}
-
-input[id='image-12']:checked ~ .modal > .image-box
-{
-    background-image: url('images/pepper.jpg');
+    display: inline-block;
 }
 
 .modal .close
@@ -167,21 +124,22 @@ input[id='image-12']:checked ~ .modal > .image-box
 
 .modal .image-box
 {
-    margin: 0 auto;
-    height: 100%;
-    max-width: 30%;
-    margin-top: 10%;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
 }
 
 .slider
 {
-    width: 5000px;
+    width: inherit;
+    display: inline-block;
     list-style: none;
     text-align: left;
     padding: 0;
     transition: margin 1s;
+    white-space: nowrap;
 }
 
 .radio1:checked ~ .slider
@@ -213,11 +171,11 @@ input[id='image-12']:checked ~ .modal > .image-box
 
 .controls
 {
-    display: inline-block;
-    left: 45.5%;
-    top: 300px;
-    z-index: 0;
     position: absolute;
+    display: block;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 300px;
 }
 
 .controls > label
