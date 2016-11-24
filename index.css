@@ -16,6 +16,11 @@ label
     color: rgb(255, 255, 255);
 }
 
+label:active
+{
+    opacity: .7;
+}
+
 .right-label
 {
     float: right;
