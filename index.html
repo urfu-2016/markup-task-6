@@ -6,80 +6,96 @@
     <title>Marvel heroes</title>
 </head>
 <body>
-    <input type="radio" name="scroller" class="first-scroll" checked>
-    <input type="radio" name="scroller" class="second-scroll">
+    <input type="radio" id="left-scroll" name="scroll" class="left-scroll" checked>
+    <label for="left-scroll" class="left-label">
+        <img 
+            src="http://www.iconsdb.com/icons/preview/white/right-round-xxl.png"
+            alt="right arrow icon"
+            title="right arrow icon">
+    </label>
+    <input type="radio" id="right-scroll" name="scroll" class="right-scroll">
+    <label for="right-scroll" class="right-label">
+        <img 
+            src="http://www.iconsdb.com/icons/preview/white/right-round-xxl.png"
+            alt="right arrow icon"
+            title="right arrow icon">
+    </label>
     <div class="gallery">
-        <div class="gallery-item">
-            <a href="#deadpool-image">
-                <img 
-                    src="https://goo.gl/ZlYqgi"
-                    alt="deadpool-image"
-                    title="deadpool-image">
-            </a>
-            <p class="description">Deadpool</p>
+        <div class="first-page">
+            <div class="gallery-item">
+                <a href="#deadpool-image">
+                    <img 
+                        src="https://goo.gl/ZlYqgi"
+                        alt="deadpool-image"
+                        title="deadpool-image">
+                </a>
+                <p class="description">Deadpool</p>
+            </div>
+            <div class="gallery-item">
+                <a href="#ironman-image">
+                    <img 
+                        src="https://goo.gl/uYaAMX"
+                        alt="iron man image"
+                        title="iron man image">
+                </a>
+                <p class="description">Iron Man</p>
+            </div>
+            <div class="gallery-item">
+                <a href="#falcon-image">
+                    <img 
+                        src="https://goo.gl/rfZmct"
+                        alt="falcon image"
+                        title="falcon image">
+                </a>
+                <p class="description">Falcon</p>
+            </div>
+            <div class="gallery-item">
+                <a href="#captain-image">
+                    <img 
+                        src="https://goo.gl/3ElbxH"
+                        alt="Captain America image"
+                        title="Captain America image">
+                </a>
+                <p class="description">Captain America</p>
+            </div>
         </div>
-        <div class="gallery-item">
-            <a href="#ironman-image">
-                <img 
-                    src="https://goo.gl/uYaAMX"
-                    alt="iron man image"
-                    title="iron man image">
-            </a>
-            <p class="description">Iron Man</p>
-        </div>
-        <div class="gallery-item">
-            <a href="#falcon-image">
-                <img 
-                    src="https://goo.gl/rfZmct"
-                    alt="falcon image"
-                    title="falcon image">
-            </a>
-            <p class="description">Falcon</p>
-        </div>
-        <div class="gallery-item">
-            <a href="#captain-image">
-                <img 
-                    src="https://goo.gl/3ElbxH"
-                    alt="Captain America image"
-                    title="Captain America image">
-            </a>
-            <p class="description">Captain America</p>
-        </div>
-        <div class="gallery-item">
-            <a href="#panter-image">
-                <img 
-                    src="https://goo.gl/OkFJLg"
-                    alt="Black Panter image"
-                    title="Black Panter image">
-            </a>
-            <p class="description">Black Panter</p>
-        </div>
-        <div class="gallery-item">
-            <a href="#hulk-image">
-                <img 
-                    src="https://goo.gl/nvGEqF"
-                    alt="Hulk image"
-                    title="Hulk image">
-            </a>
-            <p class="description">Hulk</p>
-        </div>
-        <div class="gallery-item">
-            <a href="#spider-image">
-                <img 
-                    src="https://goo.gl/2LBn3S"
-                    alt="Spider-Man image"
-                    title="Spider-Man image">
-            </a>
-            <p class="description">Spider-Man</p>
-        </div>
-        <div class="gallery-item">
-            <a href="#wolverine-image">
-                <img 
-                    src="https://goo.gl/FTvobL"
-                    alt="Wolverine image"
-                    title="Wolverine image">
-            </a>
-            <p class="description">Wolverine</p>
+        <div class="second-page">
+            <div class="gallery-item">
+                <a href="#panther-image">
+                    <img 
+                        src="https://goo.gl/OkFJLg"
+                        alt="Black Panther image"
+                        title="Black Panther image">
+                </a>
+                <p class="description">Black Panther</p>
+            </div>
+            <div class="gallery-item">
+                <a href="#hulk-image">
+                    <img 
+                        src="https://goo.gl/nvGEqF"
+                        alt="Hulk image"
+                        title="Hulk image">
+                </a>
+                <p class="description">Hulk</p>
+            </div>
+            <div class="gallery-item">
+                <a href="#spider-image">
+                    <img 
+                        src="https://goo.gl/2LBn3S"
+                        alt="Spider-Man image"
+                        title="Spider-Man image">
+                </a>
+                <p class="description">Spider-Man</p>
+            </div>
+            <div class="gallery-item">
+                <a href="#wolverine-image">
+                    <img 
+                        src="https://goo.gl/FTvobL"
+                        alt="Wolverine image"
+                        title="Wolverine image">
+                </a>
+                <p class="description">Wolverine</p>
+            </div>
         </div>
     </div>
     <div id="deadpool-image" class="background">
@@ -138,12 +154,12 @@
                 title="Close button icon">
         </a>
     </div>
-    <div id="panter-image" class="background">
+    <div id="panther-image" class="background">
         <div class="image-popup">
             <img 
                 src="https://goo.gl/OkFJLg"
-                alt="Black Panter image"
-                title="Black Panter image">
+                alt="Black Panther image"
+                title="Black Panther image">
         </div>
         <a href="#" class="close">
             <img 

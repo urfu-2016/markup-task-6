@@ -1,27 +1,60 @@
-.first-scroll
+input
 {
-    position: absolute;
-    top: 90%;
-    left: 43%;
+    display: none;
 }
 
-.second-scroll
+.left-scroll:checked ~ .left-label,
+.right-scroll:checked ~ .right-label
 {
-    position: absolute;
-    top: 90%;
-    left: 45%;
+    visibility: hidden;
+}
+
+label
+{
+    position: relative;
+    top: 40vh;
+    color: rgb(255, 255, 255);
+}
+
+.right-label
+{
+    float: right;
+    margin: 0 7em 0 0;
+}
+
+.left-label
+{
+    float: left;
+    margin: 0 0 0 7em;
+    transform: rotate(180deg);
+}
+
+label > img
+{
+    width: 5em;
+}
+
+.first-page,
+.second-page
+{
+    display: none;
+}
+
+.left-scroll:checked ~ .gallery > .first-page,
+.right-scroll:checked ~ .gallery > .second-page
+{
+    display: block;
 }
 
 body
 {
     font-size: 10px;
+    background: #000;
 }
 
 .gallery
 {
     text-align: center;
-    position: relative;
-    overflow: hidden;
     width: 50%;
     margin: 0 auto;
     white-space: nowrap;
@@ -42,6 +75,7 @@ body
 .background:target
 {
     visibility: visible;
+    z-index: 1;
 }
 
 .image-popup
@@ -60,16 +94,14 @@ body
 
 .gallery-item
 {
-    -webkit-transition: all, 1s;
-    transition: all 1s;
     display: inline-block;
+    transition: all .5s;
     width: 25%;
-    left: 0;
+    z-index: 0;
+    top: 2em;
     position: relative;
-    max-height: 600px;
     margin: 3em 0;
     font-size: 2em;
-    max-width: 200px;
 }
 
 .gallery-item img
@@ -80,13 +112,13 @@ body
 .close
 {
     position: absolute;
-    top: 5%;
-    left: 90%;
+    top: 7%;
+    left: 93%;
 }
 
 .close img
 {
-    max-width: 70px;
+    max-width: 30px;
 }
 
 .gallery-item:hover
@@ -105,10 +137,5 @@ body
 .description
 {
     visibility: hidden;
-    font-size: .7em;
-}
-
-.second-scroll:checked ~ .gallery > .gallery-item
-{
-    left: -103%;
+    font-size: 1.3vw;
 }
