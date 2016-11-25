@@ -1,0 +1,55 @@
+.lightbox:target
+{
+    display: block;
+    outline: none;
+}
+
+.lightbox:target ~ .fog
+{
+    display: block;
+    outline: none;
+}
+
+.lightbox:target ~ .close-button
+{
+    display: block;
+    outline: none;
+    z-index: 2000;
+}
+
+.close-button
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.fog
+{
+    position: fixed;
+    display: none;
+    top: 0;
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    opacity: .8;
+}
+
+.lightbox
+{
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox img
+{
+    width: 30%;
+    border: 1px solid #000;
+}
