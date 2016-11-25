@@ -1,0 +1,146 @@
+main,
+h1
+{
+    text-align: center;
+}
+
+body
+{
+    min-width: 600px;
+}
+
+label
+{
+    display: inline-block;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin: 3px;
+    z-index: 6;
+}
+
+label:hover,
+.gallery-1:checked ~ .buttons .button1,
+.gallery-2:checked ~ .buttons .button2,
+.gallery-3:checked ~ .buttons .button3,
+.gallery-4:checked ~ .buttons .button4
+{
+    background: #aaa;
+}
+
+.harvest
+{
+    display: inline-block;
+    width: 300px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    max-width: 20%;
+    vertical-align: bottom;
+    height: 200px;
+}
+
+.harvest a img
+{
+    width: 100%;
+    cursor: pointer;
+}
+
+.gallery
+{
+    display: none;
+}
+
+.description
+{
+    position: fixed;
+    display: none;
+    width: 300px;
+    max-width: 20%;
+    height: 300px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+    background-color: #fff;
+}
+
+a:hover ~ .description
+{
+    display: block;
+}
+
+.gallery-1,
+.gallery-2,
+.gallery-3,
+.gallery-4
+{
+    display: none;
+}
+
+.gallery-1:checked ~ .gallery1,
+.gallery-2:checked ~ .gallery2,
+.gallery-3:checked ~ .gallery3,
+.gallery-4:checked ~ .gallery4
+{
+    display: block;
+}
+
+.close
+{
+    width: 50px;
+    cursor: pointer;
+}
+
+.big-pictures img:target
+{
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: #aaa;
+}
+
+.big-pictures img:target ~ a .close
+{
+    position: fixed;
+    display: block;
+    z-index: 20;
+    top: 10px;
+    right: 10px;
+    margin: auto;
+}
+
+.big-pictures img:target ~ .background
+{
+    z-index: 5;
+    display: block;
+    position: fixed;
+    background-color: #000;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.big-pictures img
+{
+    display: none;
+}
+
+.buttons
+{
+    margin-top: 30px;
+}
