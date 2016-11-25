@@ -7,10 +7,7 @@ input[name='block-control']
 {
     width: 1150px;
     text-align: center;
-    position: relative;
-    z-index: 5;
-    top: 400px;
-    display: inline-block;
+    margin: auto;
 }
 
 .selector label
@@ -18,6 +15,7 @@ input[name='block-control']
     width: 40px;
     height: 40px;
     display: inline-block;
+    overflow: hidden;
     background: url('radio/radio-unselected.png');
 }
 
@@ -29,13 +27,13 @@ input[id='block-1']:checked ~ .screen-bar .slider
 
 input[id='block-2']:checked ~ .screen-bar .slider
 {
-    margin-left: -1140px;
+    margin-left: -1175px;
     transition: 2s;
 }
 
 input[id='block-3']:checked ~ .screen-bar .slider
 {
-    margin-left: -2280px;
+    margin-left: -2350px;
     transition: 2s;
 }
 

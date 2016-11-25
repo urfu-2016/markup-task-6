@@ -3,46 +3,38 @@
 
 body
 {
+    margin: 0;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .screen-bar
 {
-    width: 1150px;
-    height: 600px;
-    position: relative;
-    display: inline-block;
+    width: 1220px;
     overflow: hidden;
+    margin: auto;
 }
 
 .slider
 {
-    position: absolute;
-    margin-left: -750px;
-    height: 300px;
-    width: max-content;
-    padding: 30px;
+    width: 1000%;
+    height: 450px;
 }
 
-.buffer
+.block
 {
-    float: left;
-    width: 60px;
-    height: 100px;
+    width: 1150px;
+    margin-left: 35px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .item
 {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     width: 230px;
     margin: 20px;
-    margin-bottom: 500px;
-    background: #fff;
-}
-
-.item-info
-{
-    display: none;
+    margin-bottom: 120px;
     background: #fff;
 }
 
@@ -65,4 +57,10 @@ body
 .item:hover .item-info
 {
     display: block;
+}
+
+.item-info
+{
+    display: none;
+    background: #fff;
 }
