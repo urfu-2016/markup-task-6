@@ -2,7 +2,7 @@ body
 {
     font-size: 10px;
     display: table;
-    width: 50%;
+    width: 90%;
     height: 100vh;
     margin: 0 auto;
     background: #000;
@@ -27,15 +27,12 @@ label
     z-index: 10;
     vertical-align: middle;
     display: table-cell;
-    min-width: 30px;
-    max-width: 100px;
 }
 
 .gallery
 {
     z-index: 1;
-    max-width: 60%;
-    margin: 0 auto;
+    width: 50%;
     position: relative;
     vertical-align: middle;
     display: table-cell;
@@ -48,20 +45,14 @@ label:active
     opacity: .8;
 }
 
-.right-label
-{
-    right: -15%;
-}
-
 .left-label
 {
-    left: -15%;
     transform: rotate(180deg);
 }
 
 label > img
 {
-    width: 100%;
+    width: 5em;
 }
 
 .first-page,
@@ -83,7 +74,6 @@ label > img
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
     visibility: hidden;
     background: rgba(0, 0, 0, .7);
 }
@@ -135,7 +125,7 @@ label > img
 
 .close img
 {
-    width: 30px;
+    width: 3em;
 }
 
 .gallery-item:hover
