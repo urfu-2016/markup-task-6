@@ -1,0 +1,148 @@
+body
+{
+    font-size: 10px;
+    display: table;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    background: #000;
+    text-align: center;
+}
+
+input
+{
+    display: none;
+}
+
+.left-scroll:checked ~ .left-label,
+.right-scroll:checked ~ .right-label
+{
+    visibility: hidden;
+}
+
+label
+{
+    position: relative;
+    color: #fff;
+    z-index: 10;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.gallery
+{
+    z-index: 1;
+    width: 50%;
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    white-space: nowrap;
+}
+
+label:active
+{
+    opacity: .8;
+}
+
+.left-label
+{
+    transform: rotate(180deg);
+}
+
+label > img
+{
+    width: 5em;
+}
+
+.first-page,
+.second-page
+{
+    display: none;
+}
+
+.left-scroll:checked ~ .gallery > .first-page,
+.right-scroll:checked ~ .gallery > .second-page
+{
+    display: block;
+}
+
+.background
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, .7);
+}
+
+.background:target
+{
+    visibility: visible;
+    z-index: 100;
+}
+
+.image-popup
+{
+    left: 25%;
+    bottom: 10%;
+    top: 10%;
+    right: 25%;
+    z-index: 1000;
+    position: absolute;
+}
+
+.image-popup > img
+{
+    width: 40%;
+}
+
+.gallery-item
+{
+    display: inline-block;
+    transition: all .5s;
+    width: 25%;
+    z-index: 0;
+    font-size: 2em;
+    min-width: 100px;
+    max-width: 300px;
+}
+
+.gallery-item img
+{
+    width: 100%;
+}
+
+.close
+{
+    position: absolute;
+    z-index: 100;
+    top: 7%;
+    left: 90%;
+}
+
+.close img
+{
+    width: 3em;
+}
+
+.gallery-item:hover
+{
+    box-shadow: 0 0 1em .3em #aaa;
+    transform: scale(1.2);
+    background: #fff;
+    z-index: 1;
+}
+
+.gallery-item:hover .description
+{
+    visibility: visible;
+}
+
+.description
+{
+    visibility: hidden;
+    font-size: 1.3vw;
+}
