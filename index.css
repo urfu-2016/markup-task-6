@@ -1,3 +1,14 @@
+body
+{
+    font-size: 10px;
+    display: table;
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    background: #000;
+    text-align: center;
+}
+
 input
 {
     display: none;
@@ -12,31 +23,45 @@ input
 label
 {
     position: relative;
-    top: 40vh;
-    color: rgb(255, 255, 255);
+    color: #fff;
+    z-index: 10;
+    vertical-align: middle;
+    display: table-cell;
+    min-width: 30px;
+    max-width: 100px;
+}
+
+.gallery
+{
+    z-index: 1;
+    max-width: 60%;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    white-space: nowrap;
 }
 
 label:active
 {
-    opacity: .7;
+    opacity: .8;
 }
 
 .right-label
 {
-    float: right;
-    margin: 0 7em 0 0;
+    right: -15%;
 }
 
 .left-label
 {
-    float: left;
-    margin: 0 0 0 7em;
+    left: -15%;
     transform: rotate(180deg);
 }
 
 label > img
 {
-    width: 5em;
+    width: 100%;
 }
 
 .first-page,
@@ -49,20 +74,6 @@ label > img
 .right-scroll:checked ~ .gallery > .second-page
 {
     display: block;
-}
-
-body
-{
-    font-size: 10px;
-    background: #000;
-}
-
-.gallery
-{
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-    white-space: nowrap;
 }
 
 .background
@@ -80,15 +91,16 @@ body
 .background:target
 {
     visibility: visible;
-    z-index: 1;
+    z-index: 100;
 }
 
 .image-popup
 {
-    left: 40%;
+    left: 25%;
     bottom: 10%;
     top: 10%;
-    right: 10%;
+    right: 25%;
+    z-index: 1000;
     position: absolute;
 }
 
@@ -103,10 +115,9 @@ body
     transition: all .5s;
     width: 25%;
     z-index: 0;
-    top: 2em;
-    position: relative;
-    margin: 3em 0;
     font-size: 2em;
+    min-width: 100px;
+    max-width: 300px;
 }
 
 .gallery-item img
@@ -117,18 +128,19 @@ body
 .close
 {
     position: absolute;
+    z-index: 100;
     top: 7%;
-    left: 93%;
+    left: 90%;
 }
 
 .close img
 {
-    max-width: 30px;
+    width: 30px;
 }
 
 .gallery-item:hover
 {
-    box-shadow: .03em .03em 1em .1em #aaa;
+    box-shadow: 0 0 1em .3em #aaa;
     transform: scale(1.2);
     background: #fff;
     z-index: 1;
