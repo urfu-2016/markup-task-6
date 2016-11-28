@@ -1,0 +1,99 @@
+header
+{
+    text-align: center;
+    font-size: 400%;
+    margin-bottom: 50px;
+}
+
+main
+{
+    text-align: center;
+}
+
+.assortment
+{
+    margin: 5% 5% 0%;
+    width: 90%;
+}
+
+.fruit
+{
+    vertical-align: top;
+    display: inline-block;
+    width: 20%;
+    margin: 2%;
+}
+
+.fruit-image
+{
+    width: 100%;
+}
+
+.fruit-name
+{
+    font: bold 30px Times New Roman;
+}
+
+.fruit:hover .info
+{
+    display: block;
+    width: 100%;
+}
+
+.fruit:hover
+{
+    box-shadow: 0 0 20px 5px #d6d6d6;
+    transform: scale(1.3, 1.3);
+    position: relative;
+}
+
+.fruit:target ~ .shade
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: #adadad;
+    opacity: .75;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.fruit:target ~ .close .cross
+{
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 3%;
+    z-index: 3;
+}
+
+.fruit:target .fruit-image
+{
+    width: 35%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    pointer-events: none;
+}
+
+.first-page-button:checked ~ .assortment .second-page,
+.first-page-button:checked ~ .assortment .third-page,
+.second-page-button:checked ~ .assortment .first-page,
+.second-page-button:checked ~ .assortment .third-page,
+.third-page-button:checked ~ .assortment .first-page,
+.third-page-button:checked ~ .assortment .second-page,
+.info,
+.shade,
+.cross
+{
+    display: none;
+}
+
