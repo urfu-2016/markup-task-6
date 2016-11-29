@@ -37,28 +37,32 @@ body
     height: 100vh;
 }
 
-label:after
+label
 {
     position: fixed;
-    width: 90px;
+    width: 6%;
     top: 0;
     bottom: 0;
     margin: auto;
     height: 90px;
+	cursor: pointer;
+	display: none;
 }
 
-input:nth-of-type(1):checked ~ label:nth-of-type(2):after,
-input:nth-of-type(2):checked ~ label:nth-of-type(3):after
+input:nth-of-type(1):checked ~ label:nth-of-type(2),
+input:nth-of-type(2):checked ~ label:nth-of-type(3)
 {
+	display: block;
+	right: 2%;
     content: url('images/right.png');
-    right: 0;
 }
 
-input:nth-of-type(2):checked ~ label:nth-of-type(1):after,
-input:nth-of-type(3):checked ~ label:nth-of-type(2):after
+input:nth-of-type(2):checked ~ label:nth-of-type(1),
+input:nth-of-type(3):checked ~ label:nth-of-type(2)
 {
+	display: block;
+	left: 2%;
     content: url('images/left.png');
-    left: 0;
 }
 
 input:nth-of-type(2):checked ~ .blocks > .externalblock
@@ -71,7 +75,7 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
     right: 150%;
 }
 
-.internalblock > img.small
+.internalblock > .images > img.small
 {
     position: relative;
     width: 80%;
@@ -79,7 +83,7 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
     cursor: pointer;
 }
 
-.internalblock:hover > img.small
+.internalblock:hover > .images > img.small
 {
     width: 100%;
     padding: 0;
@@ -94,6 +98,7 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
 {
     display: none;
     width: 100%;
+	text-align: center;
 }
 
 .cross
@@ -112,14 +117,13 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
 
 .bigimg > img
 {
+	top: 15vh;
     position: relative;
-    top: 10vh;
-    left: 25vw;
-    width: 50vw;
+    height: 70vh;
     z-index: 9995;
 }
 
-.internalblock:focus > .bigimg
+.images:focus > .bigimg
 {
     position: fixed;
     top: 0;
@@ -128,14 +132,15 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
     width: 100vw;
     height: 100vh;
     z-index: 9800;
+	
     background: rgba(0, 0, 0, .4);
 }
 
-.internalblock:focus > .cross
+.images:focus > .cross
 {
     position: fixed;
-    top: 10vh;
-    right: 25vw;
+    top: 0;
+    right: 0;
     display: block;
     width: 80px;
     height: 80px;
@@ -157,9 +162,4 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
 input
 {
     display: none;
-}
-
-label
-{
-    cursor: pointer;
 }
