@@ -10,7 +10,6 @@ input
 {
     position: absolute;
     top: 300px;
-    z-index: -1;
 }
 
 .first-radio
@@ -28,8 +27,6 @@ input
     position: absolute;
     top: 40px;
     right: 40px;
-    z-index: 2;
-    display: none;
 }
 
 .close a
@@ -48,7 +45,6 @@ input
 
 .fogging
 {
-    display: none;
     min-width: 100%;
     height: 100%;
     position: absolute;
@@ -56,7 +52,6 @@ input
     opacity: .5;
     background-color: black;
     margin: 0;
-    z-index: 1;
 }
 
 .second-block,
@@ -67,11 +62,9 @@ input
 
 .main-photo
 {
-    display: none;
     position: absolute;
     width: 100%;
     top: 100px;
-    z-index: 2;
 }
 
 .main-photo img
@@ -80,12 +73,6 @@ input
     left: 0;
     right: 0;
     max-height: 400px;
-}
-
-figcaption
-{
-    display: none;
-    margin: 0;
 }
 
 .veg-profile
@@ -98,15 +85,14 @@ figcaption
 
 }
 
+section
+{
+    opacity: .99;
+}
+
 .veg-profile img
 {
     width: 100%;
-}
-
-.veg-profile figcaption
-{
-    display: none;
-    margin: 0;
 }
 
 .veg-profile a:hover ~ figcaption
@@ -116,17 +102,16 @@ figcaption
 }
 
 .main-photo:target + .veg-profile,
-.veg-profile:hover
+.veg-profile:hover,
+.wrapper:target + .veg-profile
 {
     box-shadow: 4px 4px 10px;
 }
 
-.main-photo:target,
-.main-photo:target ~ .fogging,
-.main-photo:target ~ .close,
-.main-photo:target + .veg-profile figcaption
+.wrapper:target,
+.wrapper:target + .veg-profile figcaption
 {
-    display: block;
+    display: inline;
 }
 
 .second-radio:checked ~ .second-block,
@@ -135,6 +120,10 @@ figcaption
     display: block;
 }
 
+.veg-profile figcaption,
+.wrapper,
+.second-block,
+.third-block,
 .second-radio:checked ~ .first-block,
 .second-radio:checked ~ .third-block,
 .third-radio:checked ~ .first-block,
@@ -142,4 +131,3 @@ figcaption
 {
     display: none;
 }
-
