@@ -98,7 +98,7 @@ input:nth-of-type(3):checked ~ .blocks > .externalblock
 {
     display: none;
     width: 100%;
-	text-align: center;
+    text-align: center;
 }
 
 .cross
