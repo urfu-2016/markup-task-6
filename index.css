@@ -3,11 +3,6 @@ body
     background-color: #faebd7;
 }
 
-.img2
-{
-    left: 340px;
-}
-
 .closer
 {
     right: 30px;
@@ -21,8 +16,8 @@ body
 .blackout
 {
     position: fixed;
-    min-height: 100%;
-    min-width: 100%;
+    left: 0;
+    top: 0;
     bottom: 0;
     right: 0;
     display: none;
@@ -32,113 +27,132 @@ body
 
 main
 {
-    margin: 120px 130px 0;
+    display: block;
+    margin: 120px 10%;
 }
 
-.picture:focus ~ .blackout
+[id='close']:target ~ .closer,
+[id='close']:target ~ .blackout
 {
+    display: none;
+}
+
+.slides[id='carrot']:target ~ .bigPicture,
+.slides[id='tomato']:target ~ .bigPicture,
+.slides[id='eggplant']:target ~ .bigPicture,
+.slides[id='pepper']:target ~ .bigPicture,
+.slides[id='cabbage']:target ~ .bigPicture,
+.slides[id='white']:target ~ .bigPicture
+{
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+}
+
+.slides[id='carrot']:target ~ .blackout,
+.slides[id='tomato']:target ~ .blackout,
+.slides[id='eggplant']:target ~ .blackout,
+.slides[id='pepper']:target ~ .blackout,
+.slides[id='cabbage']:target ~ .blackout,
+.slides[id='white']:target ~ .blackout
+{
+    z-index: 1;
     display: block;
 }
 
-.picture:focus ~ .closer
+.slides[id='carrot']:target ~ a .closer,
+.slides[id='tomato']:target ~ a .closer,
+.slides[id='eggplant']:target ~ a .closer,
+.slides[id='pepper']:target ~ a .closer,
+.slides[id='cabbage']:target ~ a .closer,
+.slides[id='white']:target ~ a .closer
 {
     z-index: 2;
     display: block;
 }
 
-.picture:focus ~ .radios
-{
-    display: none;
-}
-
-.picture:focus
-{
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 600px;
-    max-width: 600px;
-}
-
-.picture:focus ~ .text
-{
-    display: none;
-}
-
-.picture:hover ~ .text
+.slides:not(:target):hover .text
 {
     display: block;
 }
 
-.slides:hover
+.slides:not(:target):hover
 {
+    z-index: 1;
     background-color: #fff;
     box-shadow: 0 0 4px #000;
-    height: 480px;
+    height: 350px;
+}
+
+.bigPicture
+{
+    display: none;
 }
 
 .picture
 {
-    float: left;
-    height: 240px;
-    margin: 0 20px;
-    max-width: 240px;
+    width: 90%;
+    display: block;
+    margin: 10px auto;
 }
 
 .slides
 {
     float: left;
-    max-width: 350px;
+    width: 25%;
 }
 
 .radios
 {
     position: fixed;
-    top: 600px;
+    top: 480px;
 }
 
 .slide1
 {
-    left: 550px;
+    left: 48%;
 }
 
 .slide2
 {
-    left: 570px;
+    left: 50%;
 }
 
 .slide3
 {
-    left: 590px;
+    left: 52%;
 }
 
 .text
 {
-    margin: 10%;
-    max-width: 180px;
+    z-index: 1;
+    margin: 0 10px;
+    width: 90%;
     text-align: justify;
-    color: #007fff;
+    color: #d87093;
     display: none;
 }
 
-input.slide1:checked ~ main .img5,
-input.slide1:checked ~ main .img6
+input.slide1:checked ~ main .eggplant,
+input.slide1:checked ~ main .pepper
 {
     display: none;
 }
 
-input.slide2:checked ~ main .img1,
-input.slide2:checked ~ main .img6
+input.slide2:checked ~ main .carrot,
+input.slide2:checked ~ main .pepper
 {
     display: none;
 }
 
-input.slide3:checked ~ main .img2,
-input.slide3:checked ~ main .img1
+input.slide3:checked ~ main .tomato,
+input.slide3:checked ~ main .carrot
 {
     display: none;
 }
