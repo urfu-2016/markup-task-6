@@ -1,0 +1,142 @@
+.vegetables
+{
+    overflow: hidden;
+    height: 600px;
+}
+
+.card-wrapper
+{
+    width: 19%;
+    display: block;
+    float: left;
+    height: 100%;
+    margin: 3%;
+}
+
+.vegetable
+{
+    margin: 0;
+    padding: 0;
+}
+
+.mini-images
+{
+    width: 100%;
+}
+
+figcaption
+{
+    visibility: hidden;
+    padding: 4px;
+}
+
+.vegetable:hover > figcaption
+{
+    visibility: visible;
+}
+
+.vegetable:hover
+{
+    box-shadow: darkslategray 0 0 10px;
+}
+
+.big-image img
+{
+    width: 50%;
+    margin: 3% auto 0;
+    display: block;
+}
+
+.big-image,
+.close-big-image-link
+{
+    z-index: 2;
+}
+
+.big,
+.big-image,
+.big-background,
+.close-big-image-link
+{
+    position: fixed;
+}
+
+.big,
+.big-image,
+.big-background
+{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.big
+{
+    visibility: hidden;
+}
+
+.big-background
+{
+    z-index: 1;
+    opacity: .7;
+    background-color: #000;
+}
+
+.big:target
+{
+    visibility: visible;
+}
+
+.close-big-image-link
+{
+    right: 0;
+    top: 0;
+}
+
+.close-big-image-link img
+{
+    width: 100px;
+    z-index: 2;
+}
+
+.first-page,
+.second-page,
+.third-page
+{
+    float: left;
+}
+
+.switching-pages
+{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+}
+
+.switching-pages[value='first']
+{
+    left: 48%;
+}
+
+.switching-pages[value='third']
+{
+    left: 52%;
+}
+
+.switching-pages[value='first']:checked .first-page,
+.switching-pages[value='second']:checked .second-page,
+.switching-pages[value='third']:checked .third-page
+{
+    display: block;
+}
+
+.switching-pages[value='first']:checked ~ .second-page,
+.switching-pages[value='first']:checked ~ .third-page,
+.switching-pages[value='second']:checked ~ .first-page,
+.switching-pages[value='second']:checked ~ .third-page,
+.switching-pages[value='third']:checked ~ .first-page,
+.switching-pages[value='third']:checked ~ .second-page
+{
+    display: none;
+}
