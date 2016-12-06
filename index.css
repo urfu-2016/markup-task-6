@@ -32,7 +32,7 @@ main
 
 .fruit-name
 {
-    font: bold 100% Times New Roman;
+    font: bold 100% Times New Roman, sans-serif;
 }
 
 .fruit:hover .info
@@ -41,11 +41,16 @@ main
     width: 100%;
 }
 
+.fruit:hover .fruit-description
+{
+    padding: 3%;
+}
+
 .fruit:hover
 {
     box-shadow: 0 0 20px 5px #d6d6d6;
-    transform: scale(1.2, 1.2);/* или не просто уменьшением величины ? */
     position: relative;
+    transform: scale(1.15);
 }
 
 .fruit:target ~ .shade
@@ -68,15 +73,17 @@ main
     position: absolute;
     top: 2%;
     right: 2%;
-    width: 3%;
+    font-size: 200%;
     z-index: 3;
 }
 
-.fruit:target .fruit-image
+.fruit:target + .wrapper,
+.fruit:target + .wrapper .enlarged-image
 {
+    display: block;
     width: 35%;
     z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -93,7 +100,9 @@ main
 .third-page-button:checked ~ .assortment .second-page,
 .info,
 .shade,
-.cross
+.cross,
+.wrapper,
+.enlarged-image
 {
     display: none;
 }
