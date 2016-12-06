@@ -55,13 +55,16 @@
     background: #fff;
     overflow: hidden;
     cursor: pointer;
-    transition: right .2s ease-in-out, z-index .2s ease-in-out;
+    transition: right .2s ease-in-out
+        , left .2s ease-in-out
+        , z-index .2s ease-in-out;
     box-shadow: 0 0 2px rgba(0,0,0,.2);
 }
 
 .gallery-item:hover > div
 {
-    right: -40px;
+    right: -20px;
+    left: -20px;
     z-index: 20;
     box-shadow: 0 0 14px rgba(0,0,0,.3);
 }
@@ -104,6 +107,8 @@
 {
     font-size: 18px;
     height: 180px;
+    width: 172px;
+    margin: 14px auto;
     opacity: 0;
     white-space: normal;
     transition: opacity .2s ease-in-out;
@@ -133,9 +138,8 @@ input[type='radio']
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     display: none;
     z-index: 0;
@@ -171,25 +175,19 @@ input[type='radio']
     stroke-width: 3;
 }
 
-.popup__img
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 50%;
-    height: 80%;
-    margin: auto;
-    text-align: center;
-    background: #fff;
-}
-
 .popup__img-item
 {
     display: none;
-    max-width: 100%;
-    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 60%;
+    max-height: 60%;
+    background-color: #fff;
+    padding: 40px;
 }
 
 .popup__cross:checked ~ .popup
@@ -243,64 +241,10 @@ input[type='radio']
 {
     width: 787px;
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
     will-change: transform;
-    transition: transform .4s ease-in-out;
-}
-
-input[name='carusel-1']
-{
-    display: inline-block;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    margin-left: -25px;
-}
-
-.gallery .carusel-1
-{
-    margin-left: -70px;
-}
-
-.gallery .carusel-2
-{
-    margin-left: -40px;
-}
-
-.gallery .carusel-3
-{
-    margin-left: -10px;
-}
-
-.gallery .carusel-4
-{
-    margin-left: 20px;
-}
-
-.carusel-1:checked ~ .carusel .carusel__item-1
-{
-    transform: translateX(0);
-}
-
-.carusel-2:checked ~ .carusel .carusel__item-1,
-.carusel-2:checked ~ .carusel .carusel__item-2
-{
-    transform: translateX(-840px);
-}
-
-.carusel-3:checked ~ .carusel .carusel__item-1,
-.carusel-3:checked ~ .carusel .carusel__item-2,
-.carusel-3:checked ~ .carusel .carusel__item-3
-{
-    transform: translateX(-1676px);
-}
-
-.carusel-4:checked ~ .carusel .carusel__item-1,
-.carusel-4:checked ~ .carusel .carusel__item-2,
-.carusel-4:checked ~ .carusel .carusel__item-3,
-.carusel-4:checked ~ .carusel .carusel__item-4
-{
-    transform: translateX(-2510px);
+    transition: transform .8s ease-in-out;
 }
 
 /*CARUSEL WITH ARROW*/
@@ -326,7 +270,7 @@ input[name='carusel-1']
 
 .carusel-r
 {
-    right: -30px;
+    right: -70px;
     background-position: -30px -15px;
 }
 
@@ -340,37 +284,20 @@ input[name='carusel-1']
     background-position: 0 -15px;
 }
 
-.carusel-lab-1-r
-{
-    z-index: 20;
-}
-
-.carusel-1-r:checked ~ .carusel-lab-2-r
-{
-    z-index: 30;
-}
-
 .carusel-1-r:checked ~ .carusel .carusel__item-1,
-.carusel-1-r:checked ~ .carusel .carusel__item-2
+.carusel-1-r:checked ~ .carusel .carusel__item-2,
+.carusel-1-r:checked ~ .carusel .carusel__item-3,
+.carusel-1-r:checked ~ .carusel .carusel__item-4
 {
     transform: translateX(-840px);
 }
 
-.carusel-2-r:checked ~ .carusel-lab-3-r
-{
-    z-index: 30;
-}
-
 .carusel-2-r:checked ~ .carusel .carusel__item-1,
 .carusel-2-r:checked ~ .carusel .carusel__item-2,
-.carusel-2-r:checked ~ .carusel .carusel__item-3
+.carusel-2-r:checked ~ .carusel .carusel__item-3,
+.carusel-2-r:checked ~ .carusel .carusel__item-4
 {
     transform: translateX(-1676px);
-}
-
-.carusel-3-r:checked ~ .carusel-lab-4-r
-{
-    z-index: 30;
 }
 
 .carusel-3-r:checked ~ .carusel .carusel__item-1,
@@ -381,16 +308,6 @@ input[name='carusel-1']
     transform: translateX(-2510px);
 }
 
-.carusel-lab-1-l
-{
-    z-index: 20;
-}
-
-.carusel-1-l:checked ~ .carusel-lab-2-l
-{
-    z-index: 30;
-}
-
 .carusel-2-l:checked ~ .carusel .carusel__item-1,
 .carusel-2-l:checked ~ .carusel .carusel__item-2,
 .carusel-2-l:checked ~ .carusel .carusel__item-3,
@@ -399,25 +316,34 @@ input[name='carusel-1']
     transform: translateX(-2510px);
 }
 
-.carusel-2-l:checked ~ .carusel-lab-3-l
-{
-    z-index: 30;
-}
-
 .carusel-3-l:checked ~ .carusel .carusel__item-1,
 .carusel-3-l:checked ~ .carusel .carusel__item-2,
-.carusel-3-l:checked ~ .carusel .carusel__item-3
+.carusel-3-l:checked ~ .carusel .carusel__item-3,
+.carusel-3-l:checked ~ .carusel .carusel__item-4
 {
     transform: translateX(-1676px);
 }
 
+.carusel-4-l:checked ~ .carusel .carusel__item-1,
+.carusel-4-l:checked ~ .carusel .carusel__item-2,
+.carusel-4-l:checked ~ .carusel .carusel__item-3,
+.carusel-4-l:checked ~ .carusel .carusel__item-4
+{
+    transform: translateX(-840px);
+}
+
+.carusel-lab-1-l,
+.carusel-lab-1-r
+{
+    z-index: 20;
+}
+
+.carusel-1-r:checked ~ .carusel-lab-2-r,
+.carusel-2-r:checked ~ .carusel-lab-3-r,
+.carusel-3-r:checked ~ .carusel-lab-4-r,
+.carusel-1-l:checked ~ .carusel-lab-2-l,
+.carusel-2-l:checked ~ .carusel-lab-3-l,
 .carusel-3-l:checked ~ .carusel-lab-4-l
 {
     z-index: 30;
-}
-
-.carusel-4-l:checked ~ .carusel .carusel__item-1,
-.carusel-4-l:checked ~ .carusel .carusel__item-2
-{
-    transform: translateX(-840px);
 }
