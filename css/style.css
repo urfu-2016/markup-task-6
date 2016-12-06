@@ -1,0 +1,33 @@
+html,
+body,
+p,
+h2
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html
+{
+    line-height: 1;
+}
+
+body
+{
+    width: 1024px;
+    min-height: 600px;
+    margin: 0 auto;
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
