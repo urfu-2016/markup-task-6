@@ -32,7 +32,7 @@ main
 
 .fruit-name
 {
-    font: bold 100% Times New Roman, sans-serif;
+    font: bold 100% Arial, sans-serif;
 }
 
 .fruit:hover .info
@@ -44,6 +44,7 @@ main
 .fruit:hover .fruit-description
 {
     padding: 3%;
+    font: 90% Arial, sans-serif;
 }
 
 .fruit:hover
