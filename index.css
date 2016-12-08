@@ -8,7 +8,28 @@
     color: #008000;
 }
 
-.layer
+.arrow-left:after,
+.arrow-right:after
+{
+    position: fixed;
+    top: 20%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.arrow-left:after
+{
+    content: '◀';
+    left: 2%;
+}
+
+.arrow-right:after
+{
+    content: '▶';
+    right: 2%;
+}
+
+.paranja
 {
     display: none;
     width: 100%;
@@ -46,14 +67,7 @@
 {
     display: inline-block;
     vertical-align: top;
-    margin: 5% 1%;
     width: 20%;
-}
-
-.content:target ~ .layer,
-.content:hover .description
-{
-    display: block;
 }
 
 .content:hover
@@ -70,14 +84,25 @@
     cursor: default;
 }
 
-.layer:target .cross,
+.content:target ~ .paranja,
+.content:hover .description,
+.first-page-slider:checked ~ .first-page,
+.second-page-slider:checked ~ .second-page,
+.third-page-slider:checked ~ .third-page
+{
+    display: block;
+}
+
+.first-page,
+.second-page,
+.third-page,
+.input,
 .content:target .description,
-.first:checked ~ .second-page,
-.first:checked ~ .third-page,
-.second:checked ~ .first-page,
-.second:checked ~ .third-page,
-.third:checked ~ .first-page,
-.third:checked ~ .second-page
+.first-page-slider:checked ~ .arrow-left,
+.first-page-slider:checked ~ label[for='third'],
+.second-page-slider:checked ~ label[for='second'],
+.third-page-slider:checked ~ .arrow-right,
+.third-page-slider:checked ~ label[for='first']
 {
     display: none;
 }
