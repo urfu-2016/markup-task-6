@@ -1,0 +1,245 @@
+body
+{
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 1150px;
+}
+
+header
+{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 120px;
+}
+
+header:first-letter
+{
+    color: #f68365;
+}
+
+.label
+{
+    width: 85px;
+}
+
+input
+{
+    display: none;
+}
+
+main
+{
+    text-align: center;
+}
+
+.image
+{
+    width: 230px;
+    margin-top: 10px;
+    height: 170px;
+}
+
+.page1-right:checked ~ .page2,
+.page2-left:checked ~ .page1,
+.page2-right:checked ~ .page3,
+.page3-left:checked ~ .page2
+{
+    display: inline-block;
+}
+
+.left-arrow,
+.right-arrow
+{
+    display: none;
+    width: 42px;
+    height: 40px;
+    background-size: 100%;
+    position: relative;
+    top: 94px;
+    cursor: pointer;
+}
+
+.left-arrow
+{
+    background-image: url(image/left.png);
+    margin-right: 30px;
+}
+
+.right-arrow
+{
+    background-image: url(image/right.png);
+    margin-left: 30px;
+}
+
+.page2-left:checked ~ .left-arrow:nth-of-type(1),
+.page2-left:checked ~ .right-arrow:nth-of-type(4),
+.page1-right:checked ~ .left-arrow:nth-of-type(2),
+.page1-right:checked ~ .right-arrow:nth-of-type(5),
+.page3-left:checked ~ .left-arrow:nth-of-type(2),
+.page3-left:checked ~ .right-arrow:nth-of-type(5),
+.page2-right:checked ~ .left-arrow:nth-of-type(3),
+.page2-right:checked ~ .right-arrow:nth-of-type(6)
+{
+    display: inline-block;
+}
+
+.left-arrow:nth-of-type(1),
+.right-arrow:nth-of-type(6)
+{
+    opacity: .2;
+    cursor: default;
+}
+
+.crop
+{
+    display: none;
+    vertical-align: top;
+    width: 240px;
+}
+
+.crop:hover
+{
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    margin: 0 -30px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+.name
+{
+    display: none;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c50d1e;
+}
+
+.description
+{
+    display: none;
+    margin-top: 5px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.crop:hover .description,
+.crop:hover .name
+{
+    display: block;
+}
+
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-image
+{
+    width: 500px;
+    height: 500px;
+    background-size: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -250px;
+}
+
+.modal-close
+{
+    position: fixed;
+    right: 5px;
+    top: 0;
+    width: 33px;
+    height: 32px;
+    background: url(image/crest.png);
+    background-size: 100%;
+}
+
+.crop:target ~ .modal
+{
+    display: inline-block;
+}
+
+section[id='coconut']:target ~ .modal .modal-image
+{
+    background-image: url(image/Кокос.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='melon']:target ~ .modal .modal-image
+{
+    background-image: url(image/Дыня.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='watermelon']:target ~ .modal .modal-image
+{
+    background-image: url(image/Арбуз.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='mango']:target ~ .modal .modal-image
+{
+    background-image: url(image/Манго.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='pumpkin']:target ~ .modal .modal-image
+{
+    background-image: url(image/Тыква.jpeg);
+    background-repeat: no-repeat;
+}
+
+section[id='tomato']:target ~ .modal .modal-image
+{
+    background-image: url(image/Томат.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='corn']:target ~ .modal .modal-image
+{
+    background-image: url(image/Кукуруза.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='squash']:target ~ .modal .modal-image
+{
+    background-image: url(image/Кабачок.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='dill']:target ~ .modal .modal-image
+{
+    background-image: url(image/Укроп.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='parsley']:target ~ .modal .modal-image
+{
+    background-image: url(image/Петрушка.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='mint']:target ~ .modal .modal-image
+{
+    background-image: url(image/Мята.jpg);
+    background-repeat: no-repeat;
+}
+
+section[id='onion']:target ~ .modal .modal-image
+{
+    background-image: url(image/Лук.jpg);
+    background-repeat: no-repeat;
+}
