@@ -124,7 +124,7 @@ body,
     border-radius: 50%;
     transform: scale(0);
     transition: transform .3s ease-out, border-radius .3s ease-out,
-    box-shadow .3s ease-out;
+        box-shadow .3s ease-out;
     vertical-align: middle;
 }
 
