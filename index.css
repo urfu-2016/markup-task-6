@@ -1,0 +1,151 @@
+body 
+{
+    background-color: #faebd7;
+}
+
+.closer
+{
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin: -110px 0;
+    display: none;
+}
+
+.blackout
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background: #2f353b;
+    opacity: .8;
+}
+
+main
+{
+    display: block;
+    margin: 120px 10%;
+}
+
+[id='close']:target ~ .closer,
+[id='close']:target ~ .blackout
+{
+    display: none;
+}
+
+.slides[id='carrot']:target ~ .bigPicture,
+.slides[id='tomato']:target ~ .bigPicture,
+.slides[id='eggplant']:target ~ .bigPicture,
+.slides[id='pepper']:target ~ .bigPicture,
+.slides[id='cabbage']:target ~ .bigPicture,
+.slides[id='white']:target ~ .bigPicture
+{
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+}
+
+.slides[id='carrot']:target ~ .blackout,
+.slides[id='tomato']:target ~ .blackout,
+.slides[id='eggplant']:target ~ .blackout,
+.slides[id='pepper']:target ~ .blackout,
+.slides[id='cabbage']:target ~ .blackout,
+.slides[id='white']:target ~ .blackout
+{
+    z-index: 1;
+    display: block;
+}
+
+.slides[id='carrot']:target ~ a .closer,
+.slides[id='tomato']:target ~ a .closer,
+.slides[id='eggplant']:target ~ a .closer,
+.slides[id='pepper']:target ~ a .closer,
+.slides[id='cabbage']:target ~ a .closer,
+.slides[id='white']:target ~ a .closer
+{
+    z-index: 2;
+    display: block;
+}
+
+.slides:not(:target):hover .text
+{
+    display: block;
+}
+
+.slides:not(:target):hover
+{
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 4px #000;
+    min-height: 350px;
+    height: 100%;
+}
+
+.bigPicture
+{
+    display: none;
+}
+
+.picture
+{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+}
+
+.slides
+{
+    float: left;
+    width: 25%;
+}
+
+.radios
+{
+    position: fixed;
+    top: 480px;
+}
+
+.slide1
+{
+    left: 48%;
+}
+
+.slide2
+{
+    left: 50%;
+}
+
+.slide3
+{
+    left: 52%;
+}
+
+.text
+{
+    z-index: 1;
+    margin: 0 10px;
+    width: 90%;
+    text-align: justify;
+    color: #d87093;
+    display: none;
+}
+
+input.slide1:checked ~ main .eggplant,
+input.slide1:checked ~ main .pepper,
+input.slide2:checked ~ main .carrot,
+input.slide2:checked ~ main .pepper,
+input.slide3:checked ~ main .tomato,
+input.slide3:checked ~ main .carrot
+{
+    display: none;
+}
