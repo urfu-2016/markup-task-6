@@ -87,7 +87,8 @@ main
     z-index: 1;
     background-color: #fff;
     box-shadow: 0 0 4px #000;
-    height: 350px;
+    min-height: 350px;
+    height: 100%;
 }
 
 .bigPicture
@@ -140,17 +141,9 @@ main
 }
 
 input.slide1:checked ~ main .eggplant,
-input.slide1:checked ~ main .pepper
-{
-    display: none;
-}
-
+input.slide1:checked ~ main .pepper,
 input.slide2:checked ~ main .carrot,
-input.slide2:checked ~ main .pepper
-{
-    display: none;
-}
-
+input.slide2:checked ~ main .pepper,
 input.slide3:checked ~ main .tomato,
 input.slide3:checked ~ main .carrot
 {
