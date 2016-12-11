@@ -1,0 +1,146 @@
+.gallery
+{
+    text-align: center;
+    margin-top: 50px;
+    min-width: 1400px;
+}
+
+.list,
+.hidden,
+.list-item-container input[type='radio'],
+.close
+{
+    display: none;
+}
+
+.part-1-radio:checked ~ .part1,
+.part-3-radio:checked ~ .part3,
+.part-2-radio:checked ~ .part2,
+.item-radio-1:checked ~ .hidden,
+.item-radio-1:checked ~ .close,
+.list-item-container .list-item
+{
+    display: block;
+}
+
+.animated
+{
+    transition: transform .3s;
+}
+
+.list
+{
+    margin: 50px auto;
+}
+
+.list-item-container
+{
+    display: inline-block;
+    margin: 0 15px;
+    width: 300px;
+}
+
+.list-item-container .list-item
+{
+    position: relative;
+    padding: 15px 0;
+    border: 1px solid transparent;
+    display: inline-block;
+}
+
+.list-item-container .list-item:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3), 0 1px 10px 0 rgba(0, 0, 0, .2);
+}
+
+.list-item-container .list-item:after,
+.list-item-description
+{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.list-item-description
+{
+    position: absolute;
+    top: 350px;
+    width: 300px;
+}
+
+.list-item-container:hover
+{
+    border-color: #eee;
+}
+
+.list-item-container .list-item:hover
+{
+    transform: scale(1.1, 1.1) translateY(-7px);
+}
+
+.list-item-image
+{
+    width: 250px;
+    height: auto;
+}
+
+.list-item-container .list-item:hover:after,
+.list-item-container .list-item:hover + .list-item-description
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.list-item-container .list-item:hover + .list-item-description
+{
+    transform: translateY(-15px);
+}
+
+.item-radio-1:checked ~ .hidden
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.overlay
+{
+    background-color: rgba(0, 0, 0, .3);
+    position: relative;
+    height: 100%;
+}
+
+.item-radio-1:checked ~ .hidden .overlay img
+{
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close
+{
+    position: fixed;
+    font-size: 30px;
+    top: 0;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+}
+
+.close label:hover
+{
+    cursor: pointer;
+}
+
