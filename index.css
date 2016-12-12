@@ -1,4 +1,4 @@
-.but
+.button
 {
     padding-left: 45%;
     display: block;
@@ -16,9 +16,10 @@ input
     overflow: hidden;
     position: relative;
     width: 100%;
+    left: 8%;
 }
 
-.slides
+.slide
 {
     height: 400px;
     opacity: 0;
@@ -132,13 +133,6 @@ input
     left: 750px;
 }
 
-.fruit1:checked ~ .but > .but1,
-.fruit2:checked ~ .but > .but2,
-.fruit3:checked ~ .but > .but3
-{
-    color: red;
-}
-
 .fruit1:checked ~ .slider > label > .img,
 .fruit2:checked ~ .slider > label > .img3,
 .fruit3:checked ~ .slider > label > .img6
@@ -181,7 +175,7 @@ label:hover + .text8
 {
     display: inherit;
     width: 100%;
-    height: 100%;
+    height: 1000px;
     position: absolute;
     z-index: 2000;
     background-color: black;
@@ -192,15 +186,21 @@ label:hover + .text8
 
 .exit
 {
+    text-align: center;
     display: inherit;
     z-index: 2001;
     top: 20px;
     left: 95%;
     position: absolute;
     width: 50px;
-    height: 50px;
+    height: 55px;
     background-size: 50px 50px;
-    background-color: black;
+    border: 1px solid;
+}
+
+.exit:hover
+{
+    border: 2px solid red;
 }
 
 .img_setting
@@ -276,4 +276,49 @@ label:hover + .text8
 .l_img8:checked ~ .shadow > .img_setting
 {
     background-image: url(img/Яжевика.jpeg);
+}
+
+.radio
+{
+    position: relative;
+    float: left;
+    border: 1px solid;
+    width: 16px;
+    height: 16px;
+}
+
+.radio:hover
+{
+    border: 2px solid;
+}
+
+.radio_in_first,
+.radio_in_second,
+.radio_in_third
+{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    z-index: 0;
+}
+
+.fruit1:checked ~ .button > .radio > .radio_in_first,
+.fruit2:checked ~ .button > .radio > .radio_in_second,
+.fruit3:checked ~ .button > .radio > .radio_in_third
+{
+    z-index: 5;
+    background-color: red;
+}
+
+.button_first,
+.button_second,
+.button_third
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
