@@ -15,9 +15,10 @@ body,
 
 .content
 {
-    line-height: initial;
+    line-height: 0;
     display: inline-block;
-    vertical-align: baseline;
+    text-align: center;
+    vertical-align: top;
 }
 
 .image-container
@@ -59,9 +60,8 @@ body,
     vertical-align: top;
     display: inline-block;
     width: 15rem;
-    transition: height .3s, padding .3s, margin .3s, box-shadow .3s;
+    transition: all .3s;
     background-color: #fff;
-    margin-top: -10rem;
     z-index: 2;
 }
 
@@ -69,12 +69,13 @@ body,
 {
     padding: 1rem;
     box-shadow: 0 0 1rem 0 #aaa;
-    margin: -11rem -1rem 0;
+    margin: -1rem -1rem 0;
     position: relative;
 }
 
 .description
 {
+    line-height: initial;
     display: block;
     height: 0;
     overflow: hidden;
@@ -105,7 +106,7 @@ body,
 
 .pic-opener:checked ~ .fullscreen
 {
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, .3);
     z-index: 10;
 }
@@ -128,8 +129,7 @@ body,
     max-height: 0;
     border-radius: 50%;
     transform: scale(0);
-    transition: transform .3s ease-out, /*
-        */box-shadow .3s ease-out, border-radius .3s ease-out;
+    transition: all .3s ease-out;
     vertical-align: middle;
 }
 
@@ -165,35 +165,18 @@ body,
 
 .slider
 {
-    position: absolute;
-    bottom: 30vh;
     width: 3vh;
     height: 3vh;
-}
-
-.slider:nth-child(1)
-{
-    left: calc(50vw - 7.5vh);
-}
-
-.slider:nth-child(2)
-{
-    left: calc(50vw - 2.5vh);
-}
-
-.slider:nth-child(3)
-{
-    left: calc(50vw + 2.5vh);
-}
-
-.slider:nth-child(4)
-{
-    left: calc(50vw + 7.5vh);
+    display: inline-block;
+    margin-top: 70vh;
 }
 
 .vegetables
 {
     display: none;
+    position: absolute;
+    left: calc(50% - 30rem);
+    top: 40vh;
 }
 
 .slider:nth-child(1):checked ~ .vegetables:nth-of-type(1)
@@ -215,4 +198,3 @@ body,
 {
     display: inline-block;
 }
-
