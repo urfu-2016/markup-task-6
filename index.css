@@ -1,8 +1,14 @@
-
 .button
 {
+    position: absolute;
+    top: 330px;
     padding-left: 45%;
     display: block;
+}
+
+label:hover ~ .button
+{
+    top: 570px;
 }
 
 input
@@ -10,90 +16,67 @@ input
     display: none;
 }
 
-.slider
+.none
 {
-    display: inline-table;
-    height: 450px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    left: 8%;
-}
-
-.slide
-{
-    height: 400px;
-    opacity: 0;
-    position: absolute;
-    width: 350px;
-    z-index: 0;
-}
-
-.img
-{
-    background-image: url(img/ananas.jpg);
-    background-size: 350px 400px;
-}
-
-.img1
-{
-    background-image: url(img/Апельсин.jpg);
-    background-size: 350px 400px;
-    left: 400px;
-}
-
-.img2
-{
-    background-image: url(img/Арбуз.jpg);
-    background-size: 350px 400px;
-    left: 750px;
-}
-
-.img3
-{
-    background-image: url(img/Виноград.jpg);
-    background-size: 350px 400px;
-}
-
-.img4
-{
-    background-image: url(img/Вишня.jpg);
-    background-size: 350px 400px;
-    left: 400px;
-}
-
-.img5
-{
-    background-image: url(img/Киви.jpg);
-    background-size: 350px 400px;
-    left: 750px;
-}
-
-.img6
-{
-    background-image: url(img/Клубника.jpg);
-    background-size: 350px 400px;
-}
-
-.img7
-{
-    background-image: url(img/Яблоко.jpeg);
-    background-size: 350px 400px;
-    left: 400px;
-}
-
-.img8
-{
-    background-image: url(img/Яжевика.jpeg);
-    background-size: 350px 400px;
-    left: 750px;
+    width: 0;
+    height: 0;
+    display: none;
 }
 
 .text
 {
+    position: relative;
+    width: 250px;
     height: auto;
-    top: 420px;
-    text-align: center;
+    top: 320px;
+}
+
+.slider
+{
+    display: inline-table;
+    height: 590px;
+    overflow: hidden;
+    position: relative;
+    width: 1050px;
+    left: 8%;
+}
+
+.slider > .text:nth-child(4),
+.slider > .text:nth-child(10),
+.slider > .text:nth-child(17)
+{
+    left: 400px;
+}
+
+.slider > .text:nth-child(6),
+.slider > .text:nth-child(12),
+.slider > .text:nth-child(19)
+{
+    left: 750px;
+}
+
+
+.slide
+{
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    width: 250px;
+    z-index: 0;
+}
+
+.img1,
+.img7,
+.img4
+{
+    left: 400px;
+}
+
+.img2,
+.img5,
+.img8
+{
+    left: 750px;
 }
 
 .fruit1:checked ~ .slider > label > .img,
@@ -104,17 +87,17 @@ input
     z-index: 1;
 }
 
-.fruit1:checked ~ .slider > .card2 > label > .img1,
-.fruit2:checked ~ .slider > .card2 > label > .img4,
-.fruit3:checked ~ .slider > .card2 > label > .img7
+.fruit1:checked ~ .slider > label > .img1,
+.fruit2:checked ~ .slider > label > .img4,
+.fruit3:checked ~ .slider > label > .img7
 {
     opacity: 1;
     z-index: 1;
 }
 
-.fruit1:checked ~ .slider > .card3 > label > .img2,
-.fruit2:checked ~ .slider > .card3 > label > .img5,
-.fruit3:checked ~ .slider > .card3 > label > .img8
+.fruit1:checked ~ .slider > label > .img2,
+.fruit2:checked ~ .slider > label > .img5,
+.fruit3:checked ~ .slider > label > .img8
 {
     opacity: 1;
     z-index: 1;
@@ -124,13 +107,21 @@ label:hover + .text
 {
     opacity: 1;
     z-index: 1;
+    height: auto;
+}
+
+label:hover .text
+{
+    position: absolute;
+    top: 420px;
+    z-index: 1000;
 }
 
 .gray
 {
     display: inherit;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     position: absolute;
     z-index: 2000;
     background-color: black;
@@ -160,12 +151,12 @@ label:hover + .text
 
 .img_setting
 {
-    background-size: 700px 630px;
+    background-size: 600px 500px;
     position: absolute;
     left: 25%;
     top: 5%;
-    width: 700px;
-    height: 630px;
+    width: 600px;
+    height: 500px;
     z-index: 2002;
     display: inherit;
 }
@@ -259,9 +250,9 @@ label:hover + .text
     z-index: 0;
 }
 
-.fruit1:checked ~ .button > .radio > .radio_in_first,
-.fruit2:checked ~ .button > .radio > .radio_in_second,
-.fruit3:checked ~ .button > .radio > .radio_in_third
+.fruit1:checked ~ .slider > .button > .radio > .radio_in_first,
+.fruit2:checked ~ .slider > .button > .radio > .radio_in_second,
+.fruit3:checked ~ .slider > .button > .radio > .radio_in_third
 {
     z-index: 5;
     background-color: red;
@@ -276,21 +267,4 @@ label:hover + .text
     width: 100%;
     height: 100%;
     z-index: 3;
-}
-
-.card2 > .text
-{
-    left: 400px;
-}
-
-.card3 > .text
-{
-    left: 750px;
-}
-
-.text
-{
-    height: auto;
-    top: 420px;
-    text-align: center;
 }
