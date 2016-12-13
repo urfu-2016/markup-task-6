@@ -1,0 +1,149 @@
+.container
+{
+    display: inline-block;
+    white-space: nowrap;
+    margin: 12%;
+}
+
+.theme
+{
+    text-align: center;
+}
+
+.img-vegetable 
+{
+    width: 100%;
+}
+
+.vegetable:target ~ .close,
+.vegetable:target ~ .background-shadow
+{
+    display: block;
+}
+
+.close,
+.background-shadow,
+.description
+{
+    display: none;
+}
+
+.description
+{
+    white-space: normal;
+}
+
+.background-shadow
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: .6;
+    background: #000;
+}
+
+.close:hover
+{
+    box-shadow: 0 0 1px #fff;
+}
+
+.close 
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.vegetable:target .wrapper
+{
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 0;
+}
+
+.vegetable:target .img-vegetable
+{
+    position: relative;
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.vegetable:not(:target) .content:hover .description
+{
+    display: block;
+}
+
+.vegetable:not(:target) .content:hover
+{
+    background: #fff;
+    padding: 10px;
+    margin: -10%;
+    position: relative;
+    width: 120%;
+    box-shadow: 0 0 1px #000;
+    z-index: 1;
+}
+
+.vegetable
+{
+    margin: 0 5px;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.second-slide
+{
+    width: 23%;
+}
+
+.first-slider:checked ~ .second-slide,
+.first-slider:checked ~ .third-slide,
+.second-slider:checked ~ .first-slide,
+.second-slider:checked ~ .third-slide,
+.third-slider:checked ~ .first-slide,
+.third-slider:checked ~ .second-slide,
+.slider
+{
+    display: none;
+}
+
+.active 
+{
+    position: relative;
+    top: -50px;
+    text-align: center;
+}
+
+.active label 
+{
+    width: 15px;
+    height: 10px;
+    background: #ccc;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active label:hover 
+{
+    background: #999;
+}
+
+.right-direct img,
+.left-direct img
+{
+    width: 6%;
+}
+
+.right-direct,
+.left-direct
+{
+    cursor: pointer;
+}
