@@ -12,9 +12,12 @@ h1
 {
     display: none;
     position: fixed;
-    top: 1%;
-    right: 1%;
+    top: 20px;
+    right: 20px;
     z-index: 10;
+    width: 55px;
+    height: 55px;
+    background-image: url('images/close.png');
 }
 
 .hover_card
