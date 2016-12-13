@@ -1,0 +1,269 @@
+.button
+{
+    position: absolute;
+    top: 330px;
+    padding-left: 45%;
+    display: block;
+}
+
+label:hover ~ .button
+{
+    top: 570px;
+}
+
+input
+{
+    display: none;
+}
+
+.none
+{
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.text
+{
+    position: relative;
+    width: 250px;
+    height: auto;
+    top: 320px;
+}
+
+.slider
+{
+    display: inline-table;
+    height: 590px;
+    overflow: hidden;
+    position: relative;
+    width: 1050px;
+    left: 8%;
+}
+
+.slider > .text:nth-child(4),
+.slider > .text:nth-child(10),
+.slider > .text:nth-child(17)
+{
+    left: 400px;
+}
+
+.slider > .text:nth-child(6),
+.slider > .text:nth-child(12),
+.slider > .text:nth-child(19)
+{
+    left: 750px;
+}
+
+.slide
+{
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    width: 250px;
+    z-index: 0;
+}
+
+.img1,
+.img7,
+.img4
+{
+    left: 400px;
+}
+
+.img2,
+.img5,
+.img8
+{
+    left: 750px;
+}
+
+.fruit1:checked ~ .slider > label > .img,
+.fruit2:checked ~ .slider > label > .img3,
+.fruit3:checked ~ .slider > label > .img6
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+.fruit1:checked ~ .slider > label > .img1,
+.fruit2:checked ~ .slider > label > .img4,
+.fruit3:checked ~ .slider > label > .img7
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+.fruit1:checked ~ .slider > label > .img2,
+.fruit2:checked ~ .slider > label > .img5,
+.fruit3:checked ~ .slider > label > .img8
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+label:hover + .text
+{
+    opacity: 1;
+    z-index: 1;
+    height: auto;
+}
+
+label:hover .text
+{
+    position: absolute;
+    top: 420px;
+    z-index: 1000;
+}
+
+.gray
+{
+    display: inherit;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2000;
+    background-color: black;
+    opacity: .5;
+    left: 0;
+    top: 0;
+}
+
+.exit
+{
+    text-align: center;
+    display: inherit;
+    z-index: 2001;
+    top: 20px;
+    left: 95%;
+    position: absolute;
+    width: 50px;
+    height: 55px;
+    background-size: 50px 50px;
+    border: 1px solid;
+}
+
+.exit:hover
+{
+    border: 2px solid red;
+}
+
+.img_setting
+{
+    background-size: 600px 500px;
+    position: absolute;
+    left: 25%;
+    top: 5%;
+    width: 600px;
+    height: 500px;
+    z-index: 2002;
+    display: inherit;
+}
+
+.default:checked ~ .shadow
+{
+    display: none;
+}
+
+.l_img:checked ~ .shadow,
+.l_img1:checked ~ .shadow,
+.l_img2:checked ~ .shadow,
+.l_img3:checked ~ .shadow,
+.l_img4:checked ~ .shadow,
+.l_img5:checked ~ .shadow,
+.l_img6:checked ~ .shadow,
+.l_img7:checked ~ .shadow,
+.l_img8:checked ~ .shadow
+{
+    display: block;
+}
+
+.l_img:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/ananas.jpg);
+}
+
+.l_img1:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Апельсин.jpg);
+}
+
+.l_img2:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Арбуз.jpg);
+}
+
+.l_img3:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Виноград.jpg);
+}
+
+.l_img4:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Вишня.jpg);
+}
+
+.l_img5:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Киви.jpg);
+}
+
+.l_img6:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Клубника.jpg);
+}
+
+.l_img7:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Яблоко.jpeg);
+}
+
+.l_img8:checked ~ .shadow > .img_setting
+{
+    background-image: url(img/Яжевика.jpeg);
+}
+
+.radio
+{
+    position: relative;
+    float: left;
+    border: 1px solid;
+    width: 16px;
+    height: 16px;
+}
+
+.radio:hover
+{
+    border: 2px solid;
+}
+
+.radio_in_first,
+.radio_in_second,
+.radio_in_third
+{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    z-index: 0;
+}
+
+.fruit1:checked ~ .slider > .button > .radio > .radio_in_first,
+.fruit2:checked ~ .slider > .button > .radio > .radio_in_second,
+.fruit3:checked ~ .slider > .button > .radio > .radio_in_third
+{
+    z-index: 5;
+    background-color: red;
+}
+
+.button_first,
+.button_second,
+.button_third
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
