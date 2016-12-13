@@ -1,7 +1,8 @@
 .container
 {
+    display: inline-block;
     white-space: nowrap;
-    margin: 10%;
+    margin: 12%;
 }
 
 .theme
@@ -98,6 +99,11 @@
     vertical-align: top;
 }
 
+.second-slide
+{
+    width: 23%;
+}
+
 .first-slider:checked ~ .second-slide,
 .first-slider:checked ~ .third-slide,
 .second-slider:checked ~ .first-slide,
@@ -128,4 +134,16 @@
 .active label:hover 
 {
     background: #999;
+}
+
+.right-direct img,
+.left-direct img
+{
+    width: 6%;
+}
+
+.right-direct,
+.left-direct
+{
+    cursor: pointer;
 }
