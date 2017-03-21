@@ -1,0 +1,174 @@
+body
+{
+    width: 70%;
+    padding-top: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div[class*="pic"]
+{
+    display: none;
+}
+
+div[class*="pic"] label
+{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+input[id*="pic"]
+{
+    display: none;
+}
+
+input[id="pic1"]:checked ~ div[class="pic1"],
+input[id="pic2"]:checked ~ div[class="pic2"],
+input[id="pic3"]:checked ~ div[class="pic3"],
+input[id="pic4"]:checked ~ div[class="pic4"],
+input[id="pic5"]:checked ~ div[class="pic5"],
+input[id="pic6"]:checked ~ div[class="pic6"],
+input[id="pic7"]:checked ~ div[class="pic7"],
+input[id="pic8"]:checked ~ div[class="pic8"],
+input[id="pic9"]:checked ~ div[class="pic9"],
+input[id="pic10"]:checked ~ div[class="pic10"]
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background: rgba(204,203,198,.7);
+    z-index: 100;
+}
+
+input[id*="pic"]:checked ~ div[class*="pic"] img
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+div[class*="block"]
+{
+    display: none;
+}
+
+input[value="block-1"]:checked ~ div[class="block-1"],
+input[value="block-2"]:checked ~ div[class="block-2"],
+input[value="block-3"]:checked ~ div[class="block-3"]
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+input[id*="block"]
+{
+    display: none;
+}
+
+label[for*="block"]
+{
+    margin: 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #b4b2a7;
+    border-right: 2px solid #b4b2a7;
+    box-shadow: 4px 3px 13px -3px rgba(0,0,0,0.75);
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[value="block-1"]:checked ~ .radiobuttons label[for="block-1"],
+input[value="block-2"]:checked ~ .radiobuttons label[for="block-2"],
+input[value="block-3"]:checked ~ .radiobuttons label[for="block-3"]
+{
+    border: 11px solid #5fa0ea;
+    box-sizing: border-box;
+}
+
+div[class*="block"] .prodContent:nth-child(1)
+{
+    float: left;
+}
+
+div[class*="block"] .prodContent:not(:nth-child(1))
+{
+    float: left;
+}
+
+div[class*="block"] .prodContent:nth-child(1)
+{
+    left: 0;
+}
+
+div[class*="block"] .prodContent:nth-child(2)
+{
+    left: 25%;
+}
+
+div[class*="block"] .prodContent:nth-child(3)
+{
+    left: 50%;
+}
+
+div[class*="block"] .prodContent:nth-child(4)
+{
+    left: 75%;
+}
+
+.prodContent
+{
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+}
+
+.prodContent:hover
+{
+    position: absolute;
+    padding: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 3px 3px 25px -3px rgba(0,0,0,0.75);
+    z-index: 2;
+}
+
+.prodContent img
+{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.prodContent p
+{
+    display: none;
+}
+
+.prodContent:hover p
+{
+    width: 300px;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Merriweather';
+}
+
+.prodContent:hover img
+{
+    width: 300px;
+}
